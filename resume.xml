@@ -32,13 +32,14 @@ opportunity for advancement.
   </Objective>
   
   <Strengths>
+    <Entry>Exceptional communication and collaboration skills.</Entry>
+    <Entry>Outstanding technical skill.</Entry>
+    <Entry>Able to involve, improve or provide any software development processes.</Entry>
     <Entry>Familiar with modern high-load solutions.</Entry>
     <Entry>Expert in working with various operating systems.</Entry>
     <Entry>Professional Internet based software development experience using various Internet technologies.</Entry>
-    <Entry>Exceptional Technical Skill.</Entry>
     <Entry>Highly skilled in customer service.</Entry>
     <Entry>Good deliver output in less time without losing efficiency.</Entry>
-    <Entry>Efficient Communication Skill.</Entry>
   </Strengths>
   
   <Education>
@@ -60,9 +61,27 @@ opportunity for advancement.
   
   <Experience>
     <Vocational>
+        <Entry Job = "Team Lead">
+          <Period From =  "May 2015" To = "Now" />
+          <Job>Team Lead</Job>
+          <Employer>
+            <Name>BAS Services &amp; Graphics, LLC.</Name>
+            <City>Saint Petersburg</City>
+            <Description>
+                BASSG is an intelligent building solutions company with more than 15 years of experience with more than 200+ clients.
+            </Description>
+          </Employer>
+
+          <Description>
+            Lead small team of innovative product for building automation services (IoT). Progress application from early prototype to market product. Completely built up team development processes including CI. Hiring, reviewing and teaching team.
+          </Description>
+
+          <Achievement lang="en">build with team ready to market leading-edge product</Achievement>
+          <Techs>Dart, Polymer, Fantom, SkySpark, Linux, Embedded, IoT, Teamcity, Selenium</Techs>
+        </Entry>
         
         <Entry Job = 'Senior Software Engineer'>
-            <Period From = "Jan 2014" To = "Now" />
+            <Period From = "Jan 2014" To = "Jun 2015" />
             <Job>Senior Software Engineer</Job>
             <Employer>
                 <Name>Oracle</Name>
@@ -74,12 +93,12 @@ opportunity for advancement.
                 </Description>
             </Employer>
             <Description>
-	      As a member of the software engineering division (VM team, GC specialization), I assist in defining and developing software for tasks associated with the developing, debugging or designing of software applications or operating systems. Provide technical leadership to other software developers. Specify, design and implement modest changes to existing software architecture to meet changing needs.
-	    </Description>  
+        As a member of the software engineering division (VM team, GC specialization), I assist in defining and developing software for tasks associated with the developing, debugging or designing of software applications or operating systems. Provide technical leadership to other software developers. Specify, design and implement modest changes to existing software architecture to meet changing needs.
+      </Description>  
 
-	    <Achievement lang = "en">analyze test results, automate processes and write code to test code for JVM.</Achievement>
-	    <Achievement lang = "en">writing robust, reliable, repeatable and maintainable tests that find issues early and cover the area of the component under testing JVM.</Achievement>
-	    <Achievement lang = "en">build frameworks and tools used for testing JVM. </Achievement>
+      <Achievement lang = "en">analyze test results, automate processes and write code to test code for JVM.</Achievement>
+      <Achievement lang = "en">writing robust, reliable, repeatable and maintainable tests that find issues early and cover the area of the component under testing JVM.</Achievement>
+      <Achievement lang = "en">build frameworks and tools used for testing JVM. </Achievement>
             
             <Techs>Java, C++, various internals tools</Techs>
         </Entry>
@@ -98,7 +117,7 @@ opportunity for advancement.
             <Techs>C++, Boost, MSVC, GCC, Python.</Techs>
         </Entry>
 
-		<Entry Job = 'Lead Software Engineer'>
+    <Entry Job = 'Lead Software Engineer'>
         <Period From = "Mar 2012" To = "May 2013" />
         <Job>Lead Software Engineer</Job>
         <Employer>
@@ -107,16 +126,16 @@ opportunity for advancement.
           <Description>Internet companies group</Description>
         </Employer><!-- ; internal company portal; web-based reporting application. -->
         <Description>
-			Working on high-load backend solutions (C++, FreeBSD) for social networking service, developing replication subsystem between highloaded servers.
-			Developing and supporting set of internal tools for testing, building and supporting entire project.
-			Research standart PHP modules for performance issues and developing optimized solutions.
-			Recruit and supervise computer engineers and programmers. Coaching colleagues about efficient use of set of IT tecnologies.
-		</Description>
-		
-		<Achievement lang = "ru">Улучшил процесс сборки для всего проекта</Achievement>
+      Working on high-load backend solutions (C++, FreeBSD) for social networking service, developing replication subsystem between highloaded servers.
+      Developing and supporting set of internal tools for testing, building and supporting entire project.
+      Research standart PHP modules for performance issues and developing optimized solutions.
+      Recruit and supervise computer engineers and programmers. Coaching colleagues about efficient use of set of IT tecnologies.
+    </Description>
+    
+    <Achievement lang = "ru">Улучшил процесс сборки для всего проекта</Achievement>
         <Achievement lang = "en">Improved building process for entire project (cmake)</Achievement>
-		
-		<Achievement lang = "ru">Разработал библиотеку репликации для встраивания в различные демоны</Achievement>
+    
+    <Achievement lang = "ru">Разработал библиотеку репликации для встраивания в различные демоны</Achievement>
         <Achievement lang = "en">Developed replica library for embed into different servers</Achievement>
 
    <Achievement lang = "ru">Внедрил практику continious integration для всего проекта</Achievement>
@@ -131,29 +150,29 @@ opportunity for advancement.
           <Name>Sperasoft Inc.</Name>
           <City>Saint Petersburg</City>
           <Description>International outsourcing company</Description>
-		  <Customer>BioWare</Customer>
+      <Customer>BioWare</Customer>
         </Employer><!-- ; internal company portal; web-based reporting application. -->
         <Description>
-			Working on high-load game site (Drupal, Apache Solr), integration with 3rd party search engine, developing game data import flow from various data sources.
-			Developing and supporting set of internal tools for testing, inviting, monitoring, etc. 
-			Consulting, prototyping and developing corporal internet sites. 
-			Plan, control and evaluate the operations of information systems. 
-			Recruit and supervise computer engineers and programmers. 
-		</Description>
-		
-		<Achievement lang = "ru">Учавствовал в запуске игры <a href="http://www.swtor.com/">SWTOR</a></Achievement>
+      Working on high-load game site (Drupal, Apache Solr), integration with 3rd party search engine, developing game data import flow from various data sources.
+      Developing and supporting set of internal tools for testing, inviting, monitoring, etc. 
+      Consulting, prototyping and developing corporal internet sites. 
+      Plan, control and evaluate the operations of information systems. 
+      Recruit and supervise computer engineers and programmers. 
+    </Description>
+    
+    <Achievement lang = "ru">Учавствовал в запуске игры <a href="http://www.swtor.com/">SWTOR</a></Achievement>
         <Achievement lang = "en">Actively participated in <a href="http://www.swtor.com/">SWTOR</a> game launch </Achievement>
-		
-		<Achievement lang = "ru">Оптимизировал скорость работы интерфейса системы внутреннего мониторинга серверов</Achievement>
+    
+    <Achievement lang = "ru">Оптимизировал скорость работы интерфейса системы внутреннего мониторинга серверов</Achievement>
         <Achievement lang = "en">Optimized UI responsibility of servers monitoring internal system</Achievement>
-		
+    
         <Achievement lang = "ru">Доработал и внедрил модули интеграции различных типов данных высоконагруженного сайта с поисковым серверов Apache Solr</Achievement>
         <Achievement lang = "en">Finalized and introduced integration modules of high-load site data with Apache Solr search engine </Achievement>
 
         <Techs>Drupal, JavaScript, Java, C++, Boost, CppUnit, gSOAP, libxml, OpenSSL, GCC, bash, Java EE, JSP, RichFaces, ICEFaces, MySQL, Tomcat, PHP, HTML, CSS.</Techs>
       </Entry>
-	  
-	<Entry Job = 'Senior Software Engineer'>
+    
+  <Entry Job = 'Senior Software Engineer'>
         <Period From = "May 2010" To = "Sep 2010" />
         <Job>Senior Software Engineer</Job>
         <Employer>
@@ -162,31 +181,31 @@ opportunity for advancement.
           <Description>International outsourcing company</Description>
         </Employer>
         <Description>
-			Automate, optimize and promote corporate sites.
-			Plan, control and evaluate the operations of information systems. 
-			Recruit and supervise computer engineers and programmers. 
-		</Description>
+      Automate, optimize and promote corporate sites.
+      Plan, control and evaluate the operations of information systems. 
+      Recruit and supervise computer engineers and programmers. 
+    </Description>
 
         <Achievement lang = "ru">Перенес статичный сайт на CMS Drupal</Achievement>
         <Achievement lang = "en">Convert static corporate site into dynamic full-featured extensible site on CMS Drupal</Achievement>
         <Techs>Drupal, JavaScript, PHP, HTML, CSS.</Techs>
       </Entry>
-	  
-	  <Entry Job = 'Senior Software Engineer'>
+    
+    <Entry Job = 'Senior Software Engineer'>
         <Period From = "Jul 2008" To = "May 2010" />
         <Job>Senior Software Engineer</Job>
         <Employer>
           <Name>Sperasoft Inc.</Name>
           <City>Volgograd branch</City>
           <Description>International outsourcing company</Description>
-		  <Customer>Sony Online Entertaiment</Customer>
+      <Customer>Sony Online Entertaiment</Customer>
         </Employer>
         <Description>
-			Worked as member of a team developing and maintaining: distributed high-load system of data collection and metric controls of company systems.
-			Develop and implement policies and procedures for electronic data processing and computer systems operations and development. 
-			Meet with clients to discuss system requirements, specifications, costs and time lines.
-		</Description>
-		
+      Worked as member of a team developing and maintaining: distributed high-load system of data collection and metric controls of company systems.
+      Develop and implement policies and procedures for electronic data processing and computer systems operations and development. 
+      Meet with clients to discuss system requirements, specifications, costs and time lines.
+    </Description>
+    
         <Achievement lang = "ru">Улучшил скорость SOAP запросов web приложения к серверу</Achievement>
         <Achievement lang = "en">Improved speed of SOAP data exchange between web application and server</Achievement>
         
@@ -195,11 +214,11 @@ opportunity for advancement.
         
         <Achievement lang = "ru">Оптимизировал процесс сборки проекта под Linux</Achievement>
         <Achievement lang = "en">Optimized project building under Linux</Achievement>
-		
+    
         <Achievement lang = "ru">Разработал скрипт (bash) установки, конфигурации и управления ПО</Achievement>
         <Achievement lang = "en">Develop deployment, configuration and handling script (bash) of software instances</Achievement>
-		<Techs>C++, Boost, CppUnit, gSOAP, libxml, OpenSSL, GCC, bash, Java EE, JSP, RichFaces, ICEFaces, MySQL, Tomcat, JavaScript</Techs>
-		</Entry>
+    <Techs>C++, Boost, CppUnit, gSOAP, libxml, OpenSSL, GCC, bash, Java EE, JSP, RichFaces, ICEFaces, MySQL, Tomcat, JavaScript</Techs>
+    </Entry>
       <Entry Job = 'Freelancer'>
         <Period From = "Aug 2007" To = "Jul 2008" />
         <Job>Freelancer</Job>
@@ -310,7 +329,7 @@ opportunity for advancement.
         <Description></Description>
         <Techs></Techs>
       </Entry>
-      -->
+      TODO GUI for this CV :) -->
     </Vocational>
     <!-- <Miscellaneous>
       <Entry Job = 'Administrator of gaming club'>
@@ -322,7 +341,10 @@ opportunity for advancement.
         </Employer>
         <Description>Support and maintenance of small network</Description>
       </Entry>
-    </Miscellaneous> -->
+    </Miscellaneous> 
+
+486, 66MHz, Motorola 6502...
+  -->
     
   </Experience>
   
@@ -333,6 +355,7 @@ opportunity for advancement.
   
   <Skills>
     <Group type = 'Tools'>
+      <!-- EVERYTHING in the world :) -->
       <Entry type = 'Technologies'>.NET, J2EE, EJB, COM/DCOM/COM+, OLE/ActiveX, AJAX</Entry>
       <Entry type = 'OS'>MS Windows, Linux (Debian), QNX, FreeBSD, MSDOS, Apple DOS 3.3</Entry>
       <Entry type = 'DBMS'>MySQL, PostgreSQL, MS SQL, SQLite, MS Access, Oracle</Entry>
@@ -341,6 +364,7 @@ opportunity for advancement.
       <Entry type = 'SCM'>CVS, SVN, Perforce, git</Entry>
     </Group>
     <Group type = 'Programming languages'>
+      <!-- it doesnt MATTER at all -->
       <Entry type = 'C/C++'>STL, GCC, Boost, wxWidgets, Qt, Win32 API, GDI, WinSock, libxml, MySQL++, gSOAP, CppUnit, OpenSSL</Entry>
       <Entry type = 'PHP'>Drupal, Joomla, WordPress, DataLife Engine, Xaraya</Entry>
       <Entry type = 'JavaScript'>DOM, AJAX, JQuery, ExtJS</Entry>
@@ -375,6 +399,8 @@ opportunity for advancement.
   
   <Programs>
       <!-- <Group type = 'Author programs and scripts'> -->
+        <Entry href="https://github.com/andrey-zakharov/MandelbrotShader">Yet another WebGL small demo: Mandelbrot&amp;Julia-on-shaders</Entry>
+        <Entry href="https://github.com/andrey-zakharov/balls-logic-issue"></Entry>
         <Entry type = 'Winamp Statistician'>(VC++) Plugin for Winamp collected statistics about played tracks and then shows top list.</Entry>
         <Entry type = 'VaultSoft EasyNP~Engine'>(PHP, MySQL) Control System news, polls, banners and counters on the site on the templates and database.</Entry>
         <Entry type = 'RemoteProcMon'>(C#) server-client application, monitor the state of *NIX systems.</Entry>
