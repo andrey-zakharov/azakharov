@@ -1,0 +1,3 @@
+[submodule "assets/startbootstrap-freelancer"]
+	path = assets/startbootstrap-freelancer
+	url = https://github.com/BlackrockDigital/startbootstrap-freelancer.git

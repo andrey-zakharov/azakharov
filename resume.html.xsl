@@ -16,36 +16,84 @@
   </xsl:template>
   
   <xsl:template match = "/">
-<html>
+<xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html&gt;</xsl:text>
+<html lang="en">
   <head> 
     <xsl:apply-templates select = '/Document/Meta/Title' />
-    <link href='http://fonts.googleapis.com/css?family=Judson' rel='stylesheet' type='text/css' />
-    <style type = 'text/css'>
-      body, table { font-family: "Judson", "Times", serif; font-size: 12pt; color: #333; }
-      td { vertical-align: top }
-      #personal { overflow: hidden }
-      .address, .phone, .mobile, .email, .skype { float: right; margin-right:100pt; clear: right; }
-      .picture { float: right;   clear: right; margin-bottom: -55pt; border: 1px solid; padding: 2px; }
-      .firstname { font-size: 120% }
-      .familyname { font-size: 150% }
-      h1 { font-size: 140%; padding-left: 5em; border-bottom: 1px dotted }
-      h2 { font-size: 120%; padding-left: 8em; }
-      table.subsection td { padding-top: 0.5em; }
-      table.subsection td.period,
-      table.subsection td.type,
-      table.languages td.name { padding-right: 2em; }
-      table.subsection td.period { white-space: nowrap }
-      table.subsection span.techs { font-style: italic; }
-      table strong { font-size: 115%; }
-      <!-- theme -->
-      .picture { border-color: lime }
-      h1 { color: #040; border-color: #093; /*text-shadow: 2px 2px 12px #444;*/ }
-      h2 { color: #040; }
-    </style>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Andrey Zakharov's CV" />
+    <meta name="author" content="Andrey Zakharov" />
+        <!-- Bootstrap Core CSS -->
+    <link href="assets/startbootstrap-freelancer/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Theme CSS -->
+    <link href="assets/startbootstrap-freelancer/css/freelancer.min.css" rel="stylesheet" />
+
+    <!-- Custom Fonts -->
+    <link href="assets/startbootstrap-freelancer/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+
+    <link href="assets/cv.css" rel="stylesheet" />
+
   </head>
-  <body>
+  <body id="page-top" class="index">
+        <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="#page-top"><xsl:value-of select = '/Document/Meta/Title' /></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#Experience">Experience</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#about">About</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
   	<xsl:apply-templates select = '/Document/Meta' />
   	<xsl:apply-templates select = '/Document/Meta/following-sibling::*' />
+
+    <script src="assets/js/modernizr.js"></script>
+        <!-- jQuery -->
+    <script src="assets/startbootstrap-freelancer/vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="assets/startbootstrap-freelancer/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <!-- <script src="assets/startbootstrap-freelancer/js/jqBootstrapValidation.js"></script> -->
+    <!-- <script src="assets/startbootstrap-freelancer/js/contact_me.js"></script> -->
+
+    <!-- Theme JavaScript -->
+    <script src="assets/startbootstrap-freelancer/js/freelancer.min.js"></script>
+    <script src="assets/js/timeline.js"></script>
+
   </body>
 </html>
   </xsl:template>
@@ -53,7 +101,23 @@
   <xsl:template match="Period"><xsl:value-of select = "@From" />&mdash;<xsl:value-of select = "@To" /></xsl:template>
   <!-- Meta -->
   <xsl:template match = '/Document/Meta'><xsl:apply-templates select = "*[@lang=$lang]"/></xsl:template>
-  <xsl:template match = '/Document/Meta/Personal'><div id='personal'><xsl:apply-templates /></div></xsl:template>
+  <xsl:template match = '/Document/Meta/Personal'>    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    
+                    <div class="intro-text">
+                        <xsl:apply-templates select="Photo"/>
+                        <span class="name"><xsl:value-of select = '/Document/Meta/Title' /></span>
+                        <hr class="star-light" />
+                        <xsl:apply-templates select="Skills"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+  </xsl:template>
   
   <xsl:template match = '//Meta/Title'><title><xsl:value-of select = '.' /></title></xsl:template>
   
@@ -75,25 +139,89 @@
   <xsl:template match = '//Personal/Extra[ @type = "skype" ]'><span class='skype'>skype: <xsl:value-of select = '.' /></span></xsl:template>
     
   <xsl:template match = '//Personal/Photo'>
-    <div class = 'picture'><img>
-      <xsl:attribute name = 'width'>
+    <img class="img-responsive clip-circle">
+      <!--xsl:attribute name = 'width'>
         <xsl:value-of select = '@width' />
-      </xsl:attribute>
+      </xsl:attribute-->
       <xsl:attribute name = 'src'>
         <xsl:value-of select = '.' />
       </xsl:attribute>
-   </img></div>
+   </img>
   </xsl:template>
+
+  <xsl:template match = '//Personal/Skills'><span class="skills"><xsl:value-of select = '.' /></span></xsl:template>
   
-  <xsl:template match = '/Document/*'><h1><xsl:value-of select = 'name()' /></h1><xsl:apply-templates /></xsl:template>
-  
+  <xsl:template match = '/Document/*'>
+    <section>
+      <xsl:attribute name = 'id'>
+          <xsl:value-of select = 'name()' />
+      </xsl:attribute>
+      <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2><xsl:value-of select = 'name()' /></h2>
+                <hr class="star-primary" />
+            </div>
+        </div>
+        <xsl:apply-templates />
+      </div>
+    </section>
+  </xsl:template>
+
+  <xsl:template match = '/Document/Experience/Vocational'>
+    <section id="experience-timeline" class="cd-container">
+      <xsl:apply-templates />
+    </section>
+  </xsl:template>
+
+  <xsl:template match = '//Vocational/Entry'> 
+    <div class="cd-timeline-block">
+      <div class="cd-timeline-img">
+        <img alt="Picture">
+          <xsl:attribute name="src">assets/img/<xsl:value-of select = 'Employer/Logo' /></xsl:attribute>
+        </img>
+      </div> <!-- cd-timeline-img -->
+   
+      <div class="cd-timeline-content">
+        <h3><xsl:value-of select = '@Job' /></h3>
+        <xsl:value-of select = 'Employer/Name' />, <xsl:value-of select = 'Employer/City' />, 
+        <em><xsl:value-of select = 'Employer/Description' /></em>
+        <p><xsl:apply-templates select = 'Description' /></p>
+        <!--a href="#0" class="cd-read-more">Read more</a-->
+        <span class="cd-date period"><xsl:apply-templates select = 'Period' /></span>
+        <xsl:apply-templates select="Achievement[@lang='en']" /><br/>
+        <span class = 'techs'>Key technologies and languages: <xsl:value-of select = 'Techs' /></span>
+      </div> <!-- cd-timeline-content -->
+    </div> <!-- cd-timeline-block -->
+  </xsl:template>
+
   <xsl:template match = '/Document/*/*'><h2><xsl:value-of select = 'name()' /></h2>
     <table class = 'subsection'>
       <xsl:apply-templates />
     </table>
   </xsl:template>
   <xsl:template match = '/Document/Programs'></xsl:template>
-  <xsl:template match = '/Document/Strengths'><h1><xsl:value-of select = 'name()' /></h1><ul><xsl:apply-templates /></ul></xsl:template>
+  <xsl:template match = '/Document/Objective'></xsl:template>
+
+  <xsl:template match = '/Document/Strengths'>    
+    <section>
+      <xsl:attribute name = 'id'>
+          <xsl:value-of select = 'name()' />
+      </xsl:attribute>
+      <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2><xsl:value-of select = 'name()' /></h2>
+                <hr class="star-primary" />
+            </div>
+        </div>
+        <ul>
+          <xsl:apply-templates />
+        </ul>
+      </div>
+    </section>
+  </xsl:template>
+
   <xsl:template match = '//Strengths/Entry'><li><xsl:apply-templates /></li></xsl:template>
   
   <xsl:template match = '//Education/Entry'>
@@ -112,13 +240,7 @@
   <tr><td>description</td><td><small><xsl:value-of select = 'Description' />}</small></td></tr>
 </table>
   </xsl:template>
-  
-  <xsl:template match = '//Experience//Entry'><tr><td class='period'><xsl:apply-templates select = 'Period' /></td>
-  <td><strong><xsl:value-of select = '@Job' /></strong>, <xsl:value-of select = 'Employer/Name' />, 
-    <xsl:value-of select = 'Employer/City' />, <em><xsl:value-of select = 'Employer/Description' /></em>
-    <ul><xsl:apply-templates select = 'Description' /></ul>
-    <xsl:apply-templates select="Achievement[@lang='en']" /><br />
-    <span class = 'techs'>Key technologies and languages: <xsl:value-of select = 'Techs' /></span></td></tr></xsl:template>
+
     
   <xsl:template match = '//Achievement'><li><xsl:value-of select = '.' /></li></xsl:template>
     

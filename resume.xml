@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <?xml-stylesheet type='text/xsl' href='resume.html.xsl'?>
-<Document 
-  xmlns:xlink="http://www.w3.org/1999/xlink" >
+<Document xmlns:xlink="http://www.w3.org/1999/xlink" >
   <Meta>
     <Title lang = "en">Andrey Zakharov</Title>
     <Personal lang = "en">
@@ -12,6 +11,7 @@
       <Phone type='cell'>+7(965)072 45 87</Phone>
       <Email>aazaharov81@gmail.com</Email>
       <Extra type='skype'>vaulter2010</Extra>
+      <Skills>20+ years of software engineering</Skills>
     </Personal>
 
     <Personal lang = "ru">
@@ -70,6 +70,7 @@ opportunity for advancement.
             <Description>
                 BASSG is an intelligent building solutions company with more than 15 years of experience with more than 200+ clients.
             </Description>
+            <Logo>bassg.png</Logo>
           </Employer>
 
           <Description>
@@ -91,6 +92,7 @@ opportunity for advancement.
                     The company specializes in developing and marketing computer hardware systems and enterprise software products – 
                     particularly its own brands of database management systems. Oracle is the second-largest software maker by revenue, after Microsoft.
                 </Description>
+                <Logo>oracle.png</Logo>
             </Employer>
             <Description>
         As a member of the software engineering division (VM team, GC specialization), I assist in defining and developing software for tasks associated with the developing, debugging or designing of software applications or operating systems. Provide technical leadership to other software developers. Specify, design and implement modest changes to existing software architecture to meet changing needs.
@@ -110,6 +112,7 @@ opportunity for advancement.
                 <Name>Tensor</Name>
                 <City>Saint Petersburg</City>
                 <Description>Large holding, developing software to automate the management of the company, tax accounting and reporting.</Description>
+                <Logo>tensor.jpg</Logo>
             </Employer>
             <Description>
                 Porting large scale application back-end to Linux. Developing international support in back-end. Testing and supporting back-end application.
@@ -124,6 +127,7 @@ opportunity for advancement.
           <Name>Embria</Name>
           <City>Saint Petersburg</City>
           <Description>Internet companies group</Description>
+          <Logo>embria.jpg</Logo>
         </Employer><!-- ; internal company portal; web-based reporting application. -->
         <Description>
       Working on high-load backend solutions (C++, FreeBSD) for social networking service, developing replication subsystem between highloaded servers.
@@ -150,6 +154,7 @@ opportunity for advancement.
           <Name>Sperasoft Inc.</Name>
           <City>Saint Petersburg</City>
           <Description>International outsourcing company</Description>
+          <Logo>sperasoft.png</Logo>
       <Customer>BioWare</Customer>
         </Employer><!-- ; internal company portal; web-based reporting application. -->
         <Description>
@@ -179,6 +184,7 @@ opportunity for advancement.
           <Name>Sperasoft Inc.</Name>
           <City>Volgograd branch</City>
           <Description>International outsourcing company</Description>
+          <Logo>sperasoft.png</Logo>
         </Employer>
         <Description>
       Automate, optimize and promote corporate sites.
@@ -198,6 +204,7 @@ opportunity for advancement.
           <Name>Sperasoft Inc.</Name>
           <City>Volgograd branch</City>
           <Description>International outsourcing company</Description>
+          <Logo>sperasoft.png</Logo>
       <Customer>Sony Online Entertaiment</Customer>
         </Employer>
         <Description>
@@ -401,6 +408,7 @@ opportunity for advancement.
       <!-- <Group type = 'Author programs and scripts'> -->
         <Entry href="https://github.com/andrey-zakharov/MandelbrotShader">Yet another WebGL small demo: Mandelbrot&amp;Julia-on-shaders</Entry>
         <Entry href="https://github.com/andrey-zakharov/balls-logic-issue"></Entry>
+
         <Entry type = 'Winamp Statistician'>(VC++) Plugin for Winamp collected statistics about played tracks and then shows top list.</Entry>
         <Entry type = 'VaultSoft EasyNP~Engine'>(PHP, MySQL) Control System news, polls, banners and counters on the site on the templates and database.</Entry>
         <Entry type = 'RemoteProcMon'>(C#) server-client application, monitor the state of *NIX systems.</Entry>
