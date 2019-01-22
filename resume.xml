@@ -11,7 +11,7 @@
       <Phone type='cell'>+7(965)072 45 87</Phone>
       <Email>aazaharov81@gmail.com</Email>
       <Extra type='skype'>vaulter2010</Extra>
-      <Skills>20+ years of software engineering</Skills>
+      <Extra>20+ years of software engineering</Extra>
     </Personal>
 
     <Personal lang = "ru">
@@ -41,23 +41,100 @@ opportunity for advancement.
     <Entry>Highly skilled in customer service.</Entry>
     <Entry>Good deliver output in less time without losing efficiency.</Entry>
   </Strengths>
+    
+  <Skills>
+    <Group type = 'Tools'>
+      <!-- EVERYTHING in the world :) -->
+      <Entry type = 'Technologies'>.NET, J2EE, EJB, COM/DCOM/COM+, OLE/ActiveX, AJAX</Entry>
+      <Entry type = 'OS'>MS Windows, Linux (Debian), QNX, FreeBSD, MSDOS, Apple DOS 3.3</Entry>
+      <Entry type = 'DBMS'>MySQL, PostgreSQL, MS SQL, SQLite, MS Access, Oracle</Entry>
+      <Entry type = 'Related Software'>MS Office, MS Visio, MS Project, SSH, Bash, Kile, soapUI</Entry>
+      <Entry type = 'Development'>MS Visual Studio, Netbeans IDE, Eclipse IDE, code reviewer, JIRA, GDB, Borland Delphi</Entry>
+      <Entry type = 'SCM'>CVS, SVN, Perforce, git</Entry>
+    </Group>
+    <Group type = 'Programming languages'>
+      <!-- it doesnt MATTER at all -->
+      <Entry type = 'C/C++'>STL, GCC, Boost, wxWidgets, Qt, Win32 API, GDI, WinSock, libxml, MySQL++, gSOAP, CppUnit, OpenSSL</Entry>
+      <Entry type = 'JavaScript'>Dart, Polymer, DOM, AJAX, JQuery, ExtJS</Entry>
+      <Entry type = 'Java'>Kotlin, JSF, RichFaces</Entry>
+      <Entry type = 'C#'>.NET 2.0, WinForms</Entry>
+      <Entry type = 'SQL'>MySQL, SQLite, T-SQL</Entry>
+      <Entry type = 'Visual Basic'>VBA, MS Word, MS Excel, MS Access, MS Outlook</Entry>
+      <Entry type = 'Markup'>HTML5, XHTML, CSS3, XML, XSL</Entry>
+      <!--Entry type = 'GNU'>BASH, SSH, sed, awk, \LaTeXe</Entry-->
+      <Entry type = 'Scripting'>BASH, Perl, Lua, Python, Groovy, sed, awk, \LaTeXe</Entry>
+      <Entry type = 'PHP'>Drupal, Joomla, WordPress, DataLife Engine, Xaraya</Entry>
+      <Entry type = 'Exotic'>Architecture and assembler MOStech 6502 (Apple II, etc.)</Entry>
+    </Group>
+    <Group type = 'Practical'>
+      <Entry>Development system software for *NIX systems</Entry>
+      <Entry>Development sites <small>(News portals, Internet shops, corporate portals)</small></Entry>
+      <Entry>Administration *NIX systems (Apache, Mysql, security, SSH)</Entry>
+      <Entry>Development terms of reference</Entry>
+      <Entry>Preparation of technical design</Entry>
+      <Entry>Development of web-based application, protection</Entry>
+      <Entry>Migrating static sites to automated management systems (CMS)</Entry>
+      <Entry>SEO (Search Engine Optimization)</Entry>
+      <Entry>Development of database applications</Entry>
+      <Entry>Development of application systems (Windows, Linux)</Entry>
+      <Entry>Development of automated systems</Entry>
+      <Entry>Optimizing application code</Entry>
+      <Entry>Optimization of SQL queries</Entry>
+      <Entry>The introduction of applications and automated systems</Entry>
+      <Entry>Administration *NIX systems, optimization</Entry>
+    </Group>
+
+  </Skills>
+
   
-  <Education>
-    <Entry>
-      <Period From = '2003' To = '2009' />
-      <Degree>Master's Degree in Computer Science</Degree>
-      <Institution>Volgograd State Technical University</Institution>
-      <City>Volgograd</City>
-      <Grade>GPA of 3,6 on a 4.0 scale</Grade>
-      <Description>Automated systems for information processing and management</Description>
-<!--% \cventry{2000-\-2002}{}{Volgograd State University}{Volgograd}{\textit{}}{Radiophysics}  % arguments 3 to 6 are optional-->
-    </Entry>
-<!--    <Thesis>
-      <Title>Web search engine fellow travellers</Title>
-      <Supervisors>A.A.Kizim</Supervisors>
-      <Description>Thesis introduce requirements specification to the system "fellow traveller": common information about automatized websystem and time constraints of developement, system creation goals and criterions of efficiency, search process of fellow traveller, requirements to functional part of system and to its ergonomics. Thesis consist of requirements specification to the system, preliminary design, system prototype,  user and administration manual</Description>
-    </Thesis>-->
-  </Education>
+  <Links>
+    <!--Portfolio>
+            <Entry type = ""
+                xlink:title = "See it in porfolio" 
+                xlink:role = "locator" 
+                xlink:href ="http://vaultsoft.ru/portfolio" 
+                xlink:actuate = "onRequest" 
+                xlink:show = "new" >http://vaultsoft.ru/portfolio</Entry>
+
+        </Portfolio-->
+        <Profiles>
+            <Entry type = "LinkedIn"
+                   xlink:title = "LinkedIn profile" 
+                   xlink:role = "locator" 
+                   xlink:href ="http://www.linkedin.com/pub/andrey-zakharov/21/99a/56a" 
+                   xlink:actuate = "onRequest" 
+                   xlink:show = "new" >http://www.linkedin.com/pub/andrey-zakharov/21/99a/56a</Entry>
+
+            <Entry type = "Bitbucket"
+                   xlink:title = "" 
+                   xlink:role = "locator" 
+                   xlink:href ="https://bitbucket.org/andrey_zakharov_" 
+                   xlink:actuate = "onRequest" 
+                   xlink:show = "new" >https://bitbucket.org/andrey_zakharov_</Entry>
+
+           	<Entry type = "GitHub"
+                   xlink:title = "" 
+                   xlink:role = "locator" 
+                   xlink:href ="https://github.com/andrey-zakharov" 
+                   xlink:actuate = "onRequest" 
+                   xlink:show = "new" >https://github.com/andrey-zakharov</Entry>
+                   
+            <Entry type = "Brainbench"
+                   xlink:title = "Brainbench Public Transcript" 
+                   xlink:role = "locator" 
+                   xlink:href ="http://www.brainbench.com/transcript.jsp?pid=8883643" 
+                   xlink:actuate = "onRequest" 
+                   xlink:show = "new" >http://www.brainbench.com/transcript.jsp?pid=8883643</Entry>
+
+            <Entry type = "Drupal.org"
+                   xlink:title = "" 
+                   xlink:role = "locator" 
+                   xlink:href ="http://drupal.org/user/222552" 
+                   xlink:actuate = "onRequest" 
+                   xlink:show = "new" >http://drupal.org/user/222552</Entry>
+
+        </Profiles>
+    </Links>
   
   <Experience>
     <Vocational>
@@ -78,7 +155,27 @@ opportunity for advancement.
           </Description>
 
           <Achievement lang="en">build with team ready to market leading-edge product</Achievement>
-          <Techs>Dart, Polymer, Fantom, SkySpark, Linux, Embedded, IoT, Teamcity, Selenium</Techs>
+          <Techs>Dart, Polymer, Kotlin, Fantom, SkySpark, Linux, Embedded, IoT, Teamcity, Selenium</Techs>
+        </Entry>
+
+        <Entry Job = "Team Lead">
+          <Period From =  "July 2017" To = "August 2018" />
+          <Job>Team Lead</Job>
+          <Employer>
+            <Name>Wargaming.net</Name>
+            <City>Saint Petersburg</City>
+            <Description>
+                An award-winning online game developer and publisher. One of the leaders in the free-to-play MMO market, the company delivers authentic gaming experiences and services across PC, console and mobile platforms.
+            </Description>
+            <Logo>wargaming.png</Logo>
+          </Employer>
+
+          <Description>
+            Server and game logic programming, as well as in client-server interaction, working with databases, and passionate about new technologies integration.
+          </Description>
+
+          <Achievement lang="en"></Achievement>
+          <Techs>Pyhton, C++, Bigworld</Techs>
         </Entry>
         
         <Entry Job = 'Senior Software Engineer'>
@@ -359,50 +456,24 @@ opportunity for advancement.
     <Language name = 'Russian' skill = 'Mother tongue' />
     <Language name = 'English' skill = 'Spoken and written'>Technical --- fine</Language>
   </Languages>
-  
-  <Skills>
-    <Group type = 'Tools'>
-      <!-- EVERYTHING in the world :) -->
-      <Entry type = 'Technologies'>.NET, J2EE, EJB, COM/DCOM/COM+, OLE/ActiveX, AJAX</Entry>
-      <Entry type = 'OS'>MS Windows, Linux (Debian), QNX, FreeBSD, MSDOS, Apple DOS 3.3</Entry>
-      <Entry type = 'DBMS'>MySQL, PostgreSQL, MS SQL, SQLite, MS Access, Oracle</Entry>
-      <Entry type = 'Related Software'>MS Office, MS Visio, MS Project, SSH, Bash, Kile, soapUI</Entry>
-      <Entry type = 'Development'>MS Visual Studio, Netbeans IDE, Eclipse IDE, code reviewer, JIRA, GDB, Borland Delphi</Entry>
-      <Entry type = 'SCM'>CVS, SVN, Perforce, git</Entry>
-    </Group>
-    <Group type = 'Programming languages'>
-      <!-- it doesnt MATTER at all -->
-      <Entry type = 'C/C++'>STL, GCC, Boost, wxWidgets, Qt, Win32 API, GDI, WinSock, libxml, MySQL++, gSOAP, CppUnit, OpenSSL</Entry>
-      <Entry type = 'PHP'>Drupal, Joomla, WordPress, DataLife Engine, Xaraya</Entry>
-      <Entry type = 'JavaScript'>DOM, AJAX, JQuery, ExtJS</Entry>
-      <Entry type = 'Java'>JSF, RichFaces</Entry>
-      <Entry type = 'C#'>.NET 2.0, WinForms</Entry>
-      <Entry type = 'SQL'>MySQL, SQLite, T-SQL</Entry>
-      <Entry type = 'Visual Basic'>VBA, MS Word, MS Excel, MS Access, MS Outlook</Entry>
-      <Entry type = 'Markup'>HTML5, XHTML, CSS3, XML, XSL</Entry>
-      <!--Entry type = 'GNU'>BASH, SSH, sed, awk, \LaTeXe</Entry-->
-      <Entry type = 'Scripting'>BASH, Perl, Lua, Python, Groovy, sed, awk, \LaTeXe</Entry>
-      <Entry type = 'Exotic'>Architecture and assembler MOStech 6502 (Apple II, etc.)</Entry>
-    </Group>
-    <Group type = 'Practical'>
-      <Entry>Development system software for *NIX systems</Entry>
-      <Entry>Development sites <small>(News portals, Internet shops, corporate portals)</small></Entry>
-      <Entry>Administration *NIX systems (Apache, Mysql, security, SSH)</Entry>
-      <Entry>Development terms of reference</Entry>
-      <Entry>Preparation of technical design</Entry>
-      <Entry>Development of web-based application, protection</Entry>
-      <Entry>Migrating static sites to automated management systems (CMS)</Entry>
-      <Entry>SEO (Search Engine Optimization)</Entry>
-      <Entry>Development of database applications</Entry>
-      <Entry>Development of application systems (Windows, Linux)</Entry>
-      <Entry>Development of automated systems</Entry>
-      <Entry>Optimizing application code</Entry>
-      <Entry>Optimization of SQL queries</Entry>
-      <Entry>The introduction of applications and automated systems</Entry>
-      <Entry>Administration *NIX systems, optimization</Entry>
-    </Group>
 
-  </Skills>
+  
+  <Education>
+    <Entry>
+      <Period From = '2003' To = '2009' />
+      <Degree>Master's Degree in Computer Science</Degree>
+      <Institution>Volgograd State Technical University</Institution>
+      <City>Volgograd</City>
+      <Grade>GPA of 3,6 on a 4.0 scale</Grade>
+      <Description>Automated systems for information processing and management</Description>
+<!--% \cventry{2000-\-2002}{}{Volgograd State University}{Volgograd}{\textit{}}{Radiophysics}  % arguments 3 to 6 are optional-->
+    </Entry>
+<!--    <Thesis>
+      <Title>Web search engine fellow travellers</Title>
+      <Supervisors>A.A.Kizim</Supervisors>
+      <Description>Thesis introduce requirements specification to the system "fellow traveller": common information about automatized websystem and time constraints of developement, system creation goals and criterions of efficiency, search process of fellow traveller, requirements to functional part of system and to its ergonomics. Thesis consist of requirements specification to the system, preliminary design, system prototype,  user and administration manual</Description>
+    </Thesis>-->
+  </Education>
   
   <Programs>
       <!-- <Group type = 'Author programs and scripts'> -->
@@ -445,38 +516,7 @@ opportunity for advancement.
         Url = "http://vaultsoft.ru/phpchat.html"
         Year = "2003" />
   </Bibliography>
-  
-  <Links>
-    <!--Portfolio>
-            <Entry type = ""
-                xlink:title = "See it in porfolio" 
-                xlink:role = "locator" 
-                xlink:href ="http://vaultsoft.ru/portfolio" 
-                xlink:actuate = "onRequest" 
-                xlink:show = "new" >http://vaultsoft.ru/portfolio</Entry>
 
-        </Portfolio-->
-        <Profiles>
-            <Entry type = "LinkedIn"
-                   xlink:title = "LinkedIn profile" 
-                   xlink:role = "locator" 
-                   xlink:href ="http://www.linkedin.com/pub/andrey-zakharov/21/99a/56a" 
-                   xlink:actuate = "onRequest" 
-                   xlink:show = "new" >http://www.linkedin.com/pub/andrey-zakharov/21/99a/56a</Entry>
-            <Entry type = "Brainbench"
-                   xlink:title = "Brainbench Public Transcript" 
-                   xlink:role = "locator" 
-                   xlink:href ="http://www.brainbench.com/transcript.jsp?pid=8883643" 
-                   xlink:actuate = "onRequest" 
-                   xlink:show = "new" >http://www.brainbench.com/transcript.jsp?pid=8883643</Entry>
-            <Entry type = "Drupal.org"
-                   xlink:title = "" 
-                   xlink:role = "locator" 
-                   xlink:href ="http://drupal.org/user/222552" 
-                   xlink:actuate = "onRequest" 
-                   xlink:show = "new" >http://drupal.org/user/222552</Entry>
-        </Profiles>
-    </Links>
 </Document>
 
 

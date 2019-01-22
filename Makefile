@@ -7,7 +7,7 @@ SED = sed
 VIEW_PDF ?= okular
 VIEW_HTML ?= x-www-browser
 
-LATEX2PDF = pdflatex -interaction=nonstopmode
+LATEX2PDF = pdflatex -file-line-error -interaction=nonstopmode
 XSLTPROC = xsltproc --stringparam lang $(PROJ_LANG)
 PROJ = resume
 PROJ_LANG ?= en
@@ -18,7 +18,7 @@ TARGET_XML = $(PROJ).$(PROJ_LANG).xml
 
 XML2TEX_XSLT = $(PROJ).tex.xsl
 
-.PHONY: preview preview-pdf preview-html all pdf xml
+.PHONY: preview preview-pdf preview-html all pdf xml $(PROJ).xml
 
 #default
 all: pdf html
@@ -34,10 +34,10 @@ preview-pdf:
 pdf: $(TARGET_TEX)
 	@$(LATEX2PDF) $(TARGET_TEX)
 
-$(PROJ).%:
+$(PROJ).%: $(PROJ).xml
 	@$(XSLTPROC) --output $(@:$*=$(PROJ_LANG).$*) $@.xsl $(PROJ).xml
 
-$(TARGET_TEX):
+$(TARGET_TEX): $(PROJ).xml
 	( $(SED) 's!C#!C\\#!' $(PROJ).xml | $(XSLTPROC) $(XML2TEX_XSLT) - | $(SED) 's!&!\\&!' > $(TARGET_TEX))
 
 clean:

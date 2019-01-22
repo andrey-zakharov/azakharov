@@ -26,10 +26,12 @@
 \addtolength{\parskip}{-5pt}
 \AtBeginDocument{\recomputelengths}
   <xsl:apply-templates select = '/Document/Meta' />
-  \begin{document}\maketitle
+  \begin{document}
+  \maketitle
     <xsl:apply-templates select = '/Document/Meta/following-sibling::*' />
   \end{document}
   </xsl:template>
+  
   <!-- Meta -->
   <xsl:template match="Period">\raggedleft{<xsl:value-of select = "@From" />\,---\hbox to .8em {}}\\
   \raggedright{<xsl:value-of select = "@To" />}</xsl:template>
@@ -45,6 +47,7 @@
   <xsl:template match = '//Personal/Email'>\email{<xsl:value-of select = '.' />}</xsl:template>
   <xsl:template match = '//Personal/Extra[ @type = "skype" ]'>
     \extrainfo{skype: \color{black}<xsl:value-of select = '.' />}</xsl:template>
+<xsl:template match = '//Personal/Extra'>\extrainfo{<xsl:value-of select = '.' />}</xsl:template>
   <xsl:template match = '//Personal/Photo'>\photo[<xsl:value-of select = '@width' />]{<xsl:value-of select = '.' />}</xsl:template>
   
 
@@ -58,8 +61,12 @@
     
   <xsl:template match = '/Document/*//Entry'><xsl:choose>
     <xsl:when test = '@type'>\cvline{<xsl:value-of select = '@type' />}</xsl:when>
-    <xsl:otherwise>\cvlistitem</xsl:otherwise></xsl:choose>{<xsl:value-of select = '.' />}</xsl:template>
-    
+    <xsl:otherwise>\cvlistitem</xsl:otherwise></xsl:choose>{<xsl:value-of select = '.' />}
+  </xsl:template>
+
+  <xsl:template match = "//Entry[@xlink:href]">\cvline{<xsl:value-of select = '@type' />}{\url{<xsl:value-of select = '@xlink:href' />}}
+  </xsl:template>
+
   <xsl:template match = '//Education/Entry'>\cventry{<xsl:apply-templates select = 'Period' />}{<xsl:value-of select = 'Degree' />}{<xsl:value-of select = 'Institution' />}{<xsl:value-of select = 'City' />}{\textit{<xsl:value-of select = 'Grade' />}}{<xsl:value-of select = 'Description' />}</xsl:template>
   
   <xsl:template match = '//Education/Thesis'>
