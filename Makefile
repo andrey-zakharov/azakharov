@@ -1,6 +1,18 @@
 #
+# Makefiles - is the simplest declarative form of processing graph steps
+# I LOVE everything simple but powerful.
 #
-#
+# Could be called with env vars:
+#  PROJ_LANG=[ru,en] make md
+# Valid targets:
+#  pdf
+#  html
+#  txt
+
+# Big TO BE DONE: separate build and dist folders from sources
+
+PROJ = 'Andrey Zakharov'
+PROJ_LANG ?= en
 
 RM = rm -f
 SED = sed
@@ -9,8 +21,8 @@ VIEW_HTML ?= x-www-browser
 
 LATEX2PDF = pdflatex -file-line-error -interaction=nonstopmode
 XSLTPROC = xsltproc --stringparam lang $(PROJ_LANG)
-PROJ = resume
-PROJ_LANG ?= en
+
+
 TARGET_TEX = $(PROJ).$(PROJ_LANG).tex
 TARGET_HTML = $(PROJ).$(PROJ_LANG).html
 TARGET_PDF = $(PROJ).$(PROJ_LANG).pdf
