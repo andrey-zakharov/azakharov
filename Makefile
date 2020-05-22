@@ -1,6 +1,8 @@
 #
 # Makefiles - is the simplest declarative form of processing graph steps
 # I LOVE everything simple but powerful.
+# Here is dumpest computational flow graph xml -> pdf, html and it does not work :)
+# CI here? :)
 #
 # Could be called with env vars:
 #  PROJ_LANG=[ru,en] make md
@@ -11,7 +13,7 @@
 
 # Big TO BE DONE: separate build and dist folders from sources
 
-PROJ = 'Andrey Zakharov'
+PROJ = AndreyZakharov
 PROJ_LANG ?= en
 
 RM = rm -f
@@ -28,7 +30,7 @@ TARGET_HTML = $(PROJ).$(PROJ_LANG).html
 TARGET_PDF = $(PROJ).$(PROJ_LANG).pdf
 TARGET_XML = $(PROJ).$(PROJ_LANG).xml
 
-XML2TEX_XSLT = $(PROJ).tex.xsl
+XML2TEX_XSLT = resume.tex.xsl
 
 .PHONY: preview preview-pdf preview-html all pdf xml $(PROJ).xml
 
@@ -46,8 +48,9 @@ preview-pdf:
 pdf: $(TARGET_TEX)
 	@$(LATEX2PDF) $(TARGET_TEX)
 
+# I've made it for support xml -> 'all others' converter
 $(PROJ).%: $(PROJ).xml
-	@$(XSLTPROC) --output $(@:$*=$(PROJ_LANG).$*) $@.xsl $(PROJ).xml
+	@$(XSLTPROC) --output $(@:$*=$(PROJ_LANG).$(PROJ) $@.xsl $(PROJ).xml
 
 $(TARGET_TEX): $(PROJ).xml
 	( $(SED) 's!C#!C\\#!' $(PROJ).xml | $(XSLTPROC) $(XML2TEX_XSLT) - | $(SED) 's!&!\\&!' > $(TARGET_TEX))

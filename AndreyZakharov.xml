@@ -8,9 +8,9 @@
       <FamilyName>Zakharov</FamilyName>
       <Photo width='85pt'>Andrey.jpg</Photo>
       <Address>Russia, Saint Petersburg</Address>
-      <Phone type='cell'>+7(965)072 45 87</Phone>
-      <Email>aazaharov81@gmail.com</Email>
-      <Extra type='skype'>vaulter2010</Extra>
+      <Phone type='cell'>+79-OK-0-sail-up</Phone>
+      <Email>andrey.al.zakharov@gmail.com</Email>
+      <!--<Extra type='skype'>vaulter2010</Extra>-->
       <Extra>20+ years of software engineering</Extra>
     </Personal>
 
@@ -19,16 +19,14 @@
       <FamilyName>Захаров</FamilyName>
       <Photo width='85pt'>Andrey.jpg</Photo>
       <Address>Россия, г.Санкт-Петербург</Address>
-      <Phone type='cell'>+7(965)072 45 87</Phone>
-      <Email>aazaharov81@gmail.com</Email>
-      <Extra type='skype'>vaulter2010</Extra>
+      <Phone type='cell'>+79-OK-0-sail-up</Phone>
+      <Email>andrey.al.zakharov@gmail.com</Email>
+      <!--<Extra type='skype'>vaulter2010</Extra>-->
     </Personal>
   </Meta>
   
   <Objective>
-  To obtain a responsible and challenging position with a progressive company
-where my work experience will have valuable application and utilization of my
-opportunity for advancement.
+    Partnership
   </Objective>
   
   <Strengths>
@@ -43,6 +41,24 @@ opportunity for advancement.
   </Strengths>
     
   <Skills>
+      <Group type = 'Practical'>
+          <Entry>System architecture</Entry>
+          <Entry>Product management</Entry>
+          <Entry>Development system software for *NIX systems</Entry>
+          <Entry>Development sites <small>(News portals, Internet shops, corporate portals)</small></Entry>
+          <Entry>Administration *NIX systems (Apache, Mysql, security, SSH)</Entry>
+          <Entry>Development terms of reference</Entry>
+          <Entry>Development of web-based application, protection</Entry>
+          <Entry>Migrating static sites to automated management systems (CMS)</Entry>
+          <Entry>SEO (Search Engine Optimization)</Entry>
+          <Entry>Development of database applications</Entry>
+          <Entry>Development of application systems (Windows, Linux)</Entry>
+          <Entry>Development of automated systems</Entry>
+          <Entry>Optimizing application code</Entry>
+          <Entry>Optimization of SQL queries</Entry>
+          <Entry>The introduction of applications and automated systems</Entry>
+          <Entry>Administration *NIX systems, optimization</Entry>
+      </Group>
     <Group type = 'Tools'>
       <!-- EVERYTHING in the world :) -->
       <Entry type = 'Technologies'>.NET, J2EE, EJB, COM/DCOM/COM+, OLE/ActiveX, AJAX</Entry>
@@ -66,23 +82,7 @@ opportunity for advancement.
       <Entry type = 'PHP'>Drupal, Joomla, WordPress, DataLife Engine, Xaraya</Entry>
       <Entry type = 'Exotic'>Architecture and assembler MOStech 6502 (Apple II, etc.)</Entry>
     </Group>
-    <Group type = 'Practical'>
-      <Entry>Development system software for *NIX systems</Entry>
-      <Entry>Development sites <small>(News portals, Internet shops, corporate portals)</small></Entry>
-      <Entry>Administration *NIX systems (Apache, Mysql, security, SSH)</Entry>
-      <Entry>Development terms of reference</Entry>
-      <Entry>Preparation of technical design</Entry>
-      <Entry>Development of web-based application, protection</Entry>
-      <Entry>Migrating static sites to automated management systems (CMS)</Entry>
-      <Entry>SEO (Search Engine Optimization)</Entry>
-      <Entry>Development of database applications</Entry>
-      <Entry>Development of application systems (Windows, Linux)</Entry>
-      <Entry>Development of automated systems</Entry>
-      <Entry>Optimizing application code</Entry>
-      <Entry>Optimization of SQL queries</Entry>
-      <Entry>The introduction of applications and automated systems</Entry>
-      <Entry>Administration *NIX systems, optimization</Entry>
-    </Group>
+
 
   </Skills>
 
@@ -139,6 +139,29 @@ opportunity for advancement.
   <Experience>
     <Vocational>
         <Entry Job = "Team Lead">
+            <Period From =  "Dec 2019" To = "Now" />
+            <Job>Team Lead, Software Architect</Job>
+            <Employer>
+                <Name>Buidl.ru</Name>
+                <City>Saint Petersburg</City>
+                <Description>
+                    High-frequency exchange with cryptocurrencies support /prizmbit.com/.
+                </Description>
+            </Employer>
+
+            <Description>
+                Support existing exchange service app. Continuous developing, refactoring, improving, delivering product to customer. Lead team of innovative product for high-frequency trading services (exchange). Completely built up team development processes including CI. Hiring, reviewing and teaching team.
+            </Description>
+
+            <Achievement lang="en">
+                Build with team application from early prototype to production.
+                Reduced overall response time of system up to 3 times.
+                Driven adoption of new technologies in the team.
+            </Achievement>
+            <Techs>DDD, Linux</Techs>
+        </Entry>
+
+        <Entry Job = "Team Lead">
           <Period From =  "May 2015" To = "Now" />
           <Job>Team Lead</Job>
           <Employer>
@@ -155,7 +178,7 @@ opportunity for advancement.
           </Description>
 
           <Achievement lang="en">build with team ready to market leading-edge product</Achievement>
-          <Techs>Dart, Polymer, Kotlin, Fantom, SkySpark, Linux, Embedded, IoT, Teamcity, Selenium</Techs>
+          <Techs>Kotlin (web socket server), Typescript, Vue, Dart, Polymer, Fantom, Linux, Embedded, IoT, Teamcity, SkySpark, Selenium</Techs>
         </Entry>
 
         <Entry Job = "Team Lead">
