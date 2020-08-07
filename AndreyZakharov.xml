@@ -31,33 +31,32 @@
   
   <Strengths>
     <Entry>Exceptional communication and collaboration skills.</Entry>
-    <Entry>Outstanding technical skill.</Entry>
-    <Entry>Able to involve, improve or provide any software development processes.</Entry>
+    <Entry>Outstanding technical skills.</Entry>
+    <Entry>Able to apply and improve any kind of software development processes.</Entry>
     <Entry>Familiar with modern high-load solutions.</Entry>
     <Entry>Expert in working with various operating systems.</Entry>
     <Entry>Professional Internet based software development experience using various Internet technologies.</Entry>
     <Entry>Highly skilled in customer service.</Entry>
-    <Entry>Good deliver output in less time without losing efficiency.</Entry>
   </Strengths>
     
   <Skills>
       <Group type = 'Practical'>
           <Entry>System architecture</Entry>
           <Entry>Product management</Entry>
+          <Entry>Formulating functional and technical requirements</Entry>
           <Entry>Development system software for *NIX systems</Entry>
-          <Entry>Development sites <small>(News portals, Internet shops, corporate portals)</small></Entry>
-          <Entry>Administration *NIX systems (Apache, Mysql, security, SSH)</Entry>
-          <Entry>Development terms of reference</Entry>
-          <Entry>Development of web-based application, protection</Entry>
-          <Entry>Migrating static sites to automated management systems (CMS)</Entry>
-          <Entry>SEO (Search Engine Optimization)</Entry>
           <Entry>Development of database applications</Entry>
-          <Entry>Development of application systems (Windows, Linux)</Entry>
+          <Entry>Development of application systems (Windows/*NIX)</Entry>
           <Entry>Development of automated systems</Entry>
           <Entry>Optimizing application code</Entry>
           <Entry>Optimization of SQL queries</Entry>
-          <Entry>The introduction of applications and automated systems</Entry>
-          <Entry>Administration *NIX systems, optimization</Entry>
+          <Entry>Administration *NIX systems (Apache, Mysql, security, SSH)</Entry>
+          <Entry>Tuning *NIX systems for optimal performance</Entry>
+          <Entry>Website Development <small>(News portals, Internet shops, corporate portals)</small></Entry>
+          <Entry>Development of web-based applications</Entry>
+          <Entry>Migrating static sites to automated management systems (CMS)</Entry>
+          <Entry>Website security</Entry>
+          <Entry>SEO (Search Engine Optimization)</Entry>
       </Group>
     <Group type = 'Tools'>
       <!-- EVERYTHING in the world :) -->
@@ -150,11 +149,11 @@
             </Employer>
 
             <Description>
-                Support existing exchange service app. Continuous developing, refactoring, improving, delivering product to customer. Lead team of innovative product for high-frequency trading services (exchange). Completely built up team development processes including CI. Hiring, reviewing and teaching team.
+                Support of the existing exchange service application. Ongoing development, improvement, refactoring and delivery of product to customers. Leading the team to develop innovative product for high-frequency trading services (exchange). Built up team development processes from scratch, including CI. Hiring, leading and mentoring the team.
             </Description>
 
             <Achievement lang="en">
-                Build with team application from early prototype to production.
+                As the team lead, built the application from early prototype to production.
                 Reduced overall response time of system up to 3 times.
                 Driven adoption of new technologies in the team.
             </Achievement>
@@ -174,7 +173,7 @@
           </Employer>
 
           <Description>
-            Lead small team of innovative product for building automation services (IoT). Progress application from early prototype to market product. Completely built up team development processes including CI. Hiring, reviewing and teaching team.
+            Lead a small team to develop innovative product for building automation services (IoT). Built the application from early prototype to a market product. Completely built up team development processes including CI. Hiring, reviewing code and mentoring the team.
           </Description>
 
           <Achievement lang="en">build with team ready to market leading-edge product</Achievement>
@@ -194,7 +193,7 @@
           </Employer>
 
           <Description>
-            Server and game logic programming, as well as in client-server interaction, working with databases, and passionate about new technologies integration.
+            Server and game logic programming, as well as in client-server interaction, working with databases, and passionately driving integration of the new technologies into the pipeline.
           </Description>
 
           <Achievement lang="en"></Achievement>
@@ -215,11 +214,11 @@
                 <Logo>oracle.png</Logo>
             </Employer>
             <Description>
-        As a member of the software engineering division (VM team, GC specialization), I assist in defining and developing software for tasks associated with the developing, debugging or designing of software applications or operating systems. Provide technical leadership to other software developers. Specify, design and implement modest changes to existing software architecture to meet changing needs.
+        As a member of the software engineering division (VM team, GC specialization), I assist in defining and developing software for tasks associated with the developing, debugging or designing of software applications or operating systems. Provide technical leadership to other software developers. Specify, design and implement modest changes to existing software architecture to meet changing requirements.
       </Description>  
 
-      <Achievement lang = "en">analyze test results, automate processes and write code to test code for JVM.</Achievement>
-      <Achievement lang = "en">writing robust, reliable, repeatable and maintainable tests that find issues early and cover the area of the component under testing JVM.</Achievement>
+      <Achievement lang = "en">analyze test results, automate processes and write code to test JVM code.</Achievement>
+      <Achievement lang = "en">writing robust, reliable, repeatable and maintainable tests that find issues early and cover the area of the JVM components.</Achievement>
       <Achievement lang = "en">build frameworks and tools used for testing JVM. </Achievement>
             
             <Techs>Java, C++, various internals tools</Techs>
@@ -235,7 +234,7 @@
                 <Logo>tensor.jpg</Logo>
             </Employer>
             <Description>
-                Porting large scale application back-end to Linux. Developing international support in back-end. Testing and supporting back-end application.
+                Porting large scale application back-end to Linux. Developing internationalization support in back-end. Testing and supporting back-end applications.
             </Description>
             <Techs>C++, Boost, MSVC, GCC, Python.</Techs>
         </Entry>
@@ -252,8 +251,8 @@
         <Description>
       Working on high-load backend solutions (C++, FreeBSD) for social networking service, developing replication subsystem between highloaded servers.
       Developing and supporting set of internal tools for testing, building and supporting entire project.
-      Research standart PHP modules for performance issues and developing optimized solutions.
-      Recruit and supervise computer engineers and programmers. Coaching colleagues about efficient use of set of IT tecnologies.
+      Investigated standard PHP modules for performance issues and developed optimized solutions.
+      Recruit and supervise software engineers. Coaching colleagues about efficient use of a number of IT tecnologies.
     </Description>
     
     <Achievement lang = "ru">Улучшил процесс сборки для всего проекта</Achievement>
@@ -282,7 +281,7 @@
       Developing and supporting set of internal tools for testing, inviting, monitoring, etc. 
       Consulting, prototyping and developing corporal internet sites. 
       Plan, control and evaluate the operations of information systems. 
-      Recruit and supervise computer engineers and programmers. 
+      Recruit and supervise software engineers. 
     </Description>
     
     <Achievement lang = "ru">Учавствовал в запуске игры <a href="http://www.swtor.com/">SWTOR</a></Achievement>
@@ -370,7 +369,7 @@
             xlink:role = "locator" 
             xlink:href = "http://vaultsoft.ru/portfolio/sverka" 
             xlink:actuate = "onRequest" 
-            xlink:show = "new" >sverka</go>). Control the budget and expenditures of the projects. Develop and implement policies and procedures for electronic data processing and computer systems operations and development.</Description>
+            xlink:show = "new" >sverka</go>). Control the budgets and expenditures of the projects. Develop and implement policies and procedures for electronic data processing and computer systems operations and development.</Description>
         <Achievement lang = "ru">Автоматизировал документооборот компании</Achievement>
         <Achievement lang = "en">Implemented web system to workflow orders and sales of company</Achievement>
         <Achievement lang = "ru">Разработал распределенную систему интернет магазинов компании</Achievement>
