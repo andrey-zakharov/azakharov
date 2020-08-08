@@ -17,11 +17,12 @@ jobs:
       run: sudo apt-get install -y texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra xsltproc
     - name: make
       run: make || true
-    - name: publish
+    - name: Commit files
       run: |
-        git stage *.pdf
-        git commit -m"$github.event_name $github.ref"
-        git push -f origin
-       
-    - name: make distcheck
-      run: make distcheck
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git commit -m "Add changes" -a
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
