@@ -16,8 +16,12 @@ jobs:
     - name: prepare
       run: sudo apt-get install -y texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra xsltproc
     - name: make
-      run: make
-    - name: make check
-      run: make check
+      run: make || true
+    - name: publish
+      run: |
+        git stage *.pdf
+        git commit -m"$github.event_name $github.ref"
+        git push -f origin
+       
     - name: make distcheck
       run: make distcheck
