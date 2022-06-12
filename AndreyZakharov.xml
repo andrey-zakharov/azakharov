@@ -11,7 +11,7 @@
       <Phone type='cell'>+79-OK-0-sail-up</Phone>
       <Email>andrey.al.zakharov@gmail.com</Email>
       <!--<Extra type='skype'>vaulter2010</Extra>-->
-      <Extra>20+ years of software engineering</Extra>
+      <Extra>10+ years of commercial software engineering</Extra>
     </Personal>
 
     <Personal lang = "ru">
@@ -26,7 +26,8 @@
   </Meta>
   
   <Objective>
-    Partnership
+    <!-- Partnership, contract job, full-time job, part-time job -->
+    decrease entropy
   </Objective>
   
   <Strengths>
@@ -137,8 +138,26 @@
   
   <Experience>
     <Vocational>
+           <Entry Job = "Senior Software Engineer">
+            <Period From = "Mar 2021" To = "May 2022" />
+            <Job>Developing multiplayer game</Job>
+            <Employer>
+                <Name>Ciliz</Name>
+                <Description>
+                    Ciliz is a game development company. Our games are available at major social networks (Facebook, OK, VK) and mobile platforms.
+                </Description>
+            </Employer>
+
+            <Description>
+                Support of the existing game application. Ongoing development, improvement, refactoring and delivery of product to customers.
+            </Description>
+
+            <Achievement lang="en">
+            </Achievement>
+            <Techs>Android, Kotlin, Typescript</Techs>
+        </Entry>
         <Entry Job = "Team Lead">
-            <Period From =  "Dec 2019" To = "Now" />
+            <Period From =  "Dec 2019" To = "Nov 2020" />
             <Job>Team Lead, Software Architect</Job>
             <Employer>
                 <Name>Buidl.ru</Name>
