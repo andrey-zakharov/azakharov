@@ -12,14 +12,14 @@
   
   <xsl:template match = "/">
 %
-\documentclass[10pt,a4paper]{moderncv}
+\documentclass[11pt,a4paper]{moderncv}
 %\renewcommand*{\addresssymbol}{\CircledA}
 \moderncvtheme[green]{classic}
 %\usepackage[T2A]{fontenc}
 \usepackage[utf8]{inputenc}
 %\usepackage[russian]{babel}
 \definecolor{addresscolor}{rgb}{0.35,0.35,0.35}
-%\usepackage{lmodern}
+\usepackage{lmodern}
 
 \usepackage[scale=0.9]{geometry}
 \usepackage{url}
@@ -34,7 +34,8 @@
   
   <!-- Meta -->
   <xsl:template match="Period">\raggedleft{<xsl:value-of select = "@From" />\,---\hbox to .8em {}}\\
-  \raggedright{<xsl:value-of select = "@To" />}</xsl:template>
+    \raggedright{<xsl:value-of select = "@To" />}
+  </xsl:template>
   
   <xsl:template match = '/Document/Meta'><xsl:apply-templates select = "*[@lang=$lang]" /></xsl:template>
   <xsl:template match = '/Document/Meta/Personal'><xsl:apply-templates /></xsl:template>
@@ -47,18 +48,17 @@
   <xsl:template match = '//Personal/Email'>\email{<xsl:value-of select = '.' />}</xsl:template>
   <xsl:template match = '//Personal/Extra[ @type = "skype" ]'>
     \extrainfo{skype: \color{black}<xsl:value-of select = '.' />}</xsl:template>
-<xsl:template match = '//Personal/Extra'>\extrainfo{<xsl:value-of select = '.' />}</xsl:template>
+  <xsl:template match = '//Personal/Extra'>\extrainfo{<xsl:value-of select = '.' />}</xsl:template>
   <xsl:template match = '//Personal/Photo'>\photo[<xsl:value-of select = '@width' />]{<xsl:value-of select = '.' />}</xsl:template>
-  
 
   <xsl:template match = '/Document/*'>
     \section{<xsl:value-of select = 'name()' />}<xsl:apply-templates /></xsl:template>
-  
+
   <xsl:template match = '/Document/*/*'>
     \subsection{<xsl:value-of select = 'name()' />}<xsl:apply-templates /></xsl:template>
-    
+
   <xsl:template match = '/Document/Experience/Vocational'><xsl:apply-templates /></xsl:template>
-    
+
   <xsl:template match = '/Document/*//Entry'><xsl:choose>
     <xsl:when test = '@type'>\cvline{<xsl:value-of select = '@type' />}</xsl:when>
     <xsl:otherwise>\cvlistitem</xsl:otherwise></xsl:choose>{<xsl:value-of select = '.' />}
@@ -80,7 +80,8 @@
   
   
   <xsl:template match = '//Experience//Entry'>\cventry{<xsl:apply-templates select = 'Period' />}{<xsl:value-of select = '@Job' />}{<xsl:value-of select = 'Employer/Name' />}%
-    {<xsl:value-of select = 'Employer/City' />}{<xsl:copy-of select = 'Employer/Description' />}{<xsl:if test = 'Employer/Customer'>Customer: <xsl:value-of select = 'Employer/Customer' /></xsl:if>\\<xsl:apply-templates select = 'Description' />\newline{}
+    {<xsl:value-of select = 'Employer/City' />}{<xsl:copy-of select = 'Employer/Description' />}{<xsl:if test = 'Employer/Customer'>Customer: <xsl:value-of select = 'Employer/Customer' /></xsl:if>\\<xsl:apply-templates select = 'Description' />%\newline{}
+    <xsl:apply-templates select = 'Project' />
     <xsl:apply-templates select="Achievement[@lang=$lang]" />}<xsl:comment>\newline{}
     Key technologies and languages: <xsl:value-of select = 'Techs' /></xsl:comment></xsl:template>
     

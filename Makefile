@@ -12,7 +12,7 @@
 #  txt
 
 # Big TO BE DONE: separate build and dist folders from sources
-
+# choco install texlive xsltproc
 PROJ = AndreyZakharov
 PROJ_LANG ?= en
 
@@ -48,12 +48,18 @@ preview-pdf:
 pdf: $(TARGET_TEX)
 	@$(LATEX2PDF) $(TARGET_TEX)
 
-# I've made it for support xml -> 'all others' converter
-$(PROJ).%: $(PROJ).xml
-	@$(XSLTPROC) --output $(@:$*=$(PROJ_LANG).$(PROJ) $@.xsl $(PROJ).xml
+texlive.libs:
+	tlmgr.bat install moderncv
 
 $(TARGET_TEX): $(PROJ).xml
-	( $(SED) 's!C#!C\\#!' $(PROJ).xml | $(XSLTPROC) $(XML2TEX_XSLT) - | $(SED) 's!&!\\&!' > $(TARGET_TEX))
+	( $(SED) 's_C#_C\\\#_' $< | $(XSLTPROC) $(XML2TEX_XSLT) - | $(SED) 's_&_\\\&_' > $@ )
+
+# I've made it for support xml -> 'all others' converter
+#$(PROJ).%: $(PROJ).xml
+#	@$(XSLTPROC) --output $(@:$*=$(PROJ_LANG).$(PROJ) $@.xsl $(PROJ).xml
+ 
+$(TARGET_HTML): $(PROJ).xml
+	( $(SED) 's!C#!C\\#!' $(PROJ).xml | $(XSLTPROC) resume.html.xsl - | $(SED) 's!&!\\&!' > $(TARGET_HTML))
 
 clean:
 	$(RM) *.log *.out *~ *.aux \
