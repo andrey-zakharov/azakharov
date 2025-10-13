@@ -18,17 +18,17 @@ jobs:
       run: sudo apt-get install -y texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra xsltproc
     - name: make
       run: make || true
-    - name: Commit files
-      run: |
-        git diff
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git commit -m "[$GITHUB_WORKFLOW] $GITHUB_REF $GITHUB_SHA result by $GITHUB_EVENT_NAME" -a
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-    - name: Archive production artifacts
+    # - name: Commit files
+    #   run: |
+    #     git diff
+    #     git config --local user.email "action@github.com"
+    #     git config --local user.name "GitHub Action"
+    #     git commit -m "[$GITHUB_WORKFLOW] $GITHUB_REF $GITHUB_SHA result by $GITHUB_EVENT_NAME" -a
+    # - name: Push changes
+    #   uses: ad-m/github-push-action@master
+    #   with:
+    #     github_token: ${{ secrets.GITHUB_TOKEN }}
+    # - name: Archive production artifacts
       uses: actions/upload-artifact@v4
       with:
         name: en.pdf
