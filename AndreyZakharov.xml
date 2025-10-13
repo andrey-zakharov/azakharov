@@ -42,28 +42,19 @@
 
     <Skills>
         <Group type='Practical' lang='ru'>
-            Глубокие знания технологий и языков программирования
-            — Отличное владение [указать конкретные языки, например, Java, Python, C#] и современными фреймворками.
-            Опыт разработки масштабируемых и устойчивых систем
-            — Создание и поддержка высоконагруженных приложений с гарантией стабильности и производительности.
-            Навыки работы с базами данных
-            — Проектирование, оптимизация и администрирование реляционных и NoSQL баз данных.
-            Владение методологиями Agile и DevOps
-            — Участие в командной разработке с использованием Scrum/Kanban, автоматизация CI/CD процессов.
-            Опыт интеграции внешних API и сервисов
-            — Реализация интеграций с RESTful/SOAP API, микросервисная архитектура.
-            Проблемно-ориентированный подход и навыки решения сложных задач
-            — Анализ требований, выявление узких мест, разработка эффективных решений.
-            Хорошие коммуникативные навыки и опыт работы в команде
-            — Умение ясно излагать мысли, вести техническую документацию, менторство.
-            Постоянное обучение и адаптация к новым технологиям
-            — Быстрое освоение новых инструментов и практик, готовность к изменениям.
-            Опыт работы с инструментами контроля версий и управления проектами
-            — Git, Jira, Confluence и др.
-            Высокая ответственность и ориентация на результат
-            — Соблюдение сроков, качество кода и удовлетворённость заказчика.
+            <Entry>Глубокие знания технологий и языков программирования (Kotlin, Java, C#, C++, Typescript)</Entry>
+            <Entry>Опыт разработки масштабируемых и устойчивых систем</Entry>
+            <Entry>Проектирование, оптимизация и администрирование реляционных и NoSQL баз данных</Entry>
+            <Entry>Agile-подход к командной разработке с использованием Scrum/Kanban</Entry>
+            <Entry>автоматизация CI/CD процессов</Entry>
+            <Entry>Опыт интеграции внешних API и сервисов, микросервисная архитектура</Entry>
+            <Entry>Проблемно-ориентированный подход и навыки решения сложных задач: анализ требований, выявление узких мест, разработка эффективных решений</Entry>
+            <Entry>Хорошие коммуникативные навыки и опыт работы в команде, ведение техническую документацию, менторство</Entry>
+            <Entry>Постоянное обучение и адаптация к новым технологиям, готовность к изменениям</Entry>
+            <Entry>Опыт работы с инструментами контроля версий и управления проектами</Entry>
+            <Entry>Высокая ответственность и ориентация на результат</Entry>
         </Group>
-        <Group type='Practical'>
+        <Group type='Practical' lang='en'>
             <Entry>System architecture</Entry>
             <Entry>Product management</Entry>
             <Entry>Formulating functional and technical requirements</Entry>
@@ -209,9 +200,8 @@
 
                 <Employer>
                     <Name>"Code Green Engineering" Limited Company</Name>
-                    <Description>
-                        An innovative company specializing in software development using neural networks.
-                    </Description>
+                    <City>Saint Petersburg</City>
+                    <Description>An innovative company specializing in software development using neural networks.</Description>
                 </Employer>
 
                 <Achievement lang="ru">Управление полным циклом разработки</Achievement>
@@ -253,6 +243,7 @@
                 </Project>
                 <Employer>
                     <Name>Ciliz</Name>
+                    <City>Saint Petersburg</City>
                     <Description>
                         Ciliz is a game development company. Our games are available at major social networks (Facebook,
                         OK, VK) and mobile platforms.
@@ -303,7 +294,7 @@
                 <Job>Team Lead</Job>
                 <Employer>
                     <Name>BAS Services &amp; Graphics, LLC.</Name>
-                    <City>Saint Petersburg</City>
+                    <City>International</City>
                     <Description>
                         BASSG is an intelligent building solutions company with more than 15 years of experience with
                         more than 200+ clients.
