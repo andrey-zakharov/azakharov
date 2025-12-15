@@ -1,122 +1,177 @@
 <?xml version="1.0"?>
-<xsl:stylesheet 
-  xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
-  <xsl:output method="text" media-type="text/x-tex" />
-    <xsl:param name = "lang" >en</xsl:param>
-  <xsl:template match = "*[ @xlink:role = 'locator' ]">
-    <xsl:choose>
-      <xsl:when test = 'text()'> \href{<xsl:value-of select = "@xlink:href" />}{<xsl:value-of select = "." />} </xsl:when>
-      <xsl:otherwise>   \url{<xsl:value-of select = "@xlink:href" />}      </xsl:otherwise>
-    </xsl:choose>
-  </xsl:template>
+<stylesheet 
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns="http://www.w3.org/1999/XSL/Transform"
+  version="1.0">
+  <output method="text" media-type="text/x-tex" />
+    <param name = "lang" >en</param>
+  <template match = "*[ @xlink:role = 'locator' ]">
+    <choose>
+      <when test = 'text()'> \href{<value-of select = "@xlink:href" />}{<value-of select = "." />} </when>
+      <otherwise>   \url{<value-of select = "@xlink:href" />}      </otherwise>
+    </choose>
+  </template>
   
-  <xsl:template match = "/">
+  <template match = "/">
 %
-\documentclass[11pt,a4paper]{moderncv}
+\documentclass[10pt,a4paper]{moderncv}
 %\renewcommand*{\addresssymbol}{\CircledA}
-\moderncvtheme[green]{classic}
+\moderncvtheme[cerulean]{contemporary}
 %\usepackage[T2A]{fontenc}
 \usepackage[utf8]{inputenc}
 %\usepackage[russian]{babel}
 \definecolor{addresscolor}{rgb}{0.35,0.35,0.35}
 \usepackage{lmodern}
+\usepackage[hmargin=0.5in,vmargin=10pt]{geometry}
 
-\usepackage[scale=0.9]{geometry}
 \usepackage{url}
-\addtolength{\parskip}{-5pt}
+\usepackage{tikz}
+\usetikzlibrary{tikzmark}
+\usetikzlibrary{shapes.symbols, positioning} % Load necessary libraries
+\newenvironment{myitemize}%
+  {\begin{list}{}{%
+    \setlength{\labelwidth}{0pt}
+    \setlength{\itemindent}{0em}
+    \setlength{\leftmargin}{1em}
+  }}%
+  {\end{list}}
+
+  \newcommand*{\cvlongentry}[7][.25em]{%
+    \cvitem[#1]{#2}{%
+      {\bfseries#3}%
+      \ifthenelse{\equal{#4}{}}{}{, {\slshape#4}}%
+      \ifthenelse{\equal{#5}{}}{}{, #5}%
+      \ifthenelse{\equal{#6}{}}{}{, #6}%
+      %\ifx&amp;#7&amp;%
+      %\else{%--b \begin{myitemize}\item{\small{#7}}\end{myitemize}}
+        \hspace{1em}\small{#7}
+      %\fi
+      }
+    }
+<!--  \renewcommand*{\cvlongentry}[7][.25em]{%-->
+<!--  \cvitem[#1]{#2}{%-->
+<!--  {\bfseries#3}%-->
+<!--  \ifthenelse{\equal{#4}{}}{}{, {\slshape#4}}%-->
+<!--  \ifthenelse{\equal{#5}{}}{}{, #5}%-->
+<!--  \ifthenelse{\equal{#6}{}}{}{, #6}%-->
+<!--  \strut%-->
+<!--  \ifx&amp;#7&amp;%-->
+<!--  \else{\newline{}\begin{minipage}[t]{\linewidth}\small#7\end{minipage}}\fi}}-->
+
+<!--\addtolength{\parskip}{-5pt}-->
 \AtBeginDocument{\recomputelengths}
-  <xsl:apply-templates select = '/Document/Meta' />
+  <apply-templates select = '/Document/Meta' />
   \begin{document}
-  \maketitle
-    <xsl:apply-templates select = '/Document/Meta/following-sibling::*' />
+<!--    %\begin{tikzpicture}[remember picture,overlay]-->
+<!--    %\fill[color1!30]-->
+<!--    %(current page.north west) rectangle ([yshift=-1cm]current page.east|-{pic cs:end});-->
+<!--    %\end{tikzpicture}-->
+    \makecvtitle
+<!--    %\tikzmark{end}-->
+<apply-templates select = '/Document/Meta/following-sibling::*[not(@lang) or @lang=$lang]' />
   \end{document}
-  </xsl:template>
-  
+  </template>
+
+  <template match = 'Project'>\item{\textbf{<value-of
+          select = '@name' />}: <value-of
+          select = 'Description[@lang = $lang]' />}</template>
+
   <!-- Meta -->
-  <xsl:template match="Period">\raggedleft{<xsl:value-of select = "@From" />\,--}
-    \raggedright{<xsl:value-of select = "@To" />}
-  </xsl:template>
+  <template match="Period">\raggedleft{{\scriptsize <value-of select = "substring-before(@From, ' ')" />}<value-of select = "substring-after(@From, ' ')" />\,--}
+    \newline\raggedright{{\scriptsize <value-of select = "substring-before(@To, ' ')" />}<value-of select = "substring-after(@To, ' ')" />}
+  </template>
   
-  <xsl:template match = '/Document/Meta'><xsl:apply-templates select = "*[@lang=$lang]" /></xsl:template>
-  <xsl:template match = '/Document/Meta/Personal'><xsl:apply-templates /></xsl:template>
-  <xsl:template match = '//Meta/Title'>\title{\today}</xsl:template>
-  <xsl:template match = '//Personal/FirstName'>\firstname{<xsl:value-of select = '.' />}</xsl:template>
-  <xsl:template match = '//Personal/FamilyName'>\familyname{<xsl:value-of select = '.' />}</xsl:template>
-  <xsl:template match = '//Personal/Address'>\address{\color{black}<xsl:value-of select = '.' />\color{addresscolor}}{}</xsl:template>
-  <xsl:template match = '//Personal/Phone'>
-    <xsl:if test = '@type = "cell"'>\mobile</xsl:if>{\color{black}<xsl:value-of select = '.' />\color{addresscolor}}</xsl:template>
-  <xsl:template match = '//Personal/Email'>\email{<xsl:value-of select = '.' />}</xsl:template>
-  <xsl:template match = '//Personal/Extra[ @type = "skype" ]'>
-    \extrainfo{skype: \color{black}<xsl:value-of select = '.' />}</xsl:template>
-  <xsl:template match = '//Personal/Extra'>\extrainfo{<xsl:value-of select = '.' />}</xsl:template>
-  <xsl:template match = '//Personal/Photo'>\photo[<xsl:value-of select = '@width' />]{<xsl:value-of select = '.' />}</xsl:template>
+  <template match = '/Document/Meta'><apply-templates select = "*[@lang = $lang]" /></template>
+  <template match = '/Document/Meta/Personal'><apply-templates /></template>
+  <template match = '//Meta/Title'>\title{\today}</template>
+  <template match = '//Personal/FirstName'>\firstname{<value-of select = '.' />}</template>
+  <template match = '//Personal/FamilyName'>\familyname{<value-of select = '.' />}</template>
+  <template match = '//Personal/Address'>\address{\color{black}<value-of select = '.' />\color{addresscolor}}{}</template>
+  <template match = '//Personal/Phone'>
+    <if test = '@type = "cell"'>\mobile</if>{<value-of select = '.' />}</template>
+  <template match = '//Personal/Email'>\email{<value-of select = '.' />}</template>
+  <template match = '//Personal/Telegram'>\social[telegram]{<value-of select = "." />}</template>
+  <template match = '//Personal/LinkedIn'>\social[linkedin]{<value-of select = "." />}</template>
+  <!-- TBD replace(., '_', '\_') -->
+  <template match = '//Personal/Extra[ @type = "skype" ]'>
+    \extrainfo{skype: \color{black}<value-of select = '.' />}</template>
+  <template match = '//Personal/Extra'>\extrainfo{<value-of select = '.' />}</template>
+  <template match = '//Personal/Photo'>\photo[<value-of select = '@width' />][2pt]{<value-of select = '.' />}</template>
 
-  <xsl:template match = '/Document/*'>
-    \section{<xsl:value-of select = 'name()' />}
-    <xsl:apply-templates select = "*[not(@lang) or @lang = $lang]" />
-  </xsl:template>
+  <template match = '/Document/*'>
+    \section<choose>
+      <when test="name() = 'Objective'">[\faBullseye]</when>
+      <when test="name() = 'Strengths'">[\faLink]</when>
+      <when test="name() = 'Skills'">[\faMagic]</when>
+      <when test="name() = 'Experience'">[\faThumbsUp]</when>
+      <when test="name() = 'Education'">[\faGraduationCap]</when>
+      <when test="name() = 'Languages'">[\faLanguage]</when>
+      <when test="name() = 'Links'">[\faAddressBook ]</when>
+    </choose>{<value-of select = 'name()' />}
+    <apply-templates select = "*[not(@lang) or @lang = $lang]" />
+  </template>
 
-  <xsl:template match = '/Document/*/*'>
-    \subsection{<xsl:choose>
-      <xsl:when test = "@type"><xsl:value-of select = '@type' /></xsl:when>
-      <xsl:otherwise><xsl:value-of select = 'name()' /></xsl:otherwise>      
-    </xsl:choose>}
-    <xsl:apply-templates /></xsl:template>
+  <template match = '/Document/*/*'>
+    \subsection{<choose>
+      <when test = "@type"><value-of select = '@type' /></when>
+      <otherwise><value-of select = 'name()' /></otherwise>      
+    </choose>}
+    <apply-templates /></template>
 
-  <xsl:template match = '/Document/Experience/Vocational'><xsl:apply-templates /></xsl:template>
+  <template match = '/Document/Experience/Vocational'><apply-templates /></template>
  
-  <xsl:template match = '/Document/*//Entry'><xsl:choose>
-    <xsl:when test = '@type'>\cvline{<xsl:value-of select = '@type' />}</xsl:when>
-    <xsl:otherwise>\cvlistitem</xsl:otherwise></xsl:choose>{<xsl:value-of select = '.' />}
-  </xsl:template>
+  <template match = '/Document/*//Entry'><choose><when
+          test = '@type'>\cvline{<value-of select = '@type'
+  />}</when><otherwise>\cvlistitem</otherwise></choose>{<value-of select = '.' />}
+  </template>
 
-  <xsl:template match = "//Entry[@xlink:href]">\cvline{<xsl:value-of select = '@type' />}{\url{<xsl:value-of select = '@xlink:href' />}}
-  </xsl:template>
+  <template match = "//Entry[@xlink:href]">\cvline{<value-of select = '@type' />}{\url{<value-of select = '@xlink:href' />}}
+  </template>
 
-  <xsl:template match = '//Education/Entry'>\cventry{<xsl:apply-templates select = 'Period' />}{<xsl:value-of select = 'Degree' />}{<xsl:value-of select = 'Institution' />}{<xsl:value-of select = 'City' />}{\textit{<xsl:value-of select = 'Grade' />}}{<xsl:value-of select = 'Description' />}</xsl:template>
+  <template match = '//Education/Entry'>\cventry{<apply-templates select = 'Period' />}{<value-of select = 'Degree' />}{<value-of select = 'Institution' />}{<value-of select = 'City' />}{\textit{<value-of select = 'Grade' />}}{<value-of select = 'Description' />}</template>
   
-  <xsl:template match = '//Education/Thesis'>
+  <template match = '//Education/Thesis'>
 \subsection{Master thesis}
-\cvline{title}{\emph{<xsl:value-of select = 'Title' />}}
-\cvline{supervisors}{<xsl:value-of select = 'Supervisors' />}
-\cvline{description}{\small <xsl:value-of select = 'Description' />}
-  </xsl:template>
+\cvline{title}{\emph{<value-of select = 'Title' />}}
+\cvline{supervisors}{<value-of select = 'Supervisors' />}
+\cvline{description}{\small <value-of select = 'Description' />}
+  </template>
   
-  <xsl:template match = '//Achievement'>\cvlistitem{<xsl:value-of select = '.' />}
-  </xsl:template>
+  <template match = '//Achievement'>\item{<value-of select = '.' />}
+  </template>
   
   
-  <xsl:template match = '//Experience//Entry'>\cventry{<xsl:apply-templates select = 'Period' />}{<xsl:value-of select = '@Job' />}{<xsl:value-of select = 'Employer/Name' />}
-    {<xsl:value-of select = 'Employer/City' />}{<xsl:copy-of select = 'Employer/Description' />}{<xsl:if test = 'Employer/Customer'>Customer: <xsl:value-of select = 'Employer/Customer' /></xsl:if><xsl:apply-templates 
-     select = 'Description' />\newline{}<xsl:apply-templates 
-     select = 'Project' />\newline{}<xsl:apply-templates 
-     select = "Achievement[@lang = $lang]" />}<xsl:comment>\newline{}
-    Key technologies and languages: <xsl:value-of select = 'Techs' /></xsl:comment></xsl:template>
+  <template match = '//Experience//Entry'>\cventry{<apply-templates select = 'Period' />}{<value-of select = '@Job' />}{<value-of
+          select = 'Employer/Name' />}{<value-of select = 'Employer/City' />}{<copy-of select = 'Employer/Description' />}{<apply-templates
+          select = 'Description' />\begin{itemize}<if
+          test = 'Employer/Customer'>\item Customer: <value-of select = 'Employer/Customer' /></if><if
+          test = 'Project'>\item <choose><when test="$lang='ru'">Проекты</when><otherwise>Projects</otherwise></choose>:\begin{itemize}<apply-templates
+            select = 'Project' />\end{itemize}</if><if test = 'Achievement'>\item Responsibilities:\begin{itemize}<apply-templates select = "Achievement[@lang = $lang]" />\end{itemize}</if>\end{itemize}}
+  </template>
+  <!--    <comment>\newline{}
+      Key technologies and languages: <value-of select = 'Techs' /></comment>-->
+
+  <!-- <template match = '/Document/Languages'>
+    \pagebreak\section{<value-of select = 'name()' />}<apply-templates /></template> -->
+  <template match = '//Language'>\cvlanguage{<value-of select = '@name' />}
+    {<value-of select = '@skill' />}{<value-of select = '.' />\hfill}</template>
     
-  <!-- <xsl:template match = '/Document/Languages'>
-    \pagebreak\section{<xsl:value-of select = 'name()' />}<xsl:apply-templates /></xsl:template> -->
-  <xsl:template match = '//Language'>\cvlanguage{<xsl:value-of select = '@name' />}
-    {<xsl:value-of select = '@skill' />}{<xsl:value-of select = '.' />\hfill}</xsl:template>
-    
-<!--   <xsl:template match = '/Document/Skills'>\section{Skills}<xsl:apply-templates /></xsl:template>
-  <xsl:template select = '/Document/Skills/Group[@lang = $lang]'>\subsection{<xsl:value-of select = '@type' />}<xsl:apply-templates /></xsl:template>
-  <xsl:template match = '/Document/Skills//Entry'><xsl:choose><xsl:when test = '@type'>\cvline{<xsl:value-of select = '@type' />}</xsl:when><xsl:otherwise>\cvlistitem</xsl:otherwise></xsl:choose>{<xsl:value-of select = '.' />}</xsl:template>
+<!--   <template match = '/Document/Skills'>\section{Skills}<apply-templates /></template>
+  <template select = '/Document/Skills/Group[@lang = $lang]'>\subsection{<value-of select = '@type' />}<apply-templates /></template>
+  <template match = '/Document/Skills//Entry'><choose><when test = '@type'>\cvline{<value-of select = '@type' />}</when><otherwise>\cvlistitem</otherwise></choose>{<value-of select = '.' />}</template>
    -->
-  <xsl:template match = '/Document/Programs'>\section{Programs and scripts}<xsl:apply-templates /></xsl:template>
-  <xsl:template match = '/Document/Programs/Entry'><xsl:choose><xsl:when test = '@type'>\cvline{<xsl:value-of select = '@type' />}</xsl:when><xsl:otherwise>\cvlistitem</xsl:otherwise></xsl:choose>{<xsl:value-of select = '.' />}
-  </xsl:template>
+  <template match = '/Document/Programs'>\section{Programs and scripts}<apply-templates /></template>
+  <template match = '/Document/Programs/Entry'><choose><when test = '@type'>\cvline{<value-of select = '@type' />}</when><otherwise>\cvlistitem</otherwise></choose>{<value-of select = '.' />}
+  </template>
   
-  <xsl:template match = '/Document/Portfolio/*'><xsl:apply-templates /></xsl:template>
+  <template match = '/Document/Portfolio/*'><apply-templates /></template>
   
-  <xsl:template match = '/Document/Bibliography'>\begin{thebibliography}{9}
-    <xsl:apply-templates />
-  \end{thebibliography}</xsl:template>
-  <xsl:template match = '/Document/Bibliography/Entry'>\bibitem{}
-    \href{<xsl:value-of select = '@Url' />}{<xsl:value-of select = '@Title' />}. <xsl:value-of select = '@Url' />, <xsl:value-of select = '@Year' />
-  </xsl:template>
-  
-  <xsl:template match = 'Project'>\cvitem{\textbf{<xsl:value-of 
-    select = '@name' />}}{<xsl:value-of 
-    select = 'Description[@lang = $lang]' />}</xsl:template>
-  
-</xsl:stylesheet>
+  <template match = '/Document/Bibliography'>\begin{thebibliography}{9}
+    <apply-templates />
+  \end{thebibliography}</template>
+  <template match = '/Document/Bibliography/Entry'>\bibitem{}
+    \href{<value-of select = '@Url' />}{<value-of select = '@Title' />}. <value-of select = '@Url' />, <value-of select = '@Year' />
+  </template>
+
+</stylesheet>

@@ -8,10 +8,13 @@
             <FamilyName>Zakharov</FamilyName>
             <Photo width='85pt'>Andrey.jpg</Photo>
             <Address>Russia, Saint Petersburg</Address>
-            <Phone type='cell'>+79-OK-0-sail-up</Phone>
+<!--            <Phone type='cell'>+79-OK-0-sail-up</Phone>-->
+            <Phone type='cell'>+7-(965)-0724587</Phone>
             <Email>andrey.al.zakharov@gmail.com</Email>
+            <Telegram>@Andrey\_Zakharov\_A</Telegram>
+            <LinkedIn>mrandreyzakharov</LinkedIn>
             <!--<Extra type='skype'>vaulter2010</Extra>-->
-            <Extra>10+ years of commercial software engineering</Extra>
+            <!--Extra>15+ years of commercial software engineering</Extra-->
         </Personal>
 
         <Personal lang="ru">
@@ -25,8 +28,8 @@
         </Personal>
     </Meta>
 
-    <Objective lang="en">
-        contract job, full-time job, part-time job
+    <Objective lang='en'>
+        <Entry>Contract job, full-time job, part-time job</Entry>
         <!-- decrease entropy -->
     </Objective>
 
@@ -41,7 +44,7 @@
     </Strengths>
 
     <Skills>
-        <Group type='Practical' lang='ru'>
+        <Group type='Технические компетенции' lang='ru'>
             <Entry>Глубокие знания технологий и языков программирования (Kotlin, Java, C#, C++, Typescript)</Entry>
             <Entry>Опыт разработки масштабируемых и устойчивых систем</Entry>
             <Entry>Проектирование, оптимизация и администрирование реляционных и NoSQL баз данных</Entry>
@@ -54,111 +57,32 @@
             <Entry>Опыт работы с инструментами контроля версий и управления проектами</Entry>
             <Entry>Высокая ответственность и ориентация на результат</Entry>
         </Group>
-        <Group type='Practical' lang='en'>
-            <Entry>System architecture</Entry>
-            <Entry>Product management</Entry>
+        <Group type='Technical Proficiencies' lang='en'>
+            <Entry>System Architecture
+                <small>System Architecture Design</small>
+                <small>Design and Implementation of Application Systems (Windows/Linux)</small>
+            </Entry>
+            <Entry>System Architecture Design</Entry>
+            <Entry>Product Management Expertise</Entry>
             <Entry>Formulating functional and technical requirements</Entry>
-            <Entry>Development system software for *NIX systems</Entry>
-            <Entry>Development of database applications</Entry>
-            <Entry>Development of application systems (Windows/*NIX)</Entry>
+            <Entry>Development of System Software for Linux Environments</Entry>
+            <Entry>Creation of Database-Driven Applications</Entry>
+            <Entry>Design and Implementation of Application Systems (Windows/Linux)</Entry>
             <Entry>Development of automated systems</Entry>
-            <Entry>Optimizing application code</Entry>
-            <Entry>Optimization of SQL queries</Entry>
-            <Entry>Administration *NIX systems (Apache, MySQL, security, SSH)</Entry>
-            <Entry>Tuning *NIX systems for optimal performance</Entry>
+            <Entry>Code Optimization for Enhanced Performance</Entry>
+            <Entry>SQL Query Optimization</Entry>
+            <Entry>Administration Linux systems (Apache, MySQL, security, SSH)</Entry>
+            <Entry>Performance Tuning of Linux Environment</Entry>
             <Entry>Website Development
                 <small>(News portals, Internet shops, corporate portals)</small>
             </Entry>
-            <Entry>Development of web-based applications</Entry>
-            <Entry>Migrating static sites to automated management systems (CMS)</Entry>
-            <Entry>Website security</Entry>
-            <Entry>SEO (Search Engine Optimization)</Entry>
+            <Entry>Creation of Web-Based Applications</Entry>
+            <Entry>Migration of Static Websites to Content Management Systems (CMS)</Entry>
+            <Entry>Website Security Best Practices</Entry>
+            <Entry>Search Engine Optimization (SEO) Strategies</Entry>
         </Group>
-        <Group type='Tools'>
-            <!-- EVERYTHING in the world :) -->
-            <Entry type='Technologies'>.NET, J2EE, EJB, COM/DCOM/COM+, OLE/ActiveX, AJAX</Entry>
-            <Entry type='OS'>MS Windows, Linux (Debian), QNX, FreeBSD, MSDOS, Apple DOS 3.3</Entry>
-            <Entry type='DBMS'>MySQL, PostgreSQL, MS SQL, SQLite, MS Access, Oracle</Entry>
-            <Entry type='Related Software'>MS Office, MS Visio, MS Project, SSH, Bash, Kile, soapUI</Entry>
-            <Entry type='Development'>MS Visual Studio, Netbeans IDE, Eclipse IDE, code reviewer, JIRA, GDB, Borland
-                Delphi
-            </Entry>
-            <Entry type='SCM'>CVS, SVN, Perforce, git</Entry>
-        </Group>
-        <Group type='Programming languages'>
-            <!-- it doesnt MATTER at all -->
-            <Entry type='C/C++'>STL, GCC, Boost, wxWidgets, Qt, Win32 API, GDI, WinSock, libxml, MySQL++, gSOAP,
-                CppUnit, OpenSSL
-            </Entry>
-            <Entry type='JavaScript'>Dart, Polymer, DOM, AJAX, JQuery, ExtJS</Entry>
-            <Entry type='Java'>Kotlin, JSF, RichFaces</Entry>
-            <Entry type='C#'>.NET 2.0, WinForms</Entry>
-            <Entry type='SQL'>MySQL, SQLite, T-SQL</Entry>
-            <Entry type='Visual Basic'>VBA, MS Word, MS Excel, MS Access, MS Outlook</Entry>
-            <Entry type='Markup'>HTML5, XHTML, CSS3, XML, XSL</Entry>
-            <!--Entry type = 'GNU'>BASH, SSH, sed, awk, \LaTeXe</Entry-->
-            <Entry type='Scripting'>BASH, Perl, Lua, Python, Groovy, sed, awk, \LaTeXe</Entry>
-            <Entry type='PHP'>Drupal, Joomla, WordPress, DataLife Engine, Xaraya</Entry>
-            <Entry type='Exotic'>Architecture and assembler MOStech 6502 (Apple II, etc.)</Entry>
-        </Group>
-
 
     </Skills>
-
-
-    <Links>
-        <!--Portfolio>
-                <Entry type = ""
-                    xlink:title = "See it in porfolio"
-                    xlink:role = "locator"
-                    xlink:href ="http://vaultsoft.ru/portfolio"
-                    xlink:actuate = "onRequest"
-                    xlink:show = "new" >http://vaultsoft.ru/portfolio</Entry>
-
-            </Portfolio-->
-        <Profiles>
-            <Entry type="LinkedIn"
-                   xlink:title="LinkedIn profile"
-                   xlink:role="locator"
-                   xlink:href="http://www.linkedin.com/pub/andrey-zakharov/21/99a/56a"
-                   xlink:actuate="onRequest"
-                   xlink:show="new">http://www.linkedin.com/pub/andrey-zakharov/21/99a/56a
-            </Entry>
-
-            <Entry type="Bitbucket"
-                   xlink:title=""
-                   xlink:role="locator"
-                   xlink:href="https://bitbucket.org/andrey_zakharov_"
-                   xlink:actuate="onRequest"
-                   xlink:show="new">https://bitbucket.org/andrey_zakharov_
-            </Entry>
-
-            <Entry type="GitHub"
-                   xlink:title=""
-                   xlink:role="locator"
-                   xlink:href="https://github.com/andrey-zakharov"
-                   xlink:actuate="onRequest"
-                   xlink:show="new">https://github.com/andrey-zakharov
-            </Entry>
-
-            <Entry type="Brainbench"
-                   xlink:title="Brainbench Public Transcript"
-                   xlink:role="locator"
-                   xlink:href="http://www.brainbench.com/transcript.jsp?pid=8883643"
-                   xlink:actuate="onRequest"
-                   xlink:show="new">http://www.brainbench.com/transcript.jsp?pid=8883643
-            </Entry>
-
-            <Entry type="Drupal.org"
-                   xlink:title=""
-                   xlink:role="locator"
-                   xlink:href="http://drupal.org/user/222552"
-                   xlink:actuate="onRequest"
-                   xlink:show="new">http://drupal.org/user/222552
-            </Entry>
-
-        </Profiles>
-    </Links>
 
     <Experience>
         <Vocational>
@@ -181,12 +105,12 @@
                     <Framework>PrimeVue</Framework>
                     <Software>PostgresSQL</Software>
                 </Project>
-                <Project name="Trigonum Trade">
+                <Project name="TrigonumTrade">
                     <Description lang="ru">
                         Web-платформа "единого окна" для коллективной торговли криптоактивами, совмещающей в себе функционал торгового терминала, аналитической платформы и криптокошелька.
                     </Description>
                     <Description lang="en">
-                        Web-based "single window" platform for collaborative crypto asset trading, combining the functionalities of a trading terminal, an analytics platform, and a crypto wallet.
+                        Web-based "SPA" platform for collaborative crypto asset trading, combining the functionalities of a trading terminal, an analytics platform, and a crypto wallet.
                     </Description>
 
                     
@@ -233,27 +157,26 @@
             <Entry Job="Senior Software Engineer">
                 <Period From="Mar 2021" To="May 2022"/>
                 <Job>Developing multiplayer game</Job>
-                <Project name="The Bottle">
-                    <Description>
+                <Project name="Bottle. The Game">
+                    <Description  lang="en">
                         Support of the existing game application. Ongoing development, improvement, refactoring and
                         delivery of product to customers.
                     </Description>
+                    <Description  lang="ru">
+                        Поддержка существующего игрового приложения. Непрерывная разработка, улучшение, рефакторинг и доставка продукта клиентам.
+                    </Description>
                     <Language>Kotlin</Language>
                     <Software>Firebase</Software>
+                    <Platform>Android</Platform>
                 </Project>
                 <Employer>
                     <Name>Ciliz</Name>
                     <City>Saint Petersburg</City>
                     <Description>
-                        Ciliz is a game development company. Our games are available at major social networks (Facebook,
+                        Ciliz is a game development company. Their games are available at major social networks (Facebook,
                         OK, VK) and mobile platforms.
                     </Description>
                 </Employer>
-
-                <Description>
-                    Support of the existing game application. Ongoing development, improvement, refactoring and delivery
-                    of product to customers.
-                </Description>
 
                 <!--Achievement lang="en">
                 </Achievement-->
@@ -264,6 +187,12 @@
                 <Project name="CryptoExchange">
                     <Language>C#</Language>
                     <Framework>.NET core</Framework>
+                    <Description lang="en">
+                        Support of the existing exchange service application. Ongoing development, improvement, refactoring
+                        and delivery of product to customers. Leading the team to develop innovative product for
+                        high-frequency trading services (exchange). Built up team development processes from scratch,
+                        including CI. Hiring, leading and mentoring the team.
+                    </Description>
                 </Project>
                 <Job>Team Lead, Software Architect</Job>
                 <Employer>
@@ -274,12 +203,6 @@
                     </Description>
                 </Employer>
 
-                <Description>
-                    Support of the existing exchange service application. Ongoing development, improvement, refactoring
-                    and delivery of product to customers. Leading the team to develop innovative product for
-                    high-frequency trading services (exchange). Built up team development processes from scratch,
-                    including CI. Hiring, leading and mentoring the team.
-                </Description>
 
                 <Achievement lang="en">
                     As the team lead, built the application from early prototype to production.
@@ -565,7 +488,7 @@
                 <Achievement lang="en">Implemented distributed system of company internet shops</Achievement>
                 <Techs>HTML, JavaScript, PHP, MySQL, Apache, SSH, XML.</Techs>
             </Entry>
-            <Entry Job='Lead Programmer'>
+            <Entry Job='Lead Software Engineer'>
                 <Period From="Feb 2006" To="Apr 2006"/>
                 <Job>Lead Programmer</Job>
                 <Employer>
@@ -673,6 +596,34 @@
 
     </Experience>
 
+    <Skills>
+        <Group type='Tools'>
+        <!-- EVERYTHING in the world :) -->
+        <Entry type='Technologies'>DDD, TDD, Scrum</Entry>
+        <Entry type='OS'>MS Windows, Linux (Debian), QNX, FreeBSD, MsDOS, Apple DOS 3.3</Entry>
+        <Entry type='DBMS'>PostgreSQL, MySQL, MS SQL, SQLite, MS Access, Oracle</Entry>
+        <Entry type='Related Software'>Office, Visio, Project, SSH, Bash, docker, kubernetes</Entry>
+        <Entry type='Development'>IntelliJ IDEA, Visual Code, Visual Studio, Netbeans IDE, Eclipse IDE, Github, GitLab</Entry>
+        <Entry type='SCM'>git, Perforce, Mercurial</Entry>
+    </Group>
+        <Group type='Programming languages'>
+            <!-- it doesnt MATTER at all -->
+            <Entry type='Kotlin'>Spring Boot, ktor, Micronaut, KMP, Kotlin Compose</Entry>
+            <Entry type='Java'>Kotlin, Spring Boot</Entry>
+            <Entry type='C/C++'>STL, GCC, Boost, wxWidgets, Qt, Win32 API, GDI, WinSock, libxml, MySQL++, gSOAP,
+                CppUnit, OpenSSL
+            </Entry>
+            <Entry type='JavaScript'>TypeScript, Dart, Vue, VanillaJS</Entry>
+            <Entry type='C#'>.NET, .NET Core, WinForms</Entry>
+            <Entry type='SQL'>PostgreSQL, Oracle, MySQL, SQLite, T-SQL</Entry>
+            <Entry type='Visual Basic'>VBA, MS Word, MS Excel, MS Access, MS Outlook</Entry>
+            <Entry type='Markup'>HTML5, XHTML, CSS3, XML, XSL</Entry>
+            <!--Entry type = 'GNU'>BASH, SSH, sed, awk, \LaTeXe</Entry-->
+            <Entry type='Scripting'>Bash, Perl, Lua, Python, Groovy, sed, awk, \LaTeXe</Entry>
+            <Entry type='PHP'>Drupal, Joomla, WordPress, DataLife Engine, Xaraya</Entry>
+            <Entry type='Exotic'>Fantom, Architecture and assembler MOStech 6502 (Apple II, etc.)</Entry>
+        </Group>
+    </Skills>
     <Languages>
         <Language name='Russian' skill='Mother tongue'/>
         <Language name='English' skill='Spoken and written'>Technical --- fine</Language>
@@ -695,6 +646,67 @@
               <Description>Thesis introduce requirements specification to the system "fellow traveller": common information about automatized websystem and time constraints of developement, system creation goals and criterions of efficiency, search process of fellow traveller, requirements to functional part of system and to its ergonomics. Thesis consist of requirements specification to the system, preliminary design, system prototype,  user and administration manual</Description>
             </Thesis>-->
     </Education>
+
+
+    <Links>
+        <!--Portfolio>
+                <Entry type = ""
+                    xlink:title = "See it in porfolio"
+                    xlink:role = "locator"
+                    xlink:href ="http://vaultsoft.ru/portfolio"
+                    xlink:actuate = "onRequest"
+                    xlink:show = "new" >http://vaultsoft.ru/portfolio</Entry>
+
+            </Portfolio-->
+        <Profiles>
+            <Entry type="LinkedIn"
+                   xlink:title="LinkedIn profile"
+                   xlink:role="locator"
+                   xlink:href="http://www.linkedin.com/pub/andrey-zakharov/21/99a/56a"
+                   xlink:actuate="onRequest"
+                   xlink:show="new">http://www.linkedin.com/pub/andrey-zakharov/21/99a/56a
+            </Entry>
+
+            <Entry type="Bitbucket"
+                   xlink:title=""
+                   xlink:role="locator"
+                   xlink:href="https://bitbucket.org/andrey_zakharov_"
+                   xlink:actuate="onRequest"
+                   xlink:show="new">https://bitbucket.org/andrey_zakharov_
+            </Entry>
+
+            <Entry type="GitHub"
+                   xlink:title=""
+                   xlink:role="locator"
+                   xlink:href="https://github.com/andrey-zakharov"
+                   xlink:actuate="onRequest"
+                   xlink:show="new">https://github.com/andrey-zakharov
+            </Entry>
+
+            <!--            <Entry type="Brainbench"-->
+            <!--                   xlink:title="Brainbench Public Transcript"-->
+            <!--                   xlink:role="locator"-->
+            <!--                   xlink:href="http://www.brainbench.com/transcript.jsp?pid=8883643"-->
+            <!--                   xlink:actuate="onRequest"-->
+            <!--                   xlink:show="new">http://www.brainbench.com/transcript.jsp?pid=8883643-->
+            <!--            </Entry>-->
+            <Entry type="Habrhabr"
+                   xlink:title="Habrhabr"
+                   xlink:role="locator"
+                   xlink:href="https://habr.com/ru/users/Vaulter/"
+                   xlink:actuate="onRequest"
+                   xlink:show="new">https://habr.com/ru/users/Vaulter/
+            </Entry>
+            <Entry type="Drupal.org"
+                   xlink:title=""
+                   xlink:role="locator"
+                   xlink:href="http://drupal.org/user/222552"
+                   xlink:actuate="onRequest"
+                   xlink:show="new">http://drupal.org/user/222552
+            </Entry>
+
+        </Profiles>
+    </Links>
 
     <Programs>
         <!-- <Group type = 'Author programs and scripts'> -->

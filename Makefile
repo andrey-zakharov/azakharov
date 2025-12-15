@@ -13,6 +13,7 @@
 
 # Big TO BE DONE: separate build and dist folders from sources
 # choco install texlive xsltproc
+# tex: changepage, tikz, qrcode, xkeyval
 PROJ = AndreyZakharov
 PROJ_LANG ?= en
 
@@ -51,7 +52,7 @@ pdf: $(TARGET_TEX)
 texlive.libs:
 	tlmgr.bat install moderncv
 
-$(TARGET_TEX): $(PROJ).xml
+$(TARGET_TEX): $(PROJ).xml $(XML2TEX_XSLT)
 	( $(SED) 's_C#_C\\\#_' $< | $(XSLTPROC) $(XML2TEX_XSLT) - | $(SED) 's_&_\\\&_' > $@ )
 
 # I've made it for support xml -> 'all others' converter
