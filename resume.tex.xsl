@@ -4,6 +4,7 @@
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns="http://www.w3.org/1999/XSL/Transform"
   version="1.0">
+  <xsl:include href="resume.tex.header.xsl" />
   <output method="text" media-type="text/x-tex" />
     <param name = "lang" >en</param>
   <template match = "*[ @xlink:role = 'locator' ]">
@@ -11,66 +12,6 @@
       <when test = 'text()'> \href{<value-of select = "@xlink:href" />}{<value-of select = "." />} </when>
       <otherwise>   \url{<value-of select = "@xlink:href" />}      </otherwise>
     </choose>
-  </template>
-  
-  <template match = "/">
-%
-\documentclass[10pt,a4paper]{moderncv}
-%\renewcommand*{\addresssymbol}{\CircledA}
-\moderncvtheme[cerulean]{contemporary}
-%\usepackage[T2A]{fontenc}
-\usepackage[utf8]{inputenc}
-%\usepackage[russian]{babel}
-\definecolor{addresscolor}{rgb}{0.35,0.35,0.35}
-\usepackage{lmodern}
-\usepackage[hmargin=0.5in,vmargin=10pt]{geometry}
-
-\usepackage{url}
-\usepackage{tikz}
-\usetikzlibrary{tikzmark}
-\usetikzlibrary{shapes.symbols, positioning} % Load necessary libraries
-\newenvironment{myitemize}%
-  {\begin{list}{}{%
-    \setlength{\labelwidth}{0pt}
-    \setlength{\itemindent}{0em}
-    \setlength{\leftmargin}{1em}
-  }}%
-  {\end{list}}
-
-  \newcommand*{\cvlongentry}[7][.25em]{%
-    \cvitem[#1]{#2}{%
-      {\bfseries#3}%
-      \ifthenelse{\equal{#4}{}}{}{, {\slshape#4}}%
-      \ifthenelse{\equal{#5}{}}{}{, #5}%
-      \ifthenelse{\equal{#6}{}}{}{, #6}%
-      %\ifx&amp;#7&amp;%
-      %\else{%--b \begin{myitemize}\item{\small{#7}}\end{myitemize}}
-        \hspace{1em}\small{#7}
-      %\fi
-      }
-    }
-<!--  \renewcommand*{\cvlongentry}[7][.25em]{%-->
-<!--  \cvitem[#1]{#2}{%-->
-<!--  {\bfseries#3}%-->
-<!--  \ifthenelse{\equal{#4}{}}{}{, {\slshape#4}}%-->
-<!--  \ifthenelse{\equal{#5}{}}{}{, #5}%-->
-<!--  \ifthenelse{\equal{#6}{}}{}{, #6}%-->
-<!--  \strut%-->
-<!--  \ifx&amp;#7&amp;%-->
-<!--  \else{\newline{}\begin{minipage}[t]{\linewidth}\small#7\end{minipage}}\fi}}-->
-
-<!--\addtolength{\parskip}{-5pt}-->
-\AtBeginDocument{\recomputelengths}
-  <apply-templates select = '/Document/Meta' />
-  \begin{document}
-<!--    %\begin{tikzpicture}[remember picture,overlay]-->
-<!--    %\fill[color1!30]-->
-<!--    %(current page.north west) rectangle ([yshift=-1cm]current page.east|-{pic cs:end});-->
-<!--    %\end{tikzpicture}-->
-    \makecvtitle
-<!--    %\tikzmark{end}-->
-<apply-templates select = '/Document/Meta/following-sibling::*[not(@lang) or @lang=$lang]' />
-  \end{document}
   </template>
 
   <template match = 'Project'>\item{\textbf{<value-of

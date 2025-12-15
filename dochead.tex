@@ -1,0 +1,47 @@
+
+\begin{center}
+    \begin{tikzpicture}[
+    % Define styles for different tag sizes/weights
+    tagstyle1/.style={font=\Huge\bfseries, red},
+    tagstyle2/.style={font=\Large\bfseries, blue},
+    tagstyle3/.style={font=\normalsize, gray}
+    tagstyle4/.style={font=\small, lightgray}
+    tagstyle5/.style={font=\footnotesize, black}
+    ]
+    % Define colors
+    \definecolor{color1}{RGB}{237, 201, 73}
+    \definecolor{color2}{RGB}{186, 176, 171}
+    \definecolor{color3}{RGB}{118, 183, 178}
+    \definecolor{color4}{RGB}{225, 87, 89}
+    \definecolor{color5}{RGB}{89, 161, 79}
+    \definecolor{color6}{RGB}{175, 122, 161}
+    \definecolor{color7}{RGB}{255, 157, 167}
+    \definecolor{color8}{RGB}{156, 117, 95}
+    \definecolor{color9}{RGB}{78, 121, 167}
+    \definecolor{color10}{RGB}{242, 142, 44}
+
+    % Main text
+    \node[color1] (t1) at (0,0) {1};
+    \node[color2] (t2) at (-25px,-68px) {IoT};
+    \end{tikzpicture}
+\end{center}
+\begin{tikzpicture}[
+% Define styles for different tag sizes/weights
+    tagstyle1/.style={font=\Huge\bfseries, red},
+    tagstyle2/.style={font=\Large\bfseries, blue},
+    tagstyle3/.style={font=\normalsize, gray}
+]
+
+    % Manually place tags
+    \node[tagstyle1] (t1) at (0,0) {TikZ};
+    \node[tagstyle2, right=0.5cm of t1] (t2) {Cloud};
+    \node[tagstyle3, below=0.5cm of t1.west, anchor=west] (t3) {LaTeX Tags};
+    \node[tagstyle2, above right=0.2cm and 1cm of t2] (t4) {Graphics};
+    \node[tagstyle3, below right=0.5cm and 0.5cm of t3] (t5) {Visualization};
+
+    % Optional: Draw a large cloud shape around the tags
+    % The 'fit' library can be used to automatically size a shape around existing nodes
+
+    %\node[cloud, draw=black, fill=cyan!10, inner sep=1cm, fit=(t1) (t2) (t3) (t4) (t5)] {};
+
+\end{tikzpicture}

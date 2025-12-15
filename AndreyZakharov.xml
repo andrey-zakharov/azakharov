@@ -58,28 +58,21 @@
             <Entry>Высокая ответственность и ориентация на результат</Entry>
         </Group>
         <Group type='Technical Proficiencies' lang='en'>
-            <Entry>System Architecture
-                <small>System Architecture Design</small>
-                <small>Design and Implementation of Application Systems (Windows/Linux)</small>
-            </Entry>
-            <Entry>System Architecture Design</Entry>
-            <Entry>Product Management Expertise</Entry>
+            <Entry>System architecture design</Entry>
+            <Entry>Product management expertise</Entry>
             <Entry>Formulating functional and technical requirements</Entry>
-            <Entry>Development of System Software for Linux Environments</Entry>
+            <Entry>Development of system software for Windows, Linux, Qnx and IoT environments</Entry>
             <Entry>Creation of Database-Driven Applications</Entry>
-            <Entry>Design and Implementation of Application Systems (Windows/Linux)</Entry>
+            <Entry>Design and implementation of Application Systems</Entry>
             <Entry>Development of automated systems</Entry>
-            <Entry>Code Optimization for Enhanced Performance</Entry>
-            <Entry>SQL Query Optimization</Entry>
-            <Entry>Administration Linux systems (Apache, MySQL, security, SSH)</Entry>
-            <Entry>Performance Tuning of Linux Environment</Entry>
-            <Entry>Website Development
-                <small>(News portals, Internet shops, corporate portals)</small>
-            </Entry>
-            <Entry>Creation of Web-Based Applications</Entry>
-            <Entry>Migration of Static Websites to Content Management Systems (CMS)</Entry>
-            <Entry>Website Security Best Practices</Entry>
-            <Entry>Search Engine Optimization (SEO) Strategies</Entry>
+            <Entry>Code Optimization for enhanced Performance</Entry>
+            <Entry>SQL query optimization, RDBMS administration</Entry>
+            <Entry>Administration Linux systems (docker, security, SSH)</Entry>
+            <Entry>Performance tuning of various environments and virtual machines</Entry>
+            <Entry>Full-stack systems development</Entry>
+            <Entry>Creation of SPA applications</Entry>
+            <Entry>Internet Security best practices</Entry>
+            <Entry>Search Engine Optimization (SEO) strategies</Entry>
         </Group>
 
     </Skills>
