@@ -8,8 +8,8 @@
     <template match = "/">\input{predoc.tex}%
         <apply-templates select = '/Document/Meta' />
         \begin{document}
-        \makecvtitle
-
+        \makecvtitle%
+        \cloud%
         <apply-templates select = '/Document/Meta/following-sibling::*[not(@lang) or @lang=$lang]' />
         \end{document}
     </template>

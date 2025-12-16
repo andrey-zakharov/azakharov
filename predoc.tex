@@ -16,26 +16,87 @@
 \usetikzlibrary{tikzmark}
 \usetikzlibrary{shapes.symbols, positioning} % Load necessary libraries
 \usetikzlibrary{fit}
-
-\newenvironment{myitemize}%
-{\begin{list}{}{%
-    \setlength{\labelwidth}{0pt}
-    \setlength{\itemindent}{0em}
-    \setlength{\leftmargin}{1em}
-}}%
-{\end{list}}
-
-\newcommand*{\cvlongentry}[7][.25em]{%
-    \cvitem[#1]{#2}{%
-            {\bfseries#3}%
-        \ifthenelse{\equal{#4}{}}{}{, {\slshape#4}}%
-        \ifthenelse{\equal{#5}{}}{}{, #5}%
-        \ifthenelse{\equal{#6}{}}{}{, #6}%
-        %\ifx&amp;#7&amp;%
-        %\else{%--b \begin{myitemize}\item{\small{#7}}\end{myitemize}}
-        \hspace{1em}\small{#7}
-    %\fi
-    }
+% https://nanx.me/wordcloud/ generates with font sizes
+% 100 s1
+% 90 s2
+% 79 s3
+% 65 s4
+% 44 s5
+% 10 s6
+% 0.577, 0.520, 0.456, 0.376, 0.254, 0.058
+% 99.333, 89.786, 78.701, 64.788, 43.831, 10.000
+% 69.6719, 62.8743, 55.1554, 45.4114, 30.6885, 7.0000
+\tikzset{s1/.style={font={\fontsize{70pt}{12pt}\selectfont}, color1},
+        s2/.style={font={\fontsize{63pt}{12pt}\selectfont}, color1!80},
+        s3/.style={font={\fontsize{55pt}{12pt}\selectfont}, headTL},
+        s4/.style={font={\fontsize{45pt}{12pt}\selectfont}, color2},
+        s5/.style={font={\fontsize{30pt}{12pt}\selectfont}, color2!80},
+%        s6/.style={font=\small, lightgray},
+        s6/.style={font={\fontsize{7pt}{5pt}\selectfont}, color0},
+        every node/.style = {anchor=base} %, text depth=0pt, inner sep=+0pt, font=\vphantom{Ag}
+}
+\newcommand{\cloud}{
+    \begin{center}\resizebox{0.8\textwidth}{!}{
+        \begin{tikzpicture}
+            %\node at (0, 0) {};
+        \begin{scope}[scale=0.026458,yscale=-1]
+            % take svg, and replace
+            % <text text-anchor="middle" transform="translate\((.*)\),rotate\((.*)\)"\s+style="font-size: 10px; (.*)">\s*(.*)\s*</text>
+            % to
+            % \\node[s6] at ($1) {\\rotatebox{$2}{$4}};
+            % in svg coords points to bottom anchor (# marked point below)
+            % +-----+
+            % | text|
+            % +--#--+
+            % Main text
+%            \draw (196,-49) circle (5cm);
+            \node[s1, rotate=0]  (sys) at (196,-49) {Systems};
+            \node[s2, rotate=0]  (dev) at (-152,11) {development};
+            \node[s3, rotate=0]  (app) at (239,66) {Applications};
+%            \draw (sys.center) -- (dev.center) (sys.base)   -- (dev.base);
+%            \draw (sys.base) -- (0,0)
+%            \foreach \o [count=\oi from 0] in {0.1, 0.15, 0.3, 0.5, 1} {%
+%                \pgfmathtruncatemacro{\angle}{90 * \oi/4}
+%                \node[s4, opacity=\o, rotate=\angle, rotate=45]  at (6,-93) {Linux};
+%            }
+            \node[s4, rotate around={45:(center)}] at (6,-93) {Linux};
+            \node[s4, rotate=0]  at (80,115) {management};
+            \node[s4, rotate=0]  at (222,3) {technical};
+            \node[s5, rotate=45]  at (207,-141) {Design};
+            \node[s5, rotate=45]  at (156,-145) {Creation};
+            \node[s5, rotate=45]  at (-207,-173) {Security};
+            \node[s5, rotate=45]  at (-278,110) {Website};
+            \node[s5, rotate=45]  at (-187,103) {portals};
+            \node[s5, rotate=45]  at (-91,-193) {architecture};
+            \node[s5, rotate=0]  at (-31,42) {product};
+            \node[s5, rotate=45]  at (-155,124) {functional};
+            \node[s5, rotate=0]  at (-245,46) {automated};
+            \node[s5, rotate=45]  at (-235,116) {code};
+            \node[s5, rotate=0]  at (325,-99) {solutions};
+            \node[s5, rotate=0]  at (-57,154) {developers};
+            \node[s5, rotate=45]  at (136,158) {team};
+            \node[s5, rotate=45]  at (111,-162) {quality};
+            \node[s5, rotate=45]  at (105,-207) {writing};
+            \node[s6, rotate=0]  at (22,-76) {Expertise};
+            \node[s6, rotate=0]  at (-72,80) {Formulating};
+            \node[s6, rotate=45]  at (-103,-59) {Software};
+            \node[s6, rotate=45]  at (-100,-132) {Windows};
+            \node[s6, rotate=0]  at (116,138) {Qnx};
+            \node[s6, rotate=0]  at (244,50) {IoT};
+            \node[s6, rotate=45] at (-167,-49) {Environments};
+            \node[s6, rotate=45]  at (-123,-59) {DatabaseDriven};
+            \node[s6, rotate=0]  at (-47,52) {Enhanced};
+            \node[s6, rotate=45]  at (-131,-137) {SQL};
+            \node[s6, rotate=45]  at (162,18) {Query};
+            \node[s6, rotate=45]  at (29,-165) {Administration};
+            \node[s5, rotate=45]  at (298,-179) {Performance};
+            \node[s6, rotate=45]  at (-202,61) {docker};
+            \node[s6, rotate=45]  at (-74,126) {ssh};
+            \node[s6, rotate=45]  at (163,-35) {Tuning};
+            \node[s5, rotate=45]  at (37,-192) {requirements};
+            \node[s4, rotate=0]  at (-223,-88) {Optimization};
+        \end{scope}\end{tikzpicture}
+    }\end{center}
 }
 
 %\addtolength{\parskip}{-5pt}
