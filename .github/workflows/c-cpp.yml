@@ -24,10 +24,10 @@ jobs:
         sudo perl ./install-tl --scheme=basic --no-interaction
         # may take several hours to run
         # e.g., /usr/local/texlive/2025/bin/x86_64-linux
-        PATH=$PATH:/usr/local/texlive/2025/bin/x86_64-linux
-        sudo tlmgr update --all
-        sudo tlmgr install latex-bin
-        ls -lart
+        export PATH=$PATH:/usr/local/texlive/2025/bin/x86_64-linux
+        ls -lart /usr/local/texlive/2025/bin/x86_64-linux
+        sudo /usr/local/texlive/2025/bin/x86_64-linux/tlmgr update --all
+        sudo /usr/local/texlive/2025/bin/x86_64-linux/tlmgr install latex-bin
     - name: make
       run: |
         make || true
