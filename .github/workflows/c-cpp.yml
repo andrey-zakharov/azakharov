@@ -21,16 +21,17 @@ jobs:
         curl -L -o install-tl-unx.tar.gz https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
         zcat < install-tl-unx.tar.gz | tar xf -
         cd install-tl-2*
-        sudo perl ./install-tl --scheme=basic --no-interaction
+        perl ./install-tl --texdir=~/texlive --texuserdir ~/.texlive --no-doc-install --no-src-install --no-verify-downloads --scheme=basic --no-interaction
         # may take several hours to run
         # e.g., /usr/local/texlive/2025/bin/x86_64-linux
-        PATH=/usr/local/texlive/2025/bin/x86_64-linux:$PATH
+        PATH=~/texlive/bin/x86_64-linux:$PATH
         export PATH
-        sudo /usr/local/texlive/2025/bin/x86_64-linux/tlmgr update --all
-        sudo /usr/local/texlive/2025/bin/x86_64-linux/tlmgr install latex-bin kpathsea
+        ls -la ~/texlive
+        tlmgr update --all
+        tlmgr install latex-bin kpathsea
         # If you chose a minimal installation scheme (like scheme-small or TinyTeX), pdflatex or its symlinks might be missing.
-        sudo /usr/local/texlive/2025/bin/x86_64-linux/tlmgr install texlive-scripts-extra
-        sudo /usr/local/texlive/2025/bin/x86_64-linux/texlinks
+        tlmgr install texlive-scripts-extra
+        texlinks
     - name: make
       run: |
         make || true

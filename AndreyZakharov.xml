@@ -661,13 +661,15 @@
         </Group>
     </Skills>
     <Languages>
-        <Language name='Russian' skill='Mother tongue'/>
-        <Language name='English' skill='Spoken and written'>Technical --- fine</Language>
+        <Language lang="en" name='Russian' skill='Mother tongue'/>
+        <Language lang="ru" name='Русский' skill='Родной'/>
+        <Language lang="en" name='English' skill='Spoken and written'>Technical --- fine</Language>
+        <Language lang="ru" name='Английский' skill='Отлично'>Technical --- fine</Language>
     </Languages>
 
 
     <Education>
-        <Entry>
+        <Entry lang="en">
             <Period From='Sep 2003' To='June 2009'/>
             <Degree>Master's Degree in Computer Science</Degree>
             <Institution>Volgograd State Technical University</Institution>
