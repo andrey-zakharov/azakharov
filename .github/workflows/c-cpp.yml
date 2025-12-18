@@ -26,11 +26,11 @@ jobs:
         # e.g., /usr/local/texlive/2025/bin/x86_64-linux
         export PATH=$PATH:/usr/local/texlive/2025/bin/x86_64-linux
         ls -lart /usr/local/texlive/2025/bin/x86_64-linux
-        sudo /usr/local/texlive/2025/bin/x86_64-linux/tlmgr update --all
-        sudo /usr/local/texlive/2025/bin/x86_64-linux/tlmgr install latex-bin
+        sudo -E tlmgr update --all
+        sudo -E tlmgr install latex-bin
         # If you chose a minimal installation scheme (like scheme-small or TinyTeX), pdflatex or its symlinks might be missing.
-        sudo /usr/local/texlive/2025/bin/x86_64-linux/tlmgr install texlive-scripts-extra
-        sudo texlinks
+        sudo -E tlmgr install texlive-scripts-extra
+        sudo -E texlinks
     - name: make
       run: |
         make || true
