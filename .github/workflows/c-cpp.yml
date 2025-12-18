@@ -14,10 +14,22 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: prepare
-      run: sudo apt-get install -y texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra xsltproc
+    - name: prepare # texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra
+      run: |
+        sudo apt-get install -y xsltproc
+        cd /tmp
+        curl -L -o install-tl-unx.tar.gz https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
+        zcat < install-tl-unx.tar.gz | tar xf -
+        cd install-tl-2*
+        sudo perl ./install-tl --no-interaction
+        # may take several hours to run
+        # e.g., /usr/local/texlive/2025/bin/x86_64-linux
+        PATH=$PATH:/usr/local/texlive/2025/bin/x86_64-linux
+        ls -lart
     - name: make
-      run: make || true
+      run: |
+        make || true
+        ls -lart
     # - name: Commit files
     #   run: |
     #     git diff
