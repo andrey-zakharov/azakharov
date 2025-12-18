@@ -21,16 +21,18 @@ jobs:
         curl -L -o install-tl-unx.tar.gz https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
         zcat < install-tl-unx.tar.gz | tar xf -
         cd install-tl-2*
-        perl ./install-tl --texdir=~/texlive --texuserdir ~/.texlive --no-doc-install --no-src-install --no-verify-downloads --scheme=scheme-medium --no-interaction
+        perl ./install-tl --texdir=~/texlive --texuserdir ~/.texlive --no-doc-install --no-src-install --no-verify-downloads --scheme=scheme-basic --no-interaction
         # may take several hours to run
         # e.g., /usr/local/texlive/2025/bin/x86_64-linux
         PATH=~/texlive/bin/x86_64-linux:$PATH
         export PATH
         ls -la ~/texlive/bin/x86_64-linux
         tlmgr update --all
+        make texlive.libs
     - name: make
       run: |
         PATH=~/texlive/bin/x86_64-linux:$PATH
+        
         make || true
         ls -lart
     # - name: Commit files
