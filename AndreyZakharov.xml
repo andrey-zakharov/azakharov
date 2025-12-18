@@ -22,14 +22,18 @@
             <FamilyName>Захаров</FamilyName>
             <Photo width='85pt'>Andrey.jpg</Photo>
             <Address>Россия, г.Санкт-Петербург</Address>
-            <Phone type='cell'>+79-OK-0-sail-up</Phone>
+            <Phone type='cell'>+7-(965)-0724587</Phone>
             <Email>andrey.al.zakharov@gmail.com</Email>
+            <Telegram>@Andrey\_Zakharov\_A</Telegram>
+            <LinkedIn>mrandreyzakharov</LinkedIn>
             <!--<Extra type='skype'>vaulter2010</Extra>-->
         </Personal>
     </Meta>
 
     <Objective lang='en'>
-        <Entry>Contract job, full-time job, part-time job</Entry>
+        <Entry>Contract job</Entry>
+        <Entry>Full-time job</Entry>
+        <Entry>Part-time job</Entry>
         <!-- decrease entropy -->
     </Objective>
 
@@ -44,6 +48,7 @@
     </Strengths>
 
     <Skills>
+        <Cloud/>
         <Group type='Технические компетенции' lang='ru'>
             <Entry>Глубокие знания технологий и языков программирования (Kotlin, Java, C#, C++, Typescript)</Entry>
             <Entry>Опыт разработки масштабируемых и устойчивых систем</Entry>
@@ -62,7 +67,7 @@
             <Entry>Product management expertise</Entry>
             <Entry>Formulating functional and technical requirements</Entry>
             <Entry>Development of system software for Windows, Linux, Qnx and IoT environments</Entry>
-            <Entry>Creation of Database-Driven Applications</Entry>
+<!--            <Entry>Creation of Database-Driven Applications</Entry>-->
             <Entry>Design and implementation of Application Systems</Entry>
             <Entry>Development of automated systems</Entry>
             <Entry>Code Optimization for enhanced Performance</Entry>
@@ -72,7 +77,7 @@
             <Entry>Full-stack systems development</Entry>
             <Entry>Creation of SPA applications</Entry>
             <Entry>Internet Security best practices</Entry>
-            <Entry>Search Engine Optimization (SEO) strategies</Entry>
+<!--            <Entry>Search Engine Optimization (SEO) strategies</Entry>-->
         </Group>
 
     </Skills>
@@ -218,16 +223,38 @@
                     <Logo>bassg.png</Logo>
                 </Employer>
 
-                <Description>
-                    Lead a small team to develop innovative product for building automation services (IoT). Built the
-                    application from early prototype to a market product. Completely built up team development processes
-                    including CI. Hiring, reviewing code and mentoring the team.
-                </Description>
+                <Project name="Visualytik" url="https://bassg.com/visualytik/">
+                    <Description lang="en">Haystack based IoT Dashboard.\\
+                        Visualytik is an app to create and display dashboards for your data.
+                        Dashboards can contain any graphics,
+                        show live data as text, gauges, and grids, show histories on grids and charts,
+                        support rich interactions with buttons, sliders, inputs and so on.
+                        Moreover, Visualytik has flow-based programming, so you can make almost anything for your dashboards.
+                    </Description>
+                    <Description lang="ru">Панель управления IoT на базе Haystack\\
+                        Visualytik — это приложение для создания и отображения дашбордов для ваших данных.
+                        Панели могут содержать любые графики, отображать актуальные данные в виде текста, приборов и сеток,
+                        показывать истории на сетках и графиках, поддерживать богатые взаимодействия с кнопками, ползунками, вводом и так далее.
+                        Более того, Visualytik имеет программирование на основе потоков, так что вы можете создать практически что угодно для ваших панелей управления.
+                    </Description>
+                    <Language>dart</Language>
+                    <Language>Kotlin</Language>
+                    <Language>Typescript</Language>
+                    <Language>Fantom</Language>
+                    <Framework>Vue</Framework>
+                    <Framework>Polymer</Framework>
+                    <Software>Linux</Software>
+                    <Software>SkySpark</Software>
+                    <Software>IoT</Software>
+                    <Software>Selenium</Software>
+                </Project>
 
-                <Achievement lang="en">build with team ready to market leading-edge product</Achievement>
-                <Techs>Kotlin (web socket server), Typescript, Vue, Dart, Polymer, Fantom, Linux, Embedded, IoT,
-                    Teamcity, SkySpark, Selenium
-                </Techs>
+                <Achievement lang="en">Lead a small team to develop innovative product for building automation services (IoT)</Achievement>
+                <Achievement lang="en">Build with team ready to market leading-edge product</Achievement>
+                <Achievement lang="en">Built the application from early prototype to a market product</Achievement>
+                <Achievement lang="en">Established the development processes of the team that ensure continuous product delivery</Achievement>
+                <Achievement lang="en">Hiring, reviewing code and mentoring the team</Achievement>
+
             </Entry>
 
             <Entry Job="Team Lead">
@@ -244,13 +271,23 @@
                     <Logo>wargaming.png</Logo>
                 </Employer>
 
-                <Description>
-                    Server and game logic programming, as well as in client-server interaction, working with databases,
-                    and passionately driving integration of the new technologies into the pipeline.
-                </Description>
+                <Project name="World Of Warships">
+                    <Description lang="en">
+                        is a naval warfare-themed MMO game where players
+                        command a variety of warships and engage in tactical sea battles.
+                        With a focus on strategy and teamwork, players can choose from numerous historical
+                        vessels and customize them for combat in dynamic ocean environments.
+                    </Description>
+                    <Description lang="ru"> — это многопользовательская игра,
+                    в которой игроки управляют историческими боевыми кораблями и принимают участие в масштабных морских сражениях.
+                    Игра сочетает стратегию, командную тактику и элементы РПГ, позволяя улучшать и
+                        настраивать корабли для достижения победы на водах различных арен.</Description>
+                </Project>
 
-                <Achievement lang="en"></Achievement>
-                <Techs>Pyhton, C++, Bigworld</Techs>
+                <Achievement lang="en">Implemented several valuable functionalities in client and server logic of game</Achievement>
+                <Achievement lang="en">Optimized client-server interaction</Achievement>
+                <Achievement lang="en">Working with databases, and passionately driving integration of the new technologies into the pipeline.</Achievement>
+                <Techs>Python, C++, Bigworld</Techs>
             </Entry>
 
             <Entry Job='Senior Software Engineer'>
@@ -335,23 +372,62 @@
                 <Techs>C++, Boost, OpenSSL, GCC, bash, CMake, valgrind, gdb.</Techs>
             </Entry>
             <Entry Job='Senior Software Engineer'>
-                <Period From="Sep 2010" To="Mar 2012"/>
+                <Period From="Jul 2008" To="Mar 2012"/>
                 <Job>Senior Software Engineer</Job>
                 <Employer>
                     <Name>Sperasoft Inc.</Name>
                     <City>Saint Petersburg</City>
-                    <Description>International outsourcing company</Description>
+                    <Description>International gamedev outsourcing company</Description>
                     <Logo>sperasoft.png</Logo>
-                    <Customer>BioWare</Customer>
                 </Employer><!-- ; internal company portal; web-based reporting application. -->
-                <Description>
-                    Working on high-load game site (Drupal, Apache Solr), integration with 3rd party search engine,
-                    developing game data import flow from various data sources.
-                    Developing and supporting set of internal tools for testing, inviting, monitoring, etc.
-                    Consulting, prototyping and developing corporal internet sites.
-                    Plan, control and evaluate the operations of information systems.
-                    Recruit and supervise software engineers.
-                </Description>
+                <Project name="SWTOR">
+                    <Customer>BioWare</Customer>
+                    <Description lang="en">
+                        Customer: BioWare. Working on high-load game site (Drupal, Apache Solr), integration with 3rd party search engine,
+                        developing game data import flow from various data sources.
+                        Developing and supporting set of internal tools for testing, inviting, monitoring, etc.
+                        Consulting, prototyping and developing corporal internet sites.
+                        Plan, control and evaluate the operations of information systems.
+                        Recruit and supervise software engineers.
+                    </Description>
+                </Project>
+                <Project name="SOEMon">
+                    <Customer>Sony Online Entertainment</Customer>
+                    <Description lang="en">
+                        Worked as member of a team developing and maintaining: distributed high-load system of data
+                        collection and metric controls of company systems.
+                        Develop and implement policies and procedures for electronic data processing and computer systems
+                        operations and development.
+                        Meet with clients to discuss system requirements, specifications, costs and time lines.
+                    </Description>
+                    <Language>C++</Language>
+                    <Language>Bash</Language>
+                    <Language>Java</Language>
+                    <Language>JavaScript</Language>
+                    <Framework>Boost</Framework>
+                    <Framework>CppUnit</Framework>
+                    <Framework>JSP</Framework>
+                    <Framework>RichFaces</Framework>
+                    <Framework>ICEFaces</Framework>
+                    <Software>gSOAP</Software>
+                    <Software>libxml</Software>
+                    <Software>OpenSSL</Software>
+                    <Software>GCC</Software>
+                    <Platform>Tomcat</Platform>
+                    <Platform>MySQL</Platform>
+                </Project>
+                <Project name="sperasoft.com">
+                    <Description lang="en">
+                        Automate, optimize and promote corporate sites.
+                        Plan, control and evaluate the operations of information systems.
+                        Recruit and supervise computer engineers and programmers.
+                    </Description>
+                    <Language>PHP</Language>
+                    <Language>HTML</Language>
+                    <Language>CSS</Language>
+                    <Language>Javascript</Language>
+                    <Framework>Drupal</Framework>
+                </Project>
 
                 <Achievement lang="ru">Учавствовал в запуске игры
                     <a href="http://www.swtor.com/">SWTOR</a>
@@ -370,52 +446,6 @@
                 <Achievement lang="en">Finalized and introduced integration modules of high-load site data with Apache
                     Solr search engine
                 </Achievement>
-
-                <Techs>Drupal, JavaScript, Java, C++, Boost, CppUnit, gSOAP, libxml, OpenSSL, GCC, bash, Java EE, JSP,
-                    RichFaces, ICEFaces, MySQL, Tomcat, PHP, HTML, CSS.
-                </Techs>
-            </Entry>
-
-            <Entry Job='Senior Software Engineer'>
-                <Period From="May 2010" To="Sep 2010"/>
-                <Job>Senior Software Engineer</Job>
-                <Employer>
-                    <Name>Sperasoft Inc.</Name>
-                    <City>Volgograd branch</City>
-                    <Description>International outsourcing company</Description>
-                    <Logo>sperasoft.png</Logo>
-                </Employer>
-                <Description>
-                    Automate, optimize and promote corporate sites.
-                    Plan, control and evaluate the operations of information systems.
-                    Recruit and supervise computer engineers and programmers.
-                </Description>
-
-                <Achievement lang="ru">Перенес статичный сайт на CMS Drupal</Achievement>
-                <Achievement lang="en">Convert static corporate site into dynamic full-featured extensible site on CMS
-                    Drupal
-                </Achievement>
-                <Techs>Drupal, JavaScript, PHP, HTML, CSS.</Techs>
-            </Entry>
-
-            <Entry Job='Senior Software Engineer'>
-                <Period From="Jul 2008" To="May 2010"/>
-                <Job>Senior Software Engineer</Job>
-                <Employer>
-                    <Name>Sperasoft Inc.</Name>
-                    <City>Volgograd branch</City>
-                    <Description>International outsourcing company</Description>
-                    <Logo>sperasoft.png</Logo>
-                    <Customer>Sony Online Entertaiment</Customer>
-                </Employer>
-                <Description>
-                    Worked as member of a team developing and maintaining: distributed high-load system of data
-                    collection and metric controls of company systems.
-                    Develop and implement policies and procedures for electronic data processing and computer systems
-                    operations and development.
-                    Meet with clients to discuss system requirements, specifications, costs and time lines.
-                </Description>
-
                 <Achievement lang="ru">Улучшил скорость SOAP запросов web приложения к серверу</Achievement>
                 <Achievement lang="en">Improved speed of SOAP data exchange between web application and server</Achievement>
 
@@ -426,13 +456,14 @@
                 <Achievement lang="en">Optimized project building under Linux</Achievement>
 
                 <Achievement lang="ru">Разработал скрипт (bash) установки, конфигурации и управления ПО</Achievement>
-                <Achievement lang="en">Develop deployment, configuration and handling script (bash) of software
-                    instances
+                <Achievement lang="en">Develop deployment, configuration and handling script (bash) of software instances</Achievement>
+
+                <Achievement lang="ru">Перенес статичный сайт на CMS Drupal</Achievement>
+                <Achievement lang="en">Convert static corporate site into dynamic full-featured extensible site on CMS
+                    Drupal
                 </Achievement>
-                <Techs>C++, Boost, CppUnit, gSOAP, libxml, OpenSSL, GCC, bash, Java EE, JSP, RichFaces, ICEFaces, MySQL,
-                    Tomcat, JavaScript
-                </Techs>
             </Entry>
+
             <Entry Job='Freelancer'>
                 <Period From="Aug 2007" To="Jul 2008"/>
                 <Job>Freelancer</Job>
@@ -625,7 +656,7 @@
 
     <Education>
         <Entry>
-            <Period From='2003' To='2009'/>
+            <Period From='Sep 2003' To='June 2009'/>
             <Degree>Master's Degree in Computer Science</Degree>
             <Institution>Volgograd State Technical University</Institution>
             <City>Volgograd</City>
@@ -703,7 +734,10 @@
 
     <Programs>
         <!-- <Group type = 'Author programs and scripts'> -->
-        <Entry href="https://github.com/andrey-zakharov/MandelbrotShader">Yet another WebGL small demo: Mandelbrot-Julia-on-shaders</Entry>
+        <Entry type="ROICalc" href="https://github.com/andrey-zakharov/roicalc">(Vue) Rise Of Industry calculator.</Entry>
+        <Entry type='Mandelbrot-Julia-on-shaders' href="https://github.com/andrey-zakharov/MandelbrotShader">
+            (WebGL) WebGL small demo: Mandelbrot-Julia-on-shaders.
+        </Entry>
         <!--Entry href="https://github.com/andrey-zakharov/balls-logic-issue"></Entry-->
 
         <Entry type='Winamp Statistician'>(VC++) Plugin for Winamp collected statistics about played tracks and then
@@ -712,7 +746,7 @@
         <Entry type='VaultSoft EasyNP~Engine'>(PHP, MySQL) Control System news, polls, banners and counters on the site
             on the templates and database.
         </Entry>
-        <Entry type='RemoteProcMon'>(C#) server-client application, monitor the state of *NIX systems.</Entry>
+        <Entry type='RProcMon'>(C#) server-client application, monitor the state of *NIX systems.</Entry>
         <Entry type='Admin traffer'>(C#) Counts squid-traffic.</Entry>
         <Entry type='VSMessager'>(VC++) instant messaging client based on intranet chat.</Entry>
         <Entry type='wxChatAdmin'>(VC++, C#) remote administration tool for instant messaging server.</Entry>

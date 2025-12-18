@@ -5,13 +5,59 @@
         xmlns="http://www.w3.org/1999/XSL/Transform"
         version="1.0">
 
-    <template match = "/">\input{predoc.tex}%
+    <template match = "/">
+        \input{predoc.tex}
         <apply-templates select = '/Document/Meta' />
         \begin{document}
-        \makecvtitle%
-        \cloud%
-        <apply-templates select = '/Document/Meta/following-sibling::*[not(@lang) or @lang=$lang]' />
+        \makecvtitle
+        %\headercols{\blindtext}{\blindtext}{\blindtext}
+
+        \headercols{%
+            <apply-templates select = '/Document/Objective[ not(@lang) or @lang=$lang]' />%
+        }{%
+            <apply-templates select = '/Document/Languages' />%
+        }{%
+            <apply-templates select = '/Document/Education[not(@lang) or @lang=$lang]' />%
+        }
+        <apply-templates select =
+            '/Document/Meta/following-sibling::*[not(self::Objective) and not(self::Languages) and not(self::Education) and (not(@lang) or @lang=$lang)]' />
         \end{document}
     </template>
+
+    <!-- proper template for arguments to cvtripleitem -->
+    <template match = '//Objective'>\section[\faBullseye]{<value-of select = 'name()' />}%
+        %{\setlength{\leftmargini}{12pt}%
+        %\begin{itemize}%
+            <apply-templates select = "*" />%
+        %\end{itemize}}%
+    </template>
+<!--    <template match = '//Languages'>{<value-of select = 'name()' />}{<apply-templates select = "*" />}%</template>-->
+<!--    <template match = '//Education'>{<value-of select = 'name()' />}{<apply-templates select = "*" />}%</template>-->
+    <template match = '/Document/Objective//Entry'>%
+        %\item{<value-of select = '.' />}%
+        <value-of select = '.' />\newline{}%
+    </template>
+<!--    <template match = '/Document/Education//Entry'>{<value-of select = '.' />}%</template>-->
+    <!-- <template match = '/Document/Languages'>
+      \pagebreak\section{<value-of select = 'name()' />}<apply-templates /></template> -->
+    <template match = '//Language'>%
+        <value-of select = '@name' />: <value-of select = '@skill' />\newline{}%
+        %{<value-of select = '.' />}%
+    </template>
+
+    <template match = '//Education/Entry'>%
+        <value-of select = 'Degree' /> (<apply-templates select = 'Period' />) %
+        \textbf{<value-of select = 'Institution' />} %
+        \emph{<value-of select = 'Grade' />}\\%
+        <value-of select = 'Description' />%
+    </template>
+
+    <template match = '//Education/Thesis'>
+        \subsection{Master thesis}
+        \cvline{title}{\emph{<value-of select = 'Title' />}}
+        \cvline{supervisors}{<value-of select = 'Supervisors' />}
+        \cvline{description}{\small <value-of select = 'Description' />}
+    </template>
+
 
 </stylesheet>

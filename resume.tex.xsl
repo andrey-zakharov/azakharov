@@ -4,25 +4,37 @@
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns="http://www.w3.org/1999/XSL/Transform"
   version="1.0">
-  <xsl:include href="resume.tex.header.xsl" />
-  <output method="text" media-type="text/x-tex" />
+  <output method="text" media-type="text/x-tex"/>
     <param name = "lang" >en</param>
-  <template match = "*[ @xlink:role = 'locator' ]">
+  <template match = "*[ @xlink:role = 'locator' ]">%
     <choose>
       <when test = 'text()'> \href{<value-of select = "@xlink:href" />}{<value-of select = "." />} </when>
       <otherwise>   \url{<value-of select = "@xlink:href" />}      </otherwise>
-    </choose>
+    </choose>%
   </template>
 
   <template match = 'Project'>\item{\textbf{<value-of
           select = '@name' />}: <value-of
           select = 'Description[@lang = $lang]' />}</template>
 
-  <!-- Meta -->
-  <template match="Period">\raggedleft{{\scriptsize <value-of select = "substring-before(@From, ' ')" />}<value-of select = "substring-after(@From, ' ')" />\,--}
-    \newline\raggedright{{\scriptsize <value-of select = "substring-before(@To, ' ')" />}<value-of select = "substring-after(@To, ' ')" />}
+  <template match="Period">%
+    <variable name="fromYear" select="substring-after(@From, ' ')" />%
+    <variable name="untilYear" select="substring-after(@To, ' ')" />%
+    <choose>
+
+      <when test="$fromYear = $untilYear">\raggedleft{%
+    {\scriptsize <value-of select = "substring-before(@From, ' ')" />}<value-of select = "$fromYear" />\,--}%
+      \raggedright{{\scriptsize <value-of select = "substring-before(@To, ' ')" />}<value-of select = "$untilYear" />}%
+      </when>
+
+
+      <otherwise>\raggedleft{<value-of select = "$fromYear" />\,--}%
+        \raggedright{<value-of select = "$untilYear" />}%
+      </otherwise>
+
+    </choose>
   </template>
-  
+  <!-- Meta -->
   <template match = '/Document/Meta'><apply-templates select = "*[@lang = $lang]" /></template>
   <template match = '/Document/Meta/Personal'><apply-templates /></template>
   <template match = '//Meta/Title'>\title{\today}</template>
@@ -40,8 +52,7 @@
   <template match = '//Personal/Extra'>\extrainfo{<value-of select = '.' />}</template>
   <template match = '//Personal/Photo'>\photo[<value-of select = '@width' />][2pt]{<value-of select = '.' />}</template>
 
-  <template match = '/Document/*'>
-    \section<choose>
+  <template match = '/Document/*'>\section<choose>
       <when test="name() = 'Objective'">[\faBullseye]</when>
       <when test="name() = 'Strengths'">[\faLink]</when>
       <when test="name() = 'Skills'">[\faMagic]</when>
@@ -49,10 +60,10 @@
       <when test="name() = 'Education'">[\faGraduationCap]</when>
       <when test="name() = 'Languages'">[\faLanguage]</when>
       <when test="name() = 'Links'">[\faAddressBook ]</when>
-    </choose>{<value-of select = 'name()' />}
-    <apply-templates select = "*[not(@lang) or @lang = $lang]" />
+    </choose>{<value-of select = 'name()' />}%
+    <apply-templates select = "*[not(@lang) or @lang = $lang]" />%
   </template>
-
+  <template match = '//Cloud'>\cloud%</template>
   <template match = '/Document/*/*'>
     \subsection{<choose>
       <when test = "@type"><value-of select = '@type' /></when>
@@ -61,7 +72,7 @@
     <apply-templates /></template>
 
   <template match = '/Document/Experience/Vocational'><apply-templates /></template>
- 
+
   <template match = '/Document/*//Entry'><choose><when
           test = '@type'>\cvline{<value-of select = '@type'
   />}</when><otherwise>\cvlistitem</otherwise></choose>{<value-of select = '.' />}
@@ -70,21 +81,16 @@
   <template match = "//Entry[@xlink:href]">\cvline{<value-of select = '@type' />}{\url{<value-of select = '@xlink:href' />}}
   </template>
 
-  <template match = '//Education/Entry'>\cventry{<apply-templates select = 'Period' />}{<value-of select = 'Degree' />}{<value-of select = 'Institution' />}{<value-of select = 'City' />}{\textit{<value-of select = 'Grade' />}}{<value-of select = 'Description' />}</template>
-  
-  <template match = '//Education/Thesis'>
-\subsection{Master thesis}
-\cvline{title}{\emph{<value-of select = 'Title' />}}
-\cvline{supervisors}{<value-of select = 'Supervisors' />}
-\cvline{description}{\small <value-of select = 'Description' />}
-  </template>
-  
   <template match = '//Achievement'>\item{<value-of select = '.' />}
   </template>
   
   
-  <template match = '//Experience//Entry'>\cventry{<apply-templates select = 'Period' />}{<value-of select = '@Job' />}{<value-of
-          select = 'Employer/Name' />}{<value-of select = 'Employer/City' />}{<copy-of select = 'Employer/Description' />}{<apply-templates
+  <template match = '//Experience//Entry'>\cventry{<apply-templates select = 'Period' />}%
+    {<value-of select = '@Job' />}%
+    {<value-of select = 'Employer/Name' />}%
+    {<value-of select = 'Employer/City' />}%
+    {<copy-of select = 'Employer/Description' />}%
+    {<apply-templates
           select = 'Description' />\begin{itemize}<if
           test = 'Employer/Customer'>\item Customer: <value-of select = 'Employer/Customer' /></if><if
           test = 'Project'>\item <choose><when test="$lang='ru'">Проекты</when><otherwise>Projects</otherwise></choose>:\begin{itemize}<apply-templates
@@ -93,17 +99,19 @@
   <!--    <comment>\newline{}
       Key technologies and languages: <value-of select = 'Techs' /></comment>-->
 
-  <!-- <template match = '/Document/Languages'>
-    \pagebreak\section{<value-of select = 'name()' />}<apply-templates /></template> -->
-  <template match = '//Language'>\cvlanguage{<value-of select = '@name' />}
-    {<value-of select = '@skill' />}{<value-of select = '.' />\hfill}</template>
-    
+
 <!--   <template match = '/Document/Skills'>\section{Skills}<apply-templates /></template>
   <template select = '/Document/Skills/Group[@lang = $lang]'>\subsection{<value-of select = '@type' />}<apply-templates /></template>
   <template match = '/Document/Skills//Entry'><choose><when test = '@type'>\cvline{<value-of select = '@type' />}</when><otherwise>\cvlistitem</otherwise></choose>{<value-of select = '.' />}</template>
    -->
-  <template match = '/Document/Programs'>\section{Programs and scripts}<apply-templates /></template>
-  <template match = '/Document/Programs/Entry'><choose><when test = '@type'>\cvline{<value-of select = '@type' />}</when><otherwise>\cvlistitem</otherwise></choose>{<value-of select = '.' />}
+  <template match = '/Document/Programs'>\section[\faTasks]{Pet projects}<apply-templates /></template>
+  <template match = '/Document/Programs/Entry'>%
+    <choose>
+      <when test = '@type'>\cvline{<value-of select = '@type' />}</when>
+      <otherwise>\cvlistitem</otherwise></choose>%
+    {<value-of select = '.' /> %
+      <if test="@href"> \url{<value-of select="@href" />} </if>%
+    }%
   </template>
   
   <template match = '/Document/Portfolio/*'><apply-templates /></template>
@@ -114,5 +122,5 @@
   <template match = '/Document/Bibliography/Entry'>\bibitem{}
     \href{<value-of select = '@Url' />}{<value-of select = '@Title' />}. <value-of select = '@Url' />, <value-of select = '@Year' />
   </template>
-
+  <xsl:include href="resume.tex.header.xsl" />
 </stylesheet>

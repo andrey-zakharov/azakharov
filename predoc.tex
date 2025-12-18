@@ -13,6 +13,8 @@
 
 \usepackage{url}
 \usepackage{tikz}
+\usepackage[outline]{contour}
+\usepackage{multicol}
 \usetikzlibrary{tikzmark}
 \usetikzlibrary{shapes.symbols, positioning} % Load necessary libraries
 \usetikzlibrary{fit}
@@ -26,17 +28,18 @@
 % 0.577, 0.520, 0.456, 0.376, 0.254, 0.058
 % 99.333, 89.786, 78.701, 64.788, 43.831, 10.000
 % 69.6719, 62.8743, 55.1554, 45.4114, 30.6885, 7.0000
-\tikzset{s1/.style={font={\fontsize{70pt}{12pt}\selectfont}, color1},
-        s2/.style={font={\fontsize{63pt}{12pt}\selectfont}, color1!80},
-        s3/.style={font={\fontsize{55pt}{12pt}\selectfont}, headTL},
-        s4/.style={font={\fontsize{45pt}{12pt}\selectfont}, color2},
-        s5/.style={font={\fontsize{30pt}{12pt}\selectfont}, color2!80},
+\tikzset{s1/.style={anchor=base,font={\fontsize{70pt}{12pt}\selectfont\bfseries}, headtext},
+        s2/.style={anchor=base,font={\fontsize{63pt}{12pt}\selectfont}, color1!80},
+        s3/.style={anchor=base,font={\fontsize{55pt}{12pt}\selectfont}, headTL},
+        s4/.style={anchor=base,font={\fontsize{45pt}{12pt}\selectfont}, color2},
+        s5/.style={anchor=base,font={\fontsize{30pt}{12pt}\selectfont}, color0!50},
 %        s6/.style={font=\small, lightgray},
-        s6/.style={font={\fontsize{7pt}{5pt}\selectfont}, color0},
-        every node/.style = {anchor=base} %, text depth=0pt, inner sep=+0pt, font=\vphantom{Ag}
+        s6/.style={anchor=base,font={\fontsize{7pt}{5pt}\selectfont}, color0},
+        %every node/.style = {anchor=base} %, text depth=0pt, inner sep=+0pt, font=\vphantom{Ag}
 }
 \newcommand{\cloud}{
-    \begin{center}\resizebox{0.8\textwidth}{!}{
+    \contourlength{1.5pt}
+    \begin{center}\resizebox{0.7\textwidth}{!}{
         \begin{tikzpicture}
             %\node at (0, 0) {};
         \begin{scope}[scale=0.026458,yscale=-1]
@@ -50,7 +53,7 @@
             % +--#--+
             % Main text
 %            \draw (196,-49) circle (5cm);
-            \node[s1, rotate=0]  (sys) at (196,-49) {Systems};
+            \node[s1] at (196,-49) {\scalebox{0.89}[1]{\contour{color1}{Systems}}};
             \node[s2, rotate=0]  (dev) at (-152,11) {development};
             \node[s3, rotate=0]  (app) at (239,66) {Applications};
 %            \draw (sys.center) -- (dev.center) (sys.base)   -- (dev.base);
@@ -59,7 +62,7 @@
 %                \pgfmathtruncatemacro{\angle}{90 * \oi/4}
 %                \node[s4, opacity=\o, rotate=\angle, rotate=45]  at (6,-93) {Linux};
 %            }
-            \node[s4, rotate around={45:(center)}] at (6,-93) {Linux};
+            \node[s4, rotate=45] at (6,-93) {Linux};
             \node[s4, rotate=0]  at (80,115) {management};
             \node[s4, rotate=0]  at (222,3) {technical};
             \node[s5, rotate=45]  at (207,-141) {Design};
@@ -98,6 +101,18 @@
         \end{scope}\end{tikzpicture}
     }\end{center}
 }
+\newcommand{\blindtext}{The lipsum package is for producing placeholder text. It is useful for examples, in which you need to show some text to reproduce something, but the text itself doesn't matter. For example if somebody asks about a problem with page headers on the second page of their article, their example document needs to be at least two pages long. That's easy with the lipsum package.
+Alternatively you could actually type random text in your code, but this makes it harder to see the code which actually matters.}
+
+\newcommand{\headercols}[3]{
+    \setlength{\tabcolsep}{3pt}
+    \begin{tabular}{ p{0.333\textwidth} p{0.333\textwidth} p{0.333\textwidth} }
+        #1 & %
+        #2 & %
+        #3 \\
+    \end{tabular}
+}
+
 
 %\addtolength{\parskip}{-5pt}
 \AtBeginDocument{\recomputelengths}
