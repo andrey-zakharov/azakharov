@@ -50,7 +50,7 @@ pdf: $(TARGET_TEX)
 	@$(LATEX2PDF) $(TARGET_TEX)
 
 texlive.libs:
-	tlmgr.bat install moderncv
+	tlmgr install moderncv cyrillic lh cm-super
 
 $(TARGET_TEX): $(PROJ).xml $(XML2TEX_XSLT)
 	( $(SED) 's_C#_C\\\#_' $< | $(XSLTPROC) $(XML2TEX_XSLT) - | $(SED) 's_&_\\\&_' > $@ )

@@ -6,7 +6,7 @@
         version="1.0">
 
     <template match = "/">
-        \input{predoc.tex}
+        \input{predoc}
         <apply-templates select = '/Document/Meta' />
         \begin{document}
         \makecvtitle

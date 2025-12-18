@@ -60,7 +60,23 @@
       <when test="name() = 'Education'">[\faGraduationCap]</when>
       <when test="name() = 'Languages'">[\faLanguage]</when>
       <when test="name() = 'Links'">[\faAddressBook ]</when>
-    </choose>{<value-of select = 'name()' />}%
+    </choose>{%
+      <choose>
+        <when test="$lang='en'"><value-of select = 'name()' /></when>
+        <otherwise>%
+          <choose>
+            <when test="name() = 'Objective'">Цель</when>
+            <when test="name() = 'Strengths'">Сильные стороны</when>
+            <when test="name() = 'Skills'">Навыки</when>
+            <when test="name() = 'Experience'">Опыт</when>
+            <when test="name() = 'Education'">Образование</when>
+            <when test="name() = 'Languages'">Языки</when>
+            <when test="name() = 'Links'">Ссылки</when>
+            <otherwise><value-of select = 'name()' /></otherwise>
+          </choose>%
+        </otherwise>
+      </choose>%
+    }%
     <apply-templates select = "*[not(@lang) or @lang = $lang]" />%
   </template>
   <template match = '//Cloud'>\cloud%</template>
