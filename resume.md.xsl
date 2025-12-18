@@ -10,8 +10,8 @@
   <!-- [Link text Here](https://link-url-here.org) -->
   <template match = "*[ @xlink:role = 'locator' ]"><choose>
     <when test = 'text()'>[<value-of select = "." />](<value-of select = "@xlink:href" />)</when>
-    <otherwise>[<value-of select = "@xlink:href" />](<value-of select = "@xlink:href" />)</otherwise></choose>
-  </template>
+    <otherwise>[<value-of select = "@xlink:href" />](<value-of select = "@xlink:href" />)</otherwise>
+  </choose></template>
   
   <template match = "/">
 <apply-templates select = '/Document/Meta/Personal[@lang = $lang]' />
@@ -41,8 +41,7 @@
 <apply-templates /></template>
 
   <template match = '//Entry'>
-- <apply-templates />
-</template>
+- <apply-templates /></template>
   
   <template match = '//Education/Entry'><apply-templates select = 'Period' />, __<value-of select = 'Degree' />__,
       <value-of select = 'Institution' />, 
@@ -54,36 +53,30 @@
 
   <template match = '//Experience//Entry'><apply-templates select = 'Period' />   '''<value-of select = '@Job' />''', /<value-of select = 'Employer/Name' />/, <value-of select = 'Employer/City' />, <value-of select = 'Employer/Description' />
 <apply-templates select = 'Description' />
-<apply-templates select="Achievement[@lang='$lang']" />
-<!--
-    <span class = 'techs'>Key technologies and languages: <value-of select = 'Techs' /></td></tr>--></template>
+<apply-templates select="Achievement[@lang='$lang']" /></template>
     
   <template match = '//Achievement'> - <value-of select = '.' /></template>
     
   <template match = '//Languages'># Languages
 <apply-templates />
   </template>
-  <template match = '//Language'> - <value-of select = '@name' />: <value-of select = '@skill' />
-  </template>
-    
-  <template match = '/Document/Skills'># Skills
-<apply-templates />
-  </template>
+  <template match = '//Language'>
+- <value-of select = '@name' />: <value-of select = '@skill' /></template>
 
-    <template match = '/Document/Skills/Group'>## <value-of select = '@type' />
+    <template match = '/Document/Skills/Group'>
+## <value-of select = '@type' />
 <apply-templates />
 
     </template>
 
-  <template match = '/Document/Skills//Entry'> - <choose>
-        <when test = '@type'>
-            <value-of select = '@type' />
-        </when>
+  <template match = '/Document/Skills//Entry'>
+- <choose>
+        <when test = '@type'><value-of select = '@type' /></when>
         <otherwise></otherwise>
-    </choose> <value-of select = '.' />
-  </template>
-    
-    <template match = '/Document/Bibliography'># Publications
+  </choose> <value-of select = '.' /></template>
+
+    <template match = '/Document/Bibliography'>
+# Publications
         <apply-templates />
 
     </template>
