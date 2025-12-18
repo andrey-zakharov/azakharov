@@ -4,9 +4,19 @@
 \documentclass[10pt,a4paper]{moderncv}
 %\renewcommand*{\addresssymbol}{\CircledA}
 \moderncvtheme[cerulean]{contemporary}
-\usepackage[T2A]{fontenc}
-\usepackage[russian, english]{babel} % Add 'russian' to the babel package options
-\usepackage[utf8]{inputenc}
+\usepackage{fontspec}
+%\setmainfont{CMU Serif}[Ligatures=TeX]
+\usepackage[russian, english]{babel}
+\usepackage[T1]{fontenc}
+%\usepackage[T2A]{fontenc}
+%\usepackage[russian, english]{babel} % Add 'russian' to the babel package options
+%Prior to 2018, LaTeX’s handling of input files encoded in UTF-8 required users to add the line
+%
+%\usepackage[utf8]{inputenc}
+%Prior to 2018, LaTeX’s handling of input files encoded in UTF-8 required users to add the line to their document preamble.
+%With the release of TeX Live 2018, LaTeX was enhanced to adopt UTF-8 as its default text encoding,
+%removing the need to add \usepackage[utf8]{inputenc}
+%\usepackage[utf8]{inputenc}
 \definecolor{addresscolor}{rgb}{0.35,0.35,0.35}
 \usepackage{lmodern}
 \usepackage[hmargin=0.5in,vmargin=10pt]{geometry}

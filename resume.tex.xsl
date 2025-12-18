@@ -103,25 +103,29 @@
   
   <template match = '//Experience//Entry'>\cventry{<apply-templates select = 'Period' />}%
     {<value-of select = '@Job' />}%
-    {<value-of select = 'Employer/Name' />}%
-    {<value-of select = 'Employer/City' />}%
-    {<copy-of select = 'Employer/Description' />}%
-    {<apply-templates select = 'Description' />\begin{itemize}%
-      <if test = 'Employer/Customer'>\item Customer: <value-of select = 'Employer/Customer' /></if>%
-      <if test = 'Project'>\item <choose>
+    {<value-of select = 'Employer/Name[not(@lang) or @lang = $lang]' />}%
+    {<value-of select = 'Employer/City[not(@lang) or @lang = $lang]' />}%
+    {<copy-of select = 'Employer/Description[not(@lang) or @lang = $lang]' />}%
+    {<apply-templates select = 'Description[not(@lang) or @lang = $lang]' />%
+    <if test="Project or Achievement">\begin{itemize}%
+      <if test = 'Employer/Customer'>\item{ Customer: <value-of select = 'Employer/Customer' /> }</if>%
+      <if test = 'Project'>\item{ <choose>
           <when test="$lang='ru'">Проекты</when>
           <otherwise>Projects</otherwise>
         </choose>:%
         \begin{itemize}%
         <apply-templates select = 'Project' />%
         \end{itemize}%
-      </if>%
-      <if test = 'Achievement'>\item Responsibilities:%
+       }</if>%
+      <if test = 'Achievement'>\item{ <choose>
+        <when test="$lang='ru'">Обязанности</when>
+        <otherwise>Responsibilities</otherwise>
+      </choose>:%
         \begin{itemize}%
           <apply-templates select = "Achievement[@lang = $lang]" />%
         \end{itemize}%
-      </if>%
-      \end{itemize}%
+       }</if>%
+      \end{itemize}</if>%
     }
   </template>
   <!--    <comment>\newline{}

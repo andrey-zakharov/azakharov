@@ -7,6 +7,10 @@
 
     <template match = "/">
         \input{predoc}
+        \selectlanguage{<choose>
+            <when test="$lang='en'">english</when>
+            <otherwise>russian</otherwise>
+        </choose>}
         <apply-templates select = '/Document/Meta' />
         \begin{document}
         \makecvtitle
@@ -26,15 +30,12 @@
 
     <!-- proper template for arguments to cvtripleitem -->
     <template match = '//Objective'>\section[\faBullseye]{<value-of select = 'name()' />}%
-        %{\setlength{\leftmargini}{12pt}%
-        %\begin{itemize}%
-            <apply-templates select = "*[ not(@lang) or @lang=$lang]" />%
-        %\end{itemize}}%
+        <apply-templates select = "*[ not(@lang) or @lang=$lang]" />%
     </template>
 <!--    <template match = '//Languages'>{<value-of select = 'name()' />}{<apply-templates select = "*" />}%</template>-->
 <!--    <template match = '//Education'>{<value-of select = 'name()' />}{<apply-templates select = "*" />}%</template>-->
     <template match = '/Document/Objective//Entry'>%
-        %\item{<value-of select = '.' />}%
+<!--        %\item{<value-of select = '.' />}%-->
         <value-of select = '.' />\newline{}%
     </template>
 <!--    <template match = '/Document/Education//Entry'>{<value-of select = '.' />}%</template>-->

@@ -131,9 +131,12 @@
                 </Project>
 
                 <Employer>
-                    <Name>"Code Green Engineering" Limited Company</Name>
-                    <City>Saint Petersburg</City>
-                    <Description>An innovative company specializing in software development using neural networks.</Description>
+                    <Name lang="en">"Code Green Engineering" Limited Company</Name>
+                    <Name lang="ru">ООО "Код Грин Инжиниринг" </Name>
+                    <City lang="en">Saint Petersburg</City>
+                    <City lang="ru">Санкт-Петербург</City>
+                    <Description lang="en">An innovative company specializing in software development using neural networks.</Description>
+                    <Description lang="ru">Инновационная компания, специализирующаяся на разработке программного обеспечения с использованием нейросетей.</Description>
                 </Employer>
 
                 <Achievement lang="ru">Управление полным циклом разработки</Achievement>

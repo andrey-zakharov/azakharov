@@ -22,7 +22,7 @@ SED = sed
 VIEW_PDF ?= okular
 VIEW_HTML ?= x-www-browser
 
-LATEX2PDF = pdflatex -file-line-error -interaction=nonstopmode
+LATEX2PDF = lualatex -file-line-error -interaction=nonstopmode -halt-on-error
 XSLTPROC = xsltproc --stringparam lang $(PROJ_LANG)
 
 
@@ -48,24 +48,26 @@ preview-html:
 preview-pdf:
 	[ -r ./$(TARGET_PDF) ] && ( $(VIEW_PDF) $(TARGET_PDF) & )
 
-pdf: $(TARGET_TEX)
-	@$(LATEX2PDF) $(TARGET_TEX)
+pdf: $(PROJ).$(PROJ_LANG).tex
+	$(SED) 's_&_\\\&_' $(PROJ).$(PROJ_LANG).tex > escaped.$(PROJ_LANG).tex
+	mv escaped.$(PROJ_LANG).tex $(PROJ).$(PROJ_LANG).tex
+	$(LATEX2PDF) $(PROJ).$(PROJ_LANG).tex
 
 txt: $(PROJ).$(PROJ_LANG).md
 
 
 texlive.libs:
-	tlmgr install moderncv cyrillic lh cm-super
-
-$(TARGET_TEX): $(PROJ).xml $(XML2TEX_XSLT)
-	( $(SED) 's_C#_C\\\#_' $< | $(XSLTPROC) $(XML2TEX_XSLT) - | $(SED) 's_&_\\\&_' > $@ )
+	tlmgr install moderncv cyrillic lh cm-super luatexbase newcomputermodern cyrillic-modern babel-russian
+#
+#$(TARGET_TEX): $(PROJ).xml $(XML2TEX_XSLT)
+#	( $(SED) 's_C#_C\\\#_' $< | $(XSLTPROC) $(XML2TEX_XSLT) - | $(SED) 's_&_\\\&_' > $@ )
 
 # I've made it for support xml -> 'all others' converter
 #$(PROJ).%: $(PROJ).xml
 #	@$(XSLTPROC) --output $(@:$*=$(PROJ_LANG).$(PROJ) $@.xsl $(PROJ).xml
-
-$(TARGET_HTML): $(PROJ).xml
-	( $(SED) 's!C#!C\\#!' $(PROJ).xml | $(XSLTPROC) resume.html.xsl - | $(SED) 's!&!\\&!' > $(TARGET_HTML))
+#
+#$(TARGET_HTML): $(PROJ).xml
+#	( $(SED) 's!C#!C\\#!' $(PROJ).xml | $(XSLTPROC) resume.html.xsl - | $(SED) 's!&!\\&!' > $(TARGET_HTML))
 
 clean:
 	$(RM) *.log *.out *~ *.aux \
@@ -73,15 +75,15 @@ clean:
 	*.prepared4xslt
 
 distclean:
-	$(RM) $(TARGET_TEX) $(TARGET_HTML) $(TARGET_PDF)
+	$(RM) $(PROJ).en.* $(PROJ).ru.*
 
 ttex:
 	@$(XSLTPROC) $(XML2TEX_XSLT) $(PROJ).xml
 
-$(PROJ).$(PROJ_LANG).prepared4xslt: $(PROJ).xml
+$(PROJ).prepared4xslt: $(PROJ).xml
 	$(SED) 's_C#_C\\\#_' $< > $@
 
-$(PROJ).$(PROJ_LANG).%: $(PROJ).$(PROJ_LANG).prepared4xslt resume.tex.xsl resume.md.xsl
+$(PROJ).$(PROJ_LANG).%: $(PROJ).prepared4xslt resume.tex.xsl resume.md.xsl
 	@echo Using resume.$*.xsl
-	$(XSLTPROC) resume.$*.xsl $(PROJ).xml | $(SED) 's!&!\\&!' > $@
+	$(XSLTPROC) resume.$*.xsl $(PROJ).prepared4xslt > $@
 
