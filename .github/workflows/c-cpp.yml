@@ -26,7 +26,7 @@ jobs:
         # e.g., /usr/local/texlive/2025/bin/x86_64-linux
         PATH=~/texlive/bin/x86_64-linux:$PATH
         export PATH
-        ls -la ~/texlive
+        ls -la ~/texlive/bin/x86_64-linux
         tlmgr update --all
     - name: make
       run: |
