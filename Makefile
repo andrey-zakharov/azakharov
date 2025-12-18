@@ -30,8 +30,10 @@ TARGET_TEX = $(PROJ).$(PROJ_LANG).tex
 TARGET_HTML = $(PROJ).$(PROJ_LANG).html
 TARGET_PDF = $(PROJ).$(PROJ_LANG).pdf
 TARGET_XML = $(PROJ).$(PROJ_LANG).xml
+TARGET_TXT = $(PROJ).$(PROJ_LANG).md
 
 XML2TEX_XSLT = resume.tex.xsl
+XML2TXT_XSLT = resume.md.xsl
 
 .PHONY: preview preview-pdf preview-html all pdf xml $(PROJ).xml
 
@@ -49,6 +51,9 @@ preview-pdf:
 pdf: $(TARGET_TEX)
 	@$(LATEX2PDF) $(TARGET_TEX)
 
+txt: $(PROJ).$(PROJ_LANG).md
+
+
 texlive.libs:
 	tlmgr install moderncv cyrillic lh cm-super
 
@@ -58,16 +63,25 @@ $(TARGET_TEX): $(PROJ).xml $(XML2TEX_XSLT)
 # I've made it for support xml -> 'all others' converter
 #$(PROJ).%: $(PROJ).xml
 #	@$(XSLTPROC) --output $(@:$*=$(PROJ_LANG).$(PROJ) $@.xsl $(PROJ).xml
- 
+
 $(TARGET_HTML): $(PROJ).xml
 	( $(SED) 's!C#!C\\#!' $(PROJ).xml | $(XSLTPROC) resume.html.xsl - | $(SED) 's!&!\\&!' > $(TARGET_HTML))
 
 clean:
 	$(RM) *.log *.out *~ *.aux \
-	*.4ct *.4tc *.bbl *.blg *.dvi *.idv *.lg *.tmp *.xref
+	*.4ct *.4tc *.bbl *.blg *.dvi *.idv *.lg *.tmp *.xref \
+	*.prepared4xslt
 
 distclean:
 	$(RM) $(TARGET_TEX) $(TARGET_HTML) $(TARGET_PDF)
 
 ttex:
 	@$(XSLTPROC) $(XML2TEX_XSLT) $(PROJ).xml
+
+$(PROJ).$(PROJ_LANG).prepared4xslt: $(PROJ).xml
+	$(SED) 's_C#_C\\\#_' $< > $@
+
+$(PROJ).$(PROJ_LANG).%: $(PROJ).$(PROJ_LANG).prepared4xslt resume.tex.xsl resume.md.xsl
+	@echo Using resume.$*.xsl
+	$(XSLTPROC) resume.$*.xsl $(PROJ).xml | $(SED) 's!&!\\&!' > $@
+

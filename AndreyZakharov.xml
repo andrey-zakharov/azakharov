@@ -678,6 +678,15 @@
             <Description>Automated systems for information processing and management</Description>
             <!--% \cventry{2000-\-2002}{}{Volgograd State University}{Volgograd}{\textit{}}{Radiophysics}  % arguments 3 to 6 are optional-->
         </Entry>
+        <Entry lang="ru">
+            <Period From='Sep 2003' To='June 2009'/>
+            <Degree>Магистерская степень</Degree>
+            <Institution>Волгоградский государственный технический университет</Institution>
+            <City>Волгоград</City>
+            <Grade>Средний балл: 3,6 из 4.0</Grade>
+            <Description>Автоматизированные системы обработки и управления информацией</Description>
+            <!--% \cventry{2000-\-2002}{}{Volgograd State University}{Volgograd}{\textit{}}{Radiophysics}  % arguments 3 to 6 are optional-->
+        </Entry>
         <!--    <Thesis>
               <Title>Web search engine fellow travellers</Title>
               <Supervisors>A.A.Kizim</Supervisors>
