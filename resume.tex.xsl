@@ -106,11 +106,23 @@
     {<value-of select = 'Employer/Name' />}%
     {<value-of select = 'Employer/City' />}%
     {<copy-of select = 'Employer/Description' />}%
-    {<apply-templates
-          select = 'Description' />\begin{itemize}<if
-          test = 'Employer/Customer'>\item Customer: <value-of select = 'Employer/Customer' /></if><if
-          test = 'Project'>\item <choose><when test="$lang='ru'">Проекты</when><otherwise>Projects</otherwise></choose>:\begin{itemize}<apply-templates
-            select = 'Project' />\end{itemize}</if><if test = 'Achievement'>\item Responsibilities:\begin{itemize}<apply-templates select = "Achievement[@lang = $lang]" />\end{itemize}</if>\end{itemize}}
+    {<apply-templates select = 'Description' />\begin{itemize}%
+      <if test = 'Employer/Customer'>\item Customer: <value-of select = 'Employer/Customer' /></if>%
+      <if test = 'Project'>\item <choose>
+          <when test="$lang='ru'">Проекты</when>
+          <otherwise>Projects</otherwise>
+        </choose>:%
+        \begin{itemize}%
+        <apply-templates select = 'Project' />%
+        \end{itemize}%
+      </if>%
+      <if test = 'Achievement'>\item Responsibilities:%
+        \begin{itemize}%
+          <apply-templates select = "Achievement[@lang = $lang]" />%
+        \end{itemize}%
+      </if>%
+      \end{itemize}%
+    }
   </template>
   <!--    <comment>\newline{}
       Key technologies and languages: <value-of select = 'Techs' /></comment>-->

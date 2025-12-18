@@ -30,21 +30,24 @@
         </Personal>
     </Meta>
 
-    <Objective lang='en'>
-        <Entry>Contract job</Entry>
-        <Entry>Full-time job</Entry>
-        <Entry>Part-time job</Entry>
+    <Objective>
+        <Entry lang='en'>Contract job</Entry>
+        <Entry lang='en'>Full-time job</Entry>
+        <Entry lang='en'>Part-time job</Entry>
+        <Entry lang='ru'>Контрактная работа</Entry>
+        <Entry lang='ru'>Полная занятость</Entry>
+        <Entry lang='ru'>Частичная занятость</Entry>
         <!-- decrease entropy -->
     </Objective>
 
     <Strengths>
-        <Entry>Exceptional communication and collaboration skills.</Entry>
-        <Entry>Outstanding technical skills.</Entry>
-        <Entry>Able to apply and improve any kind of software development processes.</Entry>
-        <Entry>Familiar with modern high-load solutions.</Entry>
-        <Entry>Expert in working with various operating systems.</Entry>
-        <Entry>Professional Internet based software development experience using various Internet technologies.</Entry>
-        <Entry>Highly skilled in customer service.</Entry>
+        <Entry lang="en">Exceptional communication and collaboration skills.</Entry>
+        <Entry lang="en">Outstanding technical skills.</Entry>
+        <Entry lang="en">Able to apply and improve any kind of software development processes.</Entry>
+        <Entry lang="en">Familiar with modern high-load solutions.</Entry>
+        <Entry lang="en">Expert in working with various operating systems.</Entry>
+        <Entry lang="en">Professional Internet based software development experience using various Internet technologies.</Entry>
+        <Entry lang="en">Highly skilled in customer service.</Entry>
     </Strengths>
 
     <Skills>

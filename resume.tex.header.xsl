@@ -13,7 +13,7 @@
         %\headercols{\blindtext}{\blindtext}{\blindtext}
 
         \headercols{%
-            <apply-templates select = '/Document/Objective[ not(@lang) or @lang=$lang]' />%
+            <apply-templates select = '/Document/Objective' />%
         }{%
             <apply-templates select = '/Document/Languages' />%
         }{%
@@ -28,7 +28,7 @@
     <template match = '//Objective'>\section[\faBullseye]{<value-of select = 'name()' />}%
         %{\setlength{\leftmargini}{12pt}%
         %\begin{itemize}%
-            <apply-templates select = "*" />%
+            <apply-templates select = "*[ not(@lang) or @lang=$lang]" />%
         %\end{itemize}}%
     </template>
 <!--    <template match = '//Languages'>{<value-of select = 'name()' />}{<apply-templates select = "*" />}%</template>-->
