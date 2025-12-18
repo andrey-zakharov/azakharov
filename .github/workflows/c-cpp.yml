@@ -30,6 +30,7 @@ jobs:
         tlmgr update --all
     - name: make
       run: |
+        PATH=~/texlive/bin/x86_64-linux:$PATH
         make || true
         ls -lart
     # - name: Commit files
