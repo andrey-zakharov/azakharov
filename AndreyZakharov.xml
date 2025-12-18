@@ -335,10 +335,19 @@
                     </Description>
                     <Logo>tensor.jpg</Logo>
                 </Employer>
-                <Description>
-                    Porting large scale application back-end to Linux. Developing internationalization support in
-                    back-end. Testing and supporting back-end applications.
-                </Description>
+                <Project name="SBIS" url="https://www.tensor-sbis.ru/">
+                    <Description lang="en">
+                        Developing, testing and supporting back-end applications of product.
+                    </Description>
+                    <Language>C++</Language>
+                    <Framework>Boost</Framework>
+                    <Software>Visual Code</Software>
+                    <Software>GCC</Software>
+                    <Software>Python</Software>
+                </Project>
+
+                <Achievement lang="en">Ported large scale application back-end to Linux. </Achievement>
+                <Achievement lang="en">Developed internationalization support in back-end services.</Achievement>
                 <Techs>C++, Boost, MSVC, GCC, Python.</Techs>
             </Entry>
 
