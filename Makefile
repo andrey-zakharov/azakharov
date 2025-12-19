@@ -55,9 +55,11 @@ pdf: $(PROJ).$(PROJ_LANG).tex
 
 txt: $(PROJ).$(PROJ_LANG).md
 
+html: $(PROJ).$(PROJ_LANG).html
+
 
 texlive.libs:
-	tlmgr install moderncv polyglossia # cyrillic lh cm-super luatexbase newcomputermodern cyrillic-modern babel-russian
+	tlmgr install moderncv polyglossia luatexbase # cyrillic lh cm-super  newcomputermodern cyrillic-modern babel-russian
 
 #
 #$(TARGET_TEX): $(PROJ).xml $(XML2TEX_XSLT)
