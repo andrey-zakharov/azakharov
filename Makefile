@@ -35,7 +35,7 @@ TARGET_TXT = $(PROJ).$(PROJ_LANG).md
 XML2TEX_XSLT = resume.tex.xsl
 XML2TXT_XSLT = resume.md.xsl
 
-.PHONY: preview preview-pdf preview-html all pdf xml $(PROJ).xml
+.PHONY: preview preview-pdf preview-html all pdf xml $(PROJ).xml texlive.libs
 
 #default
 all: pdf html
@@ -58,6 +58,7 @@ txt: $(PROJ).$(PROJ_LANG).md
 
 texlive.libs:
 	tlmgr install moderncv polyglossia # cyrillic lh cm-super luatexbase newcomputermodern cyrillic-modern babel-russian
+
 #
 #$(TARGET_TEX): $(PROJ).xml $(XML2TEX_XSLT)
 #	( $(SED) 's_C#_C\\\#_' $< | $(XSLTPROC) $(XML2TEX_XSLT) - | $(SED) 's_&_\\\&_' > $@ )
