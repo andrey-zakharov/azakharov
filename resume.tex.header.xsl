@@ -7,6 +7,11 @@
 
     <template match = "/">
         \input{predoc}
+        <choose>
+            <when test="$lang='en'"></when>
+            <otherwise>\PolyglossiaSetup{russian}{hyphenmins={3,3}}</otherwise>
+        </choose>
+
         \AtBeginDocument{\setmainlanguage{<choose>
             <when test="$lang='en'">english</when>
             <otherwise>russian</otherwise>
