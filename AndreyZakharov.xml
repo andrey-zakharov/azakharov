@@ -794,7 +794,7 @@
         <!-- <Group type = 'Author programs and scripts'> -->
         <Entry type="ROICalc" href="https://github.com/andrey-zakharov/roicalc">(Vue) Rise Of Industry calculator.</Entry>
         <Entry type='Mandelbrot-Julia-on-shaders' href="https://github.com/andrey-zakharov/MandelbrotShader">
-            (WebGL) WebGL small demo: Mandelbrot-Julia-on-shaders.
+            WebGL small demo: Mandelbrot-Julia-on-shaders.
         </Entry>
         <!--Entry href="https://github.com/andrey-zakharov/balls-logic-issue"></Entry-->
 
