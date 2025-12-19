@@ -32,8 +32,8 @@ jobs:
       run: |
         PATH=~/texlive/bin/x86_64-linux:$PATH
         make texlive.libs
-        make || cat AndreyZakharov.en.tex
-        PROJ_LANG=ru make || cat AndreyZakharov.ru.tex
+        make || cat -n AndreyZakharov.en.tex
+        PROJ_LANG=ru make || cat -n AndreyZakharov.ru.tex
         ls -lart
     # - name: Commit files
     #   run: |
