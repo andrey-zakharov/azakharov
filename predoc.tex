@@ -4,10 +4,12 @@
 \documentclass[10pt,a4paper]{moderncv}
 %\renewcommand*{\addresssymbol}{\CircledA}
 \moderncvtheme[cerulean]{contemporary}
-\usepackage{fontspec}
+\usepackage{polyglossia}
+
+%\usepackage{fontspec}
 %\setmainfont{CMU Serif}[Ligatures=TeX]
-\usepackage[russian, english]{babel}
-\usepackage[T1]{fontenc}
+%\usepackage[russian, english]{babel}
+%\usepackage[T1]{fontenc}
 %\usepackage[T2A]{fontenc}
 %\usepackage[russian, english]{babel} % Add 'russian' to the babel package options
 %Prior to 2018, LaTeX’s handling of input files encoded in UTF-8 required users to add the line
@@ -17,6 +19,8 @@
 %With the release of TeX Live 2018, LaTeX was enhanced to adopt UTF-8 as its default text encoding,
 %removing the need to add \usepackage[utf8]{inputenc}
 %\usepackage[utf8]{inputenc}
+
+
 \definecolor{addresscolor}{rgb}{0.35,0.35,0.35}
 %\usepackage{lmodern}
 \usepackage[hmargin=0.5in,vmargin=10pt]{geometry}
@@ -28,6 +32,20 @@
 \usetikzlibrary{tikzmark}
 \usetikzlibrary{shapes.symbols, positioning} % Load necessary libraries
 \usetikzlibrary{fit}
+
+\setdefaultlanguage{english}
+\setotherlanguages{russian}
+\setmainfont[%
+    ItalicFont=NewCM10-Italic.otf,%
+    BoldFont=NewCM10-Bold.otf,%
+    BoldItalicFont=NewCM10-BoldItalic.otf,%
+    SmallCapsFeatures={Numbers=OldStyle}]{NewCM10-Regular.otf}
+%\newfontfamily{\cyrillicfonttt}{Courier New}[Script=Cyrillic]
+\setmonofont[ItalicFont=NewCMMono10-Italic.otf,%
+    BoldFont=NewCMMono10-Bold.otf,%
+    BoldItalicFont=NewCMMono10-BoldOblique.otf,%
+    SmallCapsFeatures={Numbers=OldStyle}]{NewCMMono10-Regular.otf}
+
 % https://nanx.me/wordcloud/ generates with font sizes
 % 100 s1
 % 90 s2

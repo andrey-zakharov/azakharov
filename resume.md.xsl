@@ -51,14 +51,17 @@
 
   </template>
 
-  <template match = '//Experience//Entry'><apply-templates select = 'Period' />   '''<value-of select = '@Job' />''', /<value-of select = 'Employer/Name' />/, <value-of select = 'Employer/City' />, <value-of select = 'Employer/Description' />
-<apply-templates select = 'Description' />
-<apply-templates select="Achievement[@lang='$lang']" /></template>
+  <template match = '//Experience//Entry'>
+ - <apply-templates select = 'Period' /> __<value-of select = '@Job' />__, /_<value-of select = 'Employer/Name' />_/, <value-of select = 'Employer/City' />, <value-of select = 'Employer/Description' />
+<apply-templates select = 'Description' /><!-- new line comment
+--><apply-templates select="Achievement[@lang=$lang]" /></template>
     
-  <template match = '//Achievement'> - <value-of select = '.' /></template>
+  <template match = '//Achievement'>
+   - <value-of select = '.' /></template>
     
-  <template match = '//Languages'># Languages
-<apply-templates />
+  <template match = '/Document/Languages'>
+# Languages
+<apply-templates select="Language[@lang=$lang]" />
   </template>
   <template match = '//Language'>
 - <value-of select = '@name' />: <value-of select = '@skill' /></template>

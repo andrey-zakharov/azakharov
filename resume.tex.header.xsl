@@ -7,10 +7,10 @@
 
     <template match = "/">
         \input{predoc}
-        \selectlanguage{<choose>
+        \AtBeginDocument{\setmainlanguage{<choose>
             <when test="$lang='en'">english</when>
             <otherwise>russian</otherwise>
-        </choose>}
+        </choose>}}
         <apply-templates select = '/Document/Meta' />
         \begin{document}
         \makecvtitle

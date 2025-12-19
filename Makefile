@@ -57,7 +57,7 @@ txt: $(PROJ).$(PROJ_LANG).md
 
 
 texlive.libs:
-	tlmgr install moderncv cyrillic lh cm-super luatexbase newcomputermodern cyrillic-modern babel-russian
+	tlmgr install moderncv polyglossia # cyrillic lh cm-super luatexbase newcomputermodern cyrillic-modern babel-russian
 #
 #$(TARGET_TEX): $(PROJ).xml $(XML2TEX_XSLT)
 #	( $(SED) 's_C#_C\\\#_' $< | $(XSLTPROC) $(XML2TEX_XSLT) - | $(SED) 's_&_\\\&_' > $@ )

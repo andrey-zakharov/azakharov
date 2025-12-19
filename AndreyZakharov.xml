@@ -3,6 +3,7 @@
 <Document xmlns:xlink="http://www.w3.org/1999/xlink">
     <Meta>
         <Title lang="en">Andrey Zakharov</Title>
+        <Title lang="ru">Андрей Захаров</Title>
         <Personal lang="en">
             <FirstName>Andrey</FirstName>
             <FamilyName>Zakharov</FamilyName>
@@ -204,6 +205,8 @@
                         high-frequency trading services (exchange). Built up team development processes from scratch,
                         including CI. Hiring, leading and mentoring the team.
                     </Description>
+                    <Software>Linux</Software>
+                    <Framework>DDD</Framework>
                 </Project>
                 <Job>Team Lead, Software Architect</Job>
                 <Employer>
@@ -219,6 +222,10 @@
                     As the team lead, built the application from early prototype to production.
                     Reduced overall response time of system up to 3 times.
                     Driven adoption of new technologies in the team.
+                </Achievement>
+                <Achievement lang="ru">
+                    В качестве руководителя команды разработал приложение от раннего прототипа до производства.
+                    Сократил общее время отклика системы в 3 раза. Способствовал внедрению новых технологий в команде.
                 </Achievement>
                 <Techs>DDD, Linux</Techs>
             </Entry>
@@ -268,6 +275,11 @@
                 <Achievement lang="en">Established the development processes of the team that ensure continuous product delivery</Achievement>
                 <Achievement lang="en">Hiring, reviewing code and mentoring the team</Achievement>
 
+                <Achievement lang="ru">Руководил небольшой командой разработки инновационного продукта в области услуг автоматизации зданий (IoT)</Achievement>
+                <Achievement lang="ru">Совместно с командой создали готовый к выходу на рынок передовой продукт</Achievement>
+                <Achievement lang="ru">Разработал приложение от раннего прототипа до коммерчески успешного продукта</Achievement>
+                <Achievement lang="ru">Установил процессы разработки в команде, обеспечивающие непрерывную поставку продукта</Achievement>
+                <Achievement lang="ru">Подбор персонала, рецензирование кода и наставничество в команде</Achievement>
             </Entry>
 
             <Entry Job="Team Lead">
@@ -295,12 +307,18 @@
                     в которой игроки управляют историческими боевыми кораблями и принимают участие в масштабных морских сражениях.
                     Игра сочетает стратегию, командную тактику и элементы РПГ, позволяя улучшать и
                         настраивать корабли для достижения победы на водах различных арен.</Description>
+                    <Language>C++</Language>
+                    <Language>Python</Language>
+                    <Framework>Bigworld</Framework>
                 </Project>
 
                 <Achievement lang="en">Implemented several valuable functionalities in client and server logic of game</Achievement>
                 <Achievement lang="en">Optimized client-server interaction</Achievement>
                 <Achievement lang="en">Working with databases, and passionately driving integration of the new technologies into the pipeline.</Achievement>
-                <Techs>Python, C++, Bigworld</Techs>
+
+                <Achievement lang="ru">Реализовал несколько ценных функций в клиентской и серверной логике игры.</Achievement>
+                <Achievement lang="ru">Оптимизировал взаимодействие между клиентом и сервером.</Achievement>
+                <Achievement lang="ru">Работал с базами данных и с увлечением внедрял новые технологии в рабочий процесс.</Achievement>
             </Entry>
 
             <Entry Job='Senior Software Engineer'>
@@ -334,6 +352,10 @@
                 </Achievement>
                 <Achievement lang="en">build frameworks and tools used for testing JVM.</Achievement>
 
+                <Achievement lang="ru">Анализировал результаты тестов, автоматизировал процессы и писал код для тестирования кода JVM.</Achievement>
+                <Achievement lang="ru">Создавал надежные, устойчивые, повторяемые и поддерживаемые тесты, которые выявляют проблемы на ранних стадиях и охватывают ряд компонентов JVM.</Achievement>
+                <Achievement lang="ru">Разрабатывал фреймворки и инструменты, используемые для тестирования JVM.</Achievement>
+
                 <Techs>Java, C++, various internals tools</Techs>
             </Entry>
 
@@ -361,7 +383,10 @@
 
                 <Achievement lang="en">Ported large scale application back-end to Linux. </Achievement>
                 <Achievement lang="en">Developed internationalization support in back-end services.</Achievement>
-                <Techs>C++, Boost, MSVC, GCC, Python.</Techs>
+
+                <Achievement lang="ru">Портировал бэкэнд крупномасштабного приложения на Linux.</Achievement>
+                <Achievement lang="ru">Разработал поддержку интернационализации и UTF в бэкэнд-сервисах.</Achievement>
+
             </Entry>
 
             <Entry Job='Lead Software Engineer'>
