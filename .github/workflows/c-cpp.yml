@@ -28,11 +28,10 @@ jobs:
         export PATH
         ls -la ~/texlive/bin/x86_64-linux
         tlmgr update --all
-        make texlive.libs
     - name: make
       run: |
         PATH=~/texlive/bin/x86_64-linux:$PATH
-        
+        make texlive.libs
         make || true
         ls -lart
     # - name: Commit files
