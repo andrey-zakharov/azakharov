@@ -59,7 +59,7 @@ html: $(PROJ).$(PROJ_LANG).html
 
 
 texlive.libs:
-	tlmgr install moderncv polyglossia luatexbase pgf tikzmark qrcode contour newcomputermodern # cyrillic lh cm-super   cyrillic-modern babel-russian
+	tlmgr install moderncv polyglossia luatexbase pgf tikzmark qrcode contour newcomputermodern babel-russian # cyrillic lh cm-super   cyrillic-modern
 
 #
 #$(TARGET_TEX): $(PROJ).xml $(XML2TEX_XSLT)
