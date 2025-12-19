@@ -215,8 +215,11 @@
                 <Employer>
                     <Name>Buidl.ru</Name>
                     <City>Saint Petersburg</City>
-                    <Description>
+                    <Description lang="en">
                         High-frequency exchange with cryptocurrencies support /prizmbit.com/.
+                    </Description>
+                    <Description lang="ru">
+                        Высоко-нагруженная биржа с поддержкой криптовалют /prizmbit.com/.
                     </Description>
                 </Employer>
 
