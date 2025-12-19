@@ -95,9 +95,10 @@
 
     <Experience>
         <Vocational>
-            <Entry Job="Team Lead">
+            <Entry Job="CGI: Leading team of developers">
                 <Period From="May 2023" To="Now"/>
-                <Job>Leading team of developers</Job>
+                <Job lang="en">Team Lead</Job>
+                <Job lang="ru">Руководитель команды</Job>
                 <Project name="ScheduleBuilder">
                     <Description lang="ru">
                         Клиент-серверная система построения циклических расписаний маршрутного легко-рельсового транспорта.
@@ -133,11 +134,11 @@
 
                 <Employer>
                     <Name lang="en">"Code Green Engineering" Limited Company</Name>
-                    <Name lang="ru">ООО "Код Грин Инжиниринг" </Name>
+                    <Name lang="ru">ООО «Код Грин Инжиниринг»</Name>
                     <City lang="en">Saint Petersburg</City>
                     <City lang="ru">Санкт-Петербург</City>
-                    <Description lang="en">An innovative company specializing in software development using neural networks.</Description>
-                    <Description lang="ru">Инновационная компания, специализирующаяся на разработке программного обеспечения с использованием нейросетей.</Description>
+                    <Description lang="en">an innovative company specializing in software development using neural networks.</Description>
+                    <Description lang="ru">инновационная компания, специализирующаяся на разработке программного обеспечения с использованием нейросетей.</Description>
                 </Employer>
 
                 <Achievement lang="ru">Управление полным циклом разработки</Achievement>
@@ -166,23 +167,23 @@
                 
 
             </Entry>
-            <Entry Job="Senior Software Engineer">
+            <Entry Job="Ciliz: Developing multiplayer game">
                 <Period From="Mar 2021" To="May 2022"/>
-                <Job>Developing multiplayer game</Job>
+                <Job lang="en">Senior Software Engineer</Job>
+                <Job lang="ru">Старший инженер-программист</Job>
                 <Project name="Bottle. The Game">
                     <Description  lang="en">
-                        Support of the existing game application. Ongoing development, improvement, refactoring and
+                        Support of the existing multiplayer game application. Ongoing development, improvement, refactoring and
                         delivery of product to customers.
                     </Description>
                     <Description  lang="ru">
-                        Поддержка существующего игрового приложения. Непрерывная разработка, улучшение, рефакторинг и доставка продукта клиентам.
+                        Поддержка существующего многопользовательского игрового приложения. Разработка, улучшение, рефакторинг и постоянная доставка продукта клиентам.
                     </Description>
                     <Language>Kotlin</Language>
                     <Software>Firebase</Software>
                     <Platform>Android</Platform>
                 </Project>
                 <Employer>
-                    <Name>Ciliz</Name>
                     <Name>Ciliz</Name>
                     <City lang="en">Saint Petersburg</City>
                     <City lang="ru">Санкт-Петербург</City>
@@ -197,7 +198,7 @@
                 </Employer>
 
             </Entry>
-            <Entry Job="Team Lead">
+            <Entry Job="Buidl: Team Lead">
                 <Period From="Dec 2019" To="Nov 2020"/>
                 <Project name="CryptoExchange">
                     <Language>C#</Language>
@@ -208,13 +209,22 @@
                         high-frequency trading services (exchange). Built up team development processes from scratch,
                         including CI. Hiring, leading and mentoring the team.
                     </Description>
+                    <Description lang="ru">
+                        Поддержка существующего приложения для биржевых услуг. Разработка, улучшение, рефакторинг
+                        и предоставление продукта клиентам. Руководство командой по разработке инновационного продукта для
+                        высокочастотных торговых услуг (биржа). Создание с нуля процессов разработки команды,
+                        включая CI. Наем, руководство и наставничество команды.
+                    </Description>
                     <Software>Linux</Software>
                     <Framework>DDD</Framework>
                 </Project>
-                <Job>Team Lead, Software Architect</Job>
+
+                <Job lang="en">Team Lead, Software Architect</Job>
+                <Job lang="ru">Руководитель команды, Архитектор программного обеспечения</Job>
                 <Employer>
                     <Name>Buidl.ru</Name>
-                    <City>Saint Petersburg</City>
+                    <City lang="en">Saint Petersburg</City>
+                    <City lang="ru">Санкт-Петербург</City>
                     <Description lang="en">
                         High-frequency exchange with cryptocurrencies support /prizmbit.com/.
                     </Description>
@@ -229,22 +239,23 @@
                     Reduced overall response time of system up to 3 times.
                     Driven adoption of new technologies in the team.
                 </Achievement>
-                <Achievement lang="ru">
-                    В качестве руководителя команды разработал приложение от раннего прототипа до производства.
-                    Сократил общее время отклика системы в 3 раза. Способствовал внедрению новых технологий в команде.
-                </Achievement>
-                <Techs>DDD, Linux</Techs>
+                <Achievement lang="ru">В качестве руководителя команды разработал приложение от раннего прототипа до производства.</Achievement>
+                <Achievement lang="ru">Сократил общее время отклика системы в 3 раза. </Achievement>
+                <Achievement lang="ru">Способствовал внедрению новых технологий в команде.</Achievement>
             </Entry>
 
-            <Entry Job="Team Lead">
+            <Entry Job="BAS: Team Lead">
                 <Period From="May 2015" To="Dec 2019"/>
-                <Job>Team Lead</Job>
+                <Job lang="en">Team Lead</Job>
+                <Job lang="ru">Руководитель команды</Job>
                 <Employer>
                     <Name>BAS Services &amp; Graphics, LLC.</Name>
-                    <City>International</City>
-                    <Description>
+                    <Description lang="en">
                         BASSG is an intelligent building solutions company with more than 15 years of experience with
                         more than 200+ clients.
+                    </Description>
+                    <Description lang="ru">
+                        BASSG — компания, занимающаяся интеллектуальными решениями для автоматизации зданий, с более чем 15-летним опытом работы и более чем 200 клиентами.
                     </Description>
                     <Logo>bassg.png</Logo>
                 </Employer>
@@ -288,16 +299,23 @@
                 <Achievement lang="ru">Подбор персонала, рецензирование кода и наставничество в команде</Achievement>
             </Entry>
 
-            <Entry Job="Team Lead">
+            <Entry Job="WoW">
                 <Period From="July 2017" To="August 2018"/>
-                <Job>Team Lead</Job>
+                <Job lang="en">Team Lead</Job>
+                <Job lang="ru">Руководитель команды</Job>
                 <Employer>
                     <Name>Wargaming.net</Name>
-                    <City>Saint Petersburg</City>
-                    <Description>
-                        An award-winning online game developer and publisher. One of the leaders in the free-to-play MMO
+                    <City lang="en">Saint Petersburg</City>
+                    <City lang="ru">Санкт-Петербург</City>
+                    <Description lang="en">
+                        an award-winning online game developer and publisher. One of the leaders in the free-to-play MMO
                         market, the company delivers authentic gaming experiences and services across PC, console and
                         mobile platforms.
+                    </Description>
+                    <Description lang="ru">
+                        удостоенный многих наград разработчик и издатель онлайн-игр.
+                        Один из лидеров на рынке бесплатных MMO-игр, компания предоставляет уникальные игровые впечатления и услуги для ПК,
+                        консолей и мобильных платформ.
                     </Description>
                     <Logo>wargaming.png</Logo>
                 </Employer>
@@ -327,13 +345,15 @@
                 <Achievement lang="ru">Работал с базами данных и с увлечением внедрял новые технологии в рабочий процесс.</Achievement>
             </Entry>
 
-            <Entry Job='Senior Software Engineer'>
+            <Entry Job='Oracle: Senior Software Engineer'>
                 <Period From="Jan 2014" To="Jun 2015"/>
-                <Job>Senior Software Engineer</Job>
+                <Job lang="en">Senior Software Engineer</Job>
+                <Job lang="ru">Старший инженер-программист</Job>
                 <Employer>
                     <Name>Oracle</Name>
-                    <City>Saint Petersburg</City>
-                    <Description>
+                    <City lang="en">Saint Petersburg</City>
+                    <City lang="ru">Санкт-Петербург</City>
+                    <Description lang="en">
                         Oracle Corporation is a U.S. based multinational computer technology corporation headquartered
                         in Redwood City, California, United States.
                         The company specializes in developing and marketing computer hardware systems and enterprise
@@ -341,14 +361,28 @@
                         particularly its own brands of database management systems. Oracle is the second-largest
                         software maker by revenue, after Microsoft.
                     </Description>
+                    <Description lang="ru">
+                        Oracle Corporation — американская многонациональная корпорация, занимающаяся компьютерными технологиями,
+                        со штаб-квартирой в Редвуд-Сити, штат Калифорния, США. Компания специализируется на разработке и
+                        маркетинге компьютерных аппаратных систем и корпоративных программных продуктов, в частности,
+                        собственных брендов систем управления базами данных.
+                        Oracle является вторым по величине производителем программного обеспечения по выручке после Microsoft.
+                    </Description>
                     <Logo>oracle.png</Logo>
                 </Employer>
-                <Description>
+                <Description lang="en">
                     As a member of the software engineering division (VM team, GC specialization), I assist in defining
                     and developing software for tasks associated with the developing, debugging or designing of software
                     applications or operating systems. Provide technical leadership to other software developers.
                     Specify, design and implement modest changes to existing software architecture to meet changing
                     requirements.
+                </Description>
+                <Description lang="ru">
+                    В качестве сотрудника подразделения разработки программного обеспечения (команда VM, специализация GC) я оказываю помощь в определении
+                    и разработке программного обеспечения для задач, связанных с разработкой, отладкой или проектированием программного обеспечения
+                    приложений или операционных систем. Обеспечивал техническое руководство других разработчиков.
+                    Определял, проектировал и внедрял изменения в существующую архитектуру программного обеспечения для удовлетворения меняющихся
+                    требований.
                 </Description>
 
                 <Achievement lang="en">analyze test results, automate processes and write code to test JVM code.
@@ -365,21 +399,21 @@
                 <Techs>Java, C++, various internals tools</Techs>
             </Entry>
 
-            <Entry Job='Lead Software Engineer'>
+            <Entry Job='Tensor: Lead Software Engineer'>
                 <Period From="Sep 2013" To="Dec 2013"/>
-                <Job>Lead Software Engineer</Job>
+                <Job lang="en">Lead Software Engineer</Job>
+                <Job lang="ru">Ведущий инженер-программист</Job>
                 <Employer>
                     <Name>Tensor</Name>
-                    <City>Saint Petersburg</City>
-                    <Description>Large holding, developing software to automate the management of the company, tax
-                        accounting and reporting.
-                    </Description>
+                    <City lang="en">Saint Petersburg</City>
+                    <City lang="ru">Санкт-Петербург</City>
+                    <Description lang="en">large holding, developing software to automate the management of the company, tax accounting and reporting.</Description>
+                    <Description lang="ru">крупный холдинг, занимающийся разработкой программного обеспечения для автоматизации управления компанией, налогового учета и отчетности.</Description>
                     <Logo>tensor.jpg</Logo>
                 </Employer>
                 <Project name="SBIS" url="https://www.tensor-sbis.ru/">
-                    <Description lang="en">
-                        Developing, testing and supporting back-end applications of product.
-                    </Description>
+                    <Description lang="en">SBIS conquered the market as an electronic reporting system. But it has long been more than just reporting. More than just accounting. More than just document management.</Description>
+                    <Description lang="ru">СБИС завоевал рынок как система электронной отчетности. Но он уже давно больше, чем отчетность. Больше, чем учет. Больше, чем документооборот.</Description>
                     <Language>C++</Language>
                     <Framework>Boost</Framework>
                     <Software>Visual Code</Software>
@@ -387,30 +421,42 @@
                     <Software>Python</Software>
                 </Project>
 
-                <Achievement lang="en">Ported large scale application back-end to Linux. </Achievement>
+                <Achievement lang="en">Developing, testing and supporting back-end applications of product.</Achievement>
+                <Achievement lang="en">Ported large scale application back-end to Linux.</Achievement>
                 <Achievement lang="en">Developed internationalization support in back-end services.</Achievement>
 
+                <Achievement lang="ru">Разработка, тестирование и поддержка серверной части приложения продукта.</Achievement>
                 <Achievement lang="ru">Портировал бэкэнд крупномасштабного приложения на Linux.</Achievement>
                 <Achievement lang="ru">Разработал поддержку интернационализации и UTF в бэкэнд-сервисах.</Achievement>
 
             </Entry>
 
-            <Entry Job='Lead Software Engineer'>
+            <Entry Job='Embria: Lead Software Engineer'>
                 <Period From="Mar 2012" To="May 2013"/>
-                <Job>Lead Software Engineer</Job>
+                <Job lang="en">Lead Software Engineer</Job>
+                <Job lang="ru">Ведущий инженер-программист</Job>
                 <Employer>
                     <Name>Embria</Name>
                     <City>Saint Petersburg</City>
-                    <Description>Internet companies group</Description>
+                    <Description lang="en">internet companies group, developing popular social network Fotostrana.ru</Description>
+                    <Description lang="ru">группа интернет-компаний, разрабатывающих популярную социальную сеть Fotostrana.ru</Description>
                     <Logo>embria.jpg</Logo>
                 </Employer><!-- ; internal company portal; web-based reporting application. -->
-                <Description>
+                <Description lang="en">
                     Working on high-load backend solutions (C++, FreeBSD) for social networking service, developing
                     replication subsystem between highloaded servers.
                     Developing and supporting set of internal tools for testing, building and supporting entire project.
                     Investigated standard PHP modules for performance issues and developed optimized solutions.
                     Recruit and supervise software engineers. Coaching colleagues about efficient use of a number of IT
                     tecnologies.
+                </Description>
+
+                <Description lang="ru">
+                    Работа над высоко-нагруженными бэкенд-решениями (C++, FreeBSD) для сервиса социальных сетей, разработка
+                    подсистемы репликации между высоко-нагруженными серверами.
+                    Разработка и поддержка набора внутренних инструментов для тестирования, сборки и поддержки всего проекта.
+                    Исследование стандартных модулей PHP на предмет проблем с производительностью и разработка оптимизированных решений.
+                    Подбор и контроль работы инженеров-программистов. Обучение коллег эффективному использованию ряда ИТ-технологий.
                 </Description>
 
                 <Achievement lang="ru">Улучшил процесс сборки для всего проекта</Achievement>
@@ -424,13 +470,16 @@
 
                 <Techs>C++, Boost, OpenSSL, GCC, bash, CMake, valgrind, gdb.</Techs>
             </Entry>
-            <Entry Job='Senior Software Engineer'>
+            <Entry Job='Spera: Senior Software Engineer'>
                 <Period From="Jul 2008" To="Mar 2012"/>
-                <Job>Senior Software Engineer</Job>
+                <Job lang="en">Senior Software Engineer</Job>
+                <Job lang="ru">Старший инженер-программист</Job>
                 <Employer>
                     <Name>Sperasoft Inc.</Name>
-                    <City>Saint Petersburg</City>
-                    <Description>International gamedev outsourcing company</Description>
+                    <City lang="en">Saint Petersburg</City>
+                    <City lang="ru">Санкт-Петербург</City>
+                    <Description lang="en">international gamedev outsourcing company</Description>
+                    <Description lang="ru">международная аутсорсинг компания разработки игр</Description>
                     <Logo>sperasoft.png</Logo>
                 </Employer><!-- ; internal company portal; web-based reporting application. -->
                 <Project name="SWTOR">
@@ -443,6 +492,14 @@
                         Plan, control and evaluate the operations of information systems.
                         Recruit and supervise software engineers.
                     </Description>
+                    <Description lang="ru">
+                        Заказчик: BioWare. Работа над высоко-нагруженным игровым сайтом (Drupal, Apache Solr),
+                        интеграция со сторонними поисковыми системами, разработка процесса импорта игровых данных из различных источников.
+                        Разработка и поддержка набора внутренних инструментов для тестирования, приглашения, мониторинга и т. д.
+                        Консультирование, прототипирование и разработка корпоративных интернет-сайтов.
+                        Планирование, контроль и оценка работы информационных систем.
+                        Подбор и руководство инженерами-программистами.
+                    </Description>
                 </Project>
                 <Project name="SOEMon">
                     <Customer>Sony Online Entertainment</Customer>
@@ -453,6 +510,12 @@
                         operations and development.
                         Meet with clients to discuss system requirements, specifications, costs and time lines.
                     </Description>
+                    <Description lang="ru">
+                        Работал в составе команды, занимавшейся разработкой и поддержкой распределенной высоко-нагруженной системы сбора данных и контроля метрик в системах компании.
+                        Разрабатывал и внедрял политики и процедуры для электронной обработки данных и эксплуатации и разработки компьютерных систем.
+                        Проводил встречи с клиентами для обсуждения требований к системе, спецификаций, стоимости и сроков.
+                    </Description>
+
                     <Language>C++</Language>
                     <Language>Bash</Language>
                     <Language>Java</Language>
@@ -474,6 +537,11 @@
                         Automate, optimize and promote corporate sites.
                         Plan, control and evaluate the operations of information systems.
                         Recruit and supervise computer engineers and programmers.
+                    </Description>
+                    <Description lang="ru">
+                        Автоматизация, оптимизация и продвижение корпоративных сайтов.
+                        Планирование, контроль и оценка работы информационных систем.
+                        Подбор и курирование инженеров и программистов.
                     </Description>
                     <Language>PHP</Language>
                     <Language>HTML</Language>
@@ -517,7 +585,7 @@
                 </Achievement>
             </Entry>
 
-            <Entry Job='Freelancer'>
+            <!--Entry Job='Freelancer'>
                 <Period From="Aug 2007" To="Jul 2008"/>
                 <Job>Freelancer</Job>
                 <Employer>
@@ -537,15 +605,19 @@
                 <Techs>Drupal, Joomla, DataLife Engine, Wordpress, HTML, JavaScript, PHP, MySQL, Apache, MSSQL, IIS,
                     SSH.
                 </Techs>
-            </Entry>
-            <Entry Job='Software Engineer'>
-                <Period From="May 2006" To="Aug 2007"/>
-                <Job>Software Engineer</Job>
+            </Entry-->
+            <Entry Job='Greentek: Software Engineer'>
+                <!-- date tweaked: -->
+                <Period From="May 2005" To="Aug 2008"/>
+                <Job lang="en">Software Engineer</Job>
+                <Job lang="ru">Инженер-программист</Job>
                 <Employer>
-                    <Name>OOO "Greentek"</Name>
-                    <City>Volgograd</City>
+                    <Name lang="en">OOO "Greentek"</Name>
+                    <Name lang="ru">ООО «Greentek»</Name>
+                    <City lang="en">Volgograd</City>
+                    <City lang="ru">Волгоград</City>
                 </Employer>
-                <Description>Development of the accounting system of orders and sales, support multiple sales sites (<go
+                <Description lang="en">Development of the accounting system of orders and sales, support multiple sales sites (<go
                         xlink:title="See it in porfolio"
                         xlink:role="locator"
                         xlink:href="http://vaultsoft.ru/portfolio/decanat.com"
@@ -559,13 +631,18 @@
                     implement policies and procedures for electronic data processing and computer systems operations and
                     development.
                 </Description>
+                <Description lang="ru">Разработка системы учета заказов и продаж, поддержка нескольких торговых площадок,
+                    разработка интернет-магазинов. Контроль бюджетов и расходов проектов. Разработка и
+                    внедрение политик и процедур электронной обработки данных, эксплуатации и
+                    развития компьютерных систем.
+                </Description>
                 <Achievement lang="ru">Автоматизировал документооборот компании</Achievement>
                 <Achievement lang="en">Implemented web system to workflow orders and sales of company</Achievement>
                 <Achievement lang="ru">Разработал распределенную систему интернет магазинов компании</Achievement>
                 <Achievement lang="en">Implemented distributed system of company internet shops</Achievement>
                 <Techs>HTML, JavaScript, PHP, MySQL, Apache, SSH, XML.</Techs>
             </Entry>
-            <Entry Job='Lead Software Engineer'>
+            <!--Entry Job='Creative Volga: Lead Software Engineer'>
                 <Period From="Feb 2006" To="Apr 2006"/>
                 <Job>Lead Programmer</Job>
                 <Employer>
@@ -583,7 +660,7 @@
                             xlink:title="See it in porfolio">http://vaultsoft.ru/portfolio/creative-volga</go>.
                 </Description>
                 <Techs>HTML, JavaScript, PHP, MySQL, Apache, Xaraya</Techs>
-            </Entry>
+            </Entry-->
 
             <!--
             <Entry Job = 'Web Programmer'>
@@ -600,13 +677,22 @@
 
             <Entry Job='Software Engineer'>
                 <Period From="Aug 2003" To="Nov 2005"/>
-                <Job>Software Engineer</Job>
+                <Job lang="en">Software Engineer</Job>
+                <Job lang="ru">Инженер-программист</Job>
                 <Employer>
-                    <Name>OAO "Volgograd State Tractor Plant"</Name>
-                    <City>Volgograd</City>
-                    <Description>Computing systems lab</Description>
+                    <Name lang="en">OAO "Volgograd State Tractor Plant"</Name>
+                    <Name lang="ru">ОАО «Волгоградский тракторный завод»</Name>
+                    <City lang="en">Volgograd</City>
+                    <City lang="ru">Волгоград</City>
+                    <Description lang="en">Computing systems lab</Description>
+                    <Description lang="ru">(сокращённо — ВгТЗ)
+                        (до 1961 года -- Сталинградский тракторный завод имени Ф. Э. Дзержинского, СТЗ) --
+                        российское машиностроительное предприятие в городе Волгограде, основанное в 1930 году в числе
+                        первых промышленных объектов, возведённых по планам ускоренной индустриализации СССР,
+                        принятым в конце 1920-х годов. В разное время основной продукцией предприятия являлась техника
+                        оборонного и гражданского назначения (сельскохозяйственные тракторы, танки и иная военная техника).</Description>
                 </Employer>
-                <Description>Implemented major improvements in automation of administrative and operational procedures
+                <Description lang="en">Implemented major improvements in automation of administrative and operational procedures
                     for the company email service.
                     Administration and refinement of instant messaging <go xlink:role="locator"
                                                                            xlink:href="http://vaultsoft.ru/portfolio/ichatsrvd"
@@ -619,6 +705,11 @@
                             xlink:role="locator"
                             xlink:href="http://vaultsoft.ru/portfolio/easynpengine" xlink:actuate="onRequest"
                             xlink:show="new">EasyNPengine</go>).
+                </Description>
+                <Description lang="ru">Внедрил существенные улучшения в автоматизации административных и операционных процедур
+                    для корпоративной электронной почты.
+                    Администрирование и усовершенствование системы обмена мгновенными сообщениями ichatsrvd.
+                    Написал набор скриптов для внутренних веб-ресурсов (Visitlog, EasyNPengine).
                 </Description>
                 <Achievement lang="ru">Автоматизировал документооборот отдела</Achievement>
                 <Achievement lang="en">Implemented system to automate paper work of department</Achievement>

@@ -72,6 +72,7 @@
             <when test="name() = 'Education'">Образование</when>
             <when test="name() = 'Languages'">Языки</when>
             <when test="name() = 'Links'">Ссылки</when>
+            <when test="name() = 'Pet projects'">Проекты</when>
             <otherwise><value-of select = 'name()' /></otherwise>
           </choose>%
         </otherwise>
@@ -82,8 +83,15 @@
   <template match = '//Cloud'>\cloud%</template>
   <template match = '/Document/*/*'>
     \subsection{<choose>
-      <when test = "@type"><value-of select = '@type' /></when>
-      <otherwise><value-of select = 'name()' /></otherwise>      
+      <when test = "@type"><choose><when test = "$lang='en'"><value-of select = '@type' /></when>
+        <otherwise><choose>
+          <when test="@type = 'Tools'">Инструменты</when>
+        </choose></otherwise></choose>
+      </when>
+      <otherwise><choose>
+        <when test = "$lang='en'"><value-of select = 'name()' /></when>
+        <otherwise><choose><when test="name() = 'Profiles'">Профили</when></choose></otherwise>
+      </choose></otherwise>
     </choose>}
     <apply-templates /></template>
 
@@ -102,7 +110,7 @@
   
   
   <template match = '//Experience//Entry'>\cventry{<apply-templates select = 'Period' />}%
-    {<value-of select = '@Job' />}%
+    {<value-of select = 'Job[not(@lang) or @lang = $lang]' />}%
     {<value-of select = 'Employer/Name[not(@lang) or @lang = $lang]' />}%
     {<value-of select = 'Employer/City[not(@lang) or @lang = $lang]' />}%
     {<copy-of select = 'Employer/Description[not(@lang) or @lang = $lang]' />}%
@@ -117,14 +125,14 @@
         <apply-templates select = 'Project' />%
         \end{itemize}%
        }</if>%
-      <if test = 'Achievement'>\item{ <choose>
+      <if test = 'Achievement'>%\item{ %<!--choose>
         <when test="$lang='ru'">Обязанности</when>
         <otherwise>Responsibilities</otherwise>
-      </choose>:%
-        \begin{itemize}%
+      </choose-->%:%
+        %\begin{itemize}%
           <apply-templates select = "Achievement[@lang = $lang]" />%
-        \end{itemize}%
-       }</if>%
+        %\end{itemize}%
+       %}</if>%
       \end{itemize}</if>%
     }
   </template>
@@ -136,7 +144,13 @@
   <template select = '/Document/Skills/Group[@lang = $lang]'>\subsection{<value-of select = '@type' />}<apply-templates /></template>
   <template match = '/Document/Skills//Entry'><choose><when test = '@type'>\cvline{<value-of select = '@type' />}</when><otherwise>\cvlistitem</otherwise></choose>{<value-of select = '.' />}</template>
    -->
-  <template match = '/Document/Programs'>\section[\faTasks]{Pet projects}<apply-templates /></template>
+
+
+  <template match = '/Document/Programs'>\section[\faTasks]{<choose>
+    <when test="$lang='en'">Pet projects</when><otherwise>Проекты</otherwise></choose>}
+<apply-templates /></template>
+
+
   <template match = '/Document/Programs/Entry'>%
     <choose>
       <when test = '@type'>\cvline{<value-of select = '@type' />}</when>

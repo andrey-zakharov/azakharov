@@ -28,10 +28,11 @@ jobs:
         export PATH
         ls -la ~/texlive/bin/x86_64-linux
         tlmgr update --all
+    - name: make prepare
+      run: PATH=~/texlive/bin/x86_64-linux:$PATH make texlive.libs
     - name: make
       run: |
         PATH=~/texlive/bin/x86_64-linux:$PATH
-        make texlive.libs
         make || cat -n AndreyZakharov.en.tex
         PROJ_LANG=ru make || cat -n AndreyZakharov.ru.tex
         ls -lart
