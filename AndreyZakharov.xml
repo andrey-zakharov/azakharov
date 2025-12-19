@@ -183,10 +183,16 @@
                 </Project>
                 <Employer>
                     <Name>Ciliz</Name>
-                    <City>Saint Petersburg</City>
-                    <Description>
+                    <Name>Ciliz</Name>
+                    <City lang="en">Saint Petersburg</City>
+                    <City lang="ru">Санкт-Петербург</City>
+                    <Description lang="en">
                         Ciliz is a game development company. Their games are available at major social networks (Facebook,
                         OK, VK) and mobile platforms.
+                    </Description>
+                    <Description lang="ru">
+                    Ciliz — это компания, занимающаяся разработкой игр.
+                        Их игры доступны на основных социальных сетях (Facebook, OK, VK) и мобильных платформах.
                     </Description>
                 </Employer>
 

@@ -29,13 +29,7 @@
     </template>
 
     <!-- proper template for arguments to cvtripleitem -->
-    <template match = '//Objective'>\section[\faBullseye]{<value-of select = 'name()' />}%
-        <apply-templates select = "*[ not(@lang) or @lang=$lang]" />%
-    </template>
-<!--    <template match = '//Languages'>{<value-of select = 'name()' />}{<apply-templates select = "*" />}%</template>-->
-<!--    <template match = '//Education'>{<value-of select = 'name()' />}{<apply-templates select = "*" />}%</template>-->
     <template match = '/Document/Objective//Entry'>%
-<!--        %\item{<value-of select = '.' />}%-->
         <value-of select = '.' />\newline{}%
     </template>
 <!--    <template match = '/Document/Education//Entry'>{<value-of select = '.' />}%</template>-->
