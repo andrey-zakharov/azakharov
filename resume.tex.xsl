@@ -37,7 +37,7 @@
   <!-- Meta -->
   <template match = '/Document/Meta'><apply-templates select = "*[@lang = $lang]" /></template>
   <template match = '/Document/Meta/Personal'><apply-templates /></template>
-  <template match = '//Meta/Title'>\title{\today}</template>
+  <template match = '/Document/Meta/Title'>\title{\today}</template>
   <template match = '//Personal/FirstName'>\firstname{<value-of select = '.' />}</template>
   <template match = '//Personal/FamilyName'>\familyname{<value-of select = '.' />}</template>
   <template match = '//Personal/Address'>\address{\color{black}<value-of select = '.' />\color{addresscolor}}{}</template>
