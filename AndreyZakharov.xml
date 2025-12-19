@@ -196,9 +196,6 @@
                     </Description>
                 </Employer>
 
-                <!--Achievement lang="en">
-                </Achievement-->
-                <Techs>Android, Kotlin, Typescript</Techs>
             </Entry>
             <Entry Job="Team Lead">
                 <Period From="Dec 2019" To="Nov 2020"/>
