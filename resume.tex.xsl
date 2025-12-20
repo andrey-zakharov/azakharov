@@ -52,7 +52,7 @@
   <template match = '//Personal/Extra'>\extrainfo{<value-of select = '.' />}</template>
   <template match = '//Personal/Photo'>\photo[<value-of select = '@width' />][2pt]{<value-of select = '.' />}</template>
 
-  <template match = '/Document/*[not(self::Meta)]'>\section<choose>
+  <template match = '/Document/*' priority="0">\section<choose>
       <when test="name() = 'Objective'">[\faBullseye]</when>
       <when test="name() = 'Strengths'">[\faLink]</when>
       <when test="name() = 'Skills'">[\faMagic]</when>
@@ -81,7 +81,7 @@
     <apply-templates select = "*[not(@lang) or @lang = $lang]" />%
   </template>
   <template match = '//Cloud'>\cloud%</template>
-  <template match = '/Document/*/*'>
+  <template match = '/Document/*/*' priority="0">
     \subsection{<choose>
       <when test = "@type"><choose><when test = "$lang='en'"><value-of select = '@type' /></when>
         <otherwise><choose>
