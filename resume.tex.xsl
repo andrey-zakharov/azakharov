@@ -168,5 +168,5 @@
   <template match = '/Document/Bibliography/Entry'>\bibitem{}
     \href{<value-of select = '@Url' />}{<value-of select = '@Title' />}. <value-of select = '@Url' />, <value-of select = '@Year' />
   </template>
-  <xsl:include href="resume.tex.header.xsl" />
+  <include href="resume.tex.header.xsl" />
 </stylesheet>
