@@ -52,7 +52,7 @@
   <template match = '//Personal/Extra'>\extrainfo{<value-of select = '.' />}</template>
   <template match = '//Personal/Photo'>\photo[<value-of select = '@width' />][2pt]{<value-of select = '.' />}</template>
 
-  <template match = '/Document/*'>\section<choose>
+  <template match = '/Document/*[not(Meta)]'>\section<choose>
       <when test="name() = 'Objective'">[\faBullseye]</when>
       <when test="name() = 'Strengths'">[\faLink]</when>
       <when test="name() = 'Skills'">[\faMagic]</when>
