@@ -23,7 +23,7 @@ VIEW_PDF ?= okular
 VIEW_HTML ?= x-www-browser
 
 LATEX2PDF = lualatex -file-line-error -interaction=nonstopmode -halt-on-error
-XSLTPROC = xsltproc --verbose --encoding utf8 --load-trace --stringparam lang $(PROJ_LANG)
+XSLTPROC = xsltproc --encoding utf8 --load-trace --stringparam lang $(PROJ_LANG)
 
 
 TARGET_TEX = $(PROJ).$(PROJ_LANG).tex
