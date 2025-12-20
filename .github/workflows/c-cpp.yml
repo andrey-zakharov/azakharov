@@ -35,7 +35,7 @@ jobs:
       run: |
         PATH=~/texlive/bin/x86_64-linux:$PATH
         (make && make) || cat -n AndreyZakharov.en.tex
-        (PROJ_LANG=ru make && make) || cat -n AndreyZakharov.ru.tex
+        (PROJ_LANG=ru make && PROJ_LANG=ru make) || cat -n AndreyZakharov.ru.tex
         ls -lart
     # double make for latex to make perfect boxes
     # - name: Commit files
