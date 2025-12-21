@@ -143,9 +143,7 @@
 ### Programming languages
 - **Kotlin**: Spring Boot, ktor, Micronaut, KMP, Kotlin Compose
 - **Java**: Kotlin, Spring Boot
-- **C/C++**: STL, GCC, Boost, wxWidgets, Qt, Win32 API, GDI, WinSock, libxml, MySQL++, gSOAP,
-                CppUnit, OpenSSL
-            
+- **C/C++**: STL, GCC, Boost, wxWidgets, Qt, Win32 API, GDI, WinSock, libxml, MySQL++, gSOAP, CppUnit, OpenSSL
 - **JavaScript**: TypeScript, Dart, Vue, VanillaJS
 - **C\#**: .NET, .NET Core, WinForms
 - **SQL**: PostgreSQL, Oracle, MySQL, SQLite, T-SQL
@@ -164,30 +162,22 @@
       _GPA of 3,6 on a 4.0 scale_,
       > Automated systems for information processing and management.
 
-  
 # Links
 ### Profiles
  - http://www.linkedin.com/pub/andrey-zakharov/21/99a/56a
-            
  - https://bitbucket.org/andrey_zakharov_
-            
  - https://github.com/andrey-zakharov
-            
  - https://habr.com/ru/users/Vaulter/
-            
  - http://drupal.org/user/222552
-            
+
 # Programs
  - [ROICalc](https://github.com/andrey-zakharov/roicalc): (Vue) Rise Of Industry calculator.
  - [Mandelbrot-Julia-on-shaders](https://github.com/andrey-zakharov/MandelbrotShader): 
             WebGL small demo: Mandelbrot-Julia-on-shaders.
-        
  - Winamp Statistician: (VC++) Plugin for Winamp collected statistics about played tracks and then
             shows top list.
-        
  - VaultSoft EasyNP~Engine: (PHP, MySQL) Control System news, polls, banners and counters on the site
             on the templates and database.
-        
  - RProcMon: (C\#) server-client application, monitor the state of *NIX systems.
  - Admin traffer: (C\#) Counts squid-traffic.
  - VSMessager: (VC++) instant messaging client based on intranet chat.
