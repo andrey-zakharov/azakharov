@@ -5,7 +5,7 @@
   xmlns="http://www.w3.org/1999/XSL/Transform"
   version="1.0">
   <output method="text" media-type="text/x-tex"/>
-    <param name = "lang" >en</param>
+  <param name = "lang" >en</param>
   <template match = "*[ @xlink:role = 'locator' ]">%
     <choose>
       <when test = 'text()'> \href{<value-of select = "@xlink:href" />}{<value-of select = "." />} </when>
